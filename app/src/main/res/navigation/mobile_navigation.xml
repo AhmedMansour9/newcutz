@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mgh.Fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_gallery"-->
+<!--        android:name="com.mgh.Fragments.Menu_Categories"-->
+<!--        android:label="@string/menu_gallery"-->
+<!--        tools:layout="@layout/fragment_menu" />-->
+    <fragment
+        android:id="@+id/nav_myprofile"
+        android:name="com.mgh.Fragments.MyProfile"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.mgh.Fragments.Cart"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.mgh.Fragments.Recent_Orders"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_my_orders" />
+
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.mgh.Fragments.Favourit"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_favourit" />
+
+    <activity
+        android:id="@+id/nav_share"
+        android:name="com.mgh.Activities.Language"
+        android:label="@string/menu_share"
+        tools:layout="@layout/activity_language" />
+
+    <fragment
+    android:id="@+id/nav_send"
+    android:name="com.mgh.Fragments.Contact_Us"
+    android:label="@string/menu_send"
+    tools:layout="@layout/fragment_contact__us" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.mgh.Fragments.About_Us"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_about__us" />
+<!--    <activity-->
+<!--        android:id="@+id/nav_language"-->
+<!--        android:name="com.dabberha.Activities.Countries"-->
+<!--        android:label="@string/language"-->
+<!--        tools:layout="@layout/activity_countries" />-->
+
+    <activity
+        android:id="@+id/nav_logout"
+        android:name="com.mgh.Activities.LogOut"
+        android:label="@string/menu_send"
+        tools:layout="@layout/activity_log_out" />
+</navigation>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:id="@+id/Rela_Cart"
+    tools:context=".Fragments.Cart">
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarCart"
+        android:background="#E9EBEE">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/logo"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/logo_login"
+                />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/SwipCart"
+        android:layout_below="@+id/Rela_total"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Relaa_Cart"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Cart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_320sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:scrollbars="horizontal" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/Relaa_Cart"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:visibility="invisible"
+            android:layout_above="@+id/Btn_Checkout"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="2dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:id="@+id/Total_Price"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="#F1C969"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_alignParentEnd="true"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/subtotal"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="#000"
+
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/title"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bc_checkout"
+            android:text="@string/checkout"
+            android:textColor="#fff"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/Btn_Checkout"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp" />
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/_70sdp"-->
+<!--            android:layout_height="@dimen/_70sdp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:src="@drawable/ic_cart_empty"-->
+<!--            android:id="@+id/img_cart"-->
+<!--            android:visibility="gone"-->
+
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/img_cart"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:id="@+id/nocart"-->
+<!--            android:textColor="#CFCFCF"-->
+<!--            android:text="@string/nocart"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="@dimen/_15sdp"-->
+<!--            android:visibility="gone"-->
+
+<!--            />-->
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:id="@+id/Rela_total"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:background="@drawable/bc_totalcost">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/T_TotalCost"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/nocartproduct"
+        android:textColor="#a11c46"
+        android:visibility="gone"
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/T_NoCart"
+        />
+
+
+
+</RelativeLayout>

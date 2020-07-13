@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:clickable="true"
+    tools:context=".Fragments.OrderLocation_Fragmet">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOrders"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#E9EBEE"
+        android:theme="?attr/actionBarTheme"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_filter"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbarOrders"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:id="@+id/Rela_total"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bc_totalcost">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/T_TotalCostOrder"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_toEndOf="@+id/T_TotalCostOrder"
+                        android:textSize="@dimen/_13sdp"
+                        android:id="@+id/T_BeforeDiscount"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prmocode"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/Rela_total"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/Promo"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/Promo"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_Promo"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+                <EditText
+                    android:id="@+id/E_Promo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:digits="د ج ح خ ه ع غ ف ق ث ص ض ذ ش س ي ب ل ا ت ن م ك ط ز و ة ى لا ر ؤ ء ئ abcdefghijklmnopqrs tuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/Btn_EnterPromo"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bc_checkout"
+                android:text="@string/enter"
+                android:layout_below="@+id/Promo"
+                tools:layout_editor_absoluteX="92dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fullname"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/Card_Promo"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/Name"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/Name"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_Name"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+                <EditText
+                    android:id="@+id/E_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:digits="د ج ح خ ه ع غ ف ق ث ص ض ذ ش س ي ب ل ا ت ن م ك ط ز و ة ى لا ر ؤ ء ئ abcdefghijklmnopqrs tuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_Name"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/phone"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/phone"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/phone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_Phone"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+                <EditText
+                    android:id="@+id/E_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:ems="10"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PannerCard"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/city"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/City"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/City"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_City"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarOrder"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:theme="@style/progressBarBlue"
+                        android:visibility="gone"
+                        />
+
+                    <EditText
+                        android:id="@+id/E_City"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="#a2a2a2"
+                        android:textColorHint="#a2a2a2"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_Phone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/country"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/Country"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/Country"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/PannerCard"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+
+                <EditText
+                    android:id="@+id/E_Country"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2"
+                    />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_City"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/streetname"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/Street"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/Street"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_Street"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+
+                <EditText
+                    android:id="@+id/E_StrretName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2"
+                    />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_Street"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/b_number"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:id="@+id/B_Number"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/B_Number"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_Number"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+
+
+                <EditText
+                    android:id="@+id/E_BuildingNumber"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/E_StrretName" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Card_Street"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/f_number"
+                android:layout_alignStart="@+id/Card_FNumber"
+                android:textSize="@dimen/_12sdp"
+                android:id="@+id/F_Number"
+                android:textColor="#8a9ead"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_below="@+id/B_Number"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Card_FNumber"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                >
+
+                <EditText
+                    android:id="@+id/E_floornumber"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:backgroundTint="#fff"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="#a2a2a2"
+                    android:textColorHint="#a2a2a2" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RadioGroup
+                android:id="@+id/radios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Card_Number"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/radiocash"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:buttonTint="#000080"
+                    android:checked="true"
+                    android:text="@string/cash"
+                    android:textColor="#000080"
+                    android:textSize="@dimen/_18sdp"
+                    tools:layout_editor_absoluteX="214dp" />
+                <RadioButton
+                    android:id="@+id/radiodebit"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:buttonTint="#000080"
+                    android:text="@string/debit"
+                    android:enabled="false"
+                    android:textColor="#000080"
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/Btn_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#fff"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bc_checkout"
+                android:text="@string/checkout"
+                android:layout_below="@+id/radios"
+                tools:layout_editor_absoluteX="92dp" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/E_Region"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="@dimen/_45sdp"-->
+    <!--                android:paddingStart="@dimen/_10sdp"-->
+    <!--                android:backgroundTint="#e5e5e5"-->
+    <!--                android:ems="10"-->
+    <!--                android:hint="@string/region"-->
+    <!--                android:inputType="textPersonName"-->
+    <!--                android:textColor="#a2a2a2"-->
+    <!--                android:textColorHint="#a2a2a2"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/E_Country" />-->
+
+
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/E_phone"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="@dimen/_45sdp"-->
+    <!--                android:paddingStart="@dimen/_10sdp"-->
+    <!--                android:ems="10"-->
+    <!--                android:hint="@string/phone"-->
+    <!--                android:backgroundTint="#e5e5e5"-->
+    <!--                android:inputType="number"-->
+    <!--                android:textColor="#a2a2a2"-->
+    <!--                android:textColorHint="#a2a2a2"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/E_Name" />-->
+
+
+
+
+    <!--&lt;!&ndash;            <fragment&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/map"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:name="com.google.android.gms.maps.SupportMapFragment"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:visibility="gone"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                android:layout_height="0dp"/>&ndash;&gt;-->
+
+
+
+
+</RelativeLayout>

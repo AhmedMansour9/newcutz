@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarMenu"
+        android:background="#222222">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/logo_splash"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/logo_login"
+                />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="?actionBarSize"-->
+<!--        android:background="#ff9f3a"-->
+<!--        android:id="@+id/Rela_Address"-->
+<!--        android:layout_height="@dimen/_55sdp">-->
+
+<!--    </RelativeLayout>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/addres"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textStyle="bold"-->
+<!--        android:id="@+id/address"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:layout_marginStart="@dimen/_15sdp"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/edit"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textStyle="bold"-->
+<!--        android:id="@+id/edit"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:layout_marginEnd="@dimen/_10sdp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/addres"-->
+<!--        android:maxLines="1"-->
+<!--        android:layout_below="@+id/address"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textStyle="bold"-->
+<!--        android:id="@+id/T_Address"-->
+<!--        android:layout_marginTop="@dimen/_2sdp"-->
+<!--        android:layout_marginStart="@dimen/_15sdp"-->
+<!--        />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Meals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:scrollbars="horizontal" />
+
+
+</RelativeLayout>

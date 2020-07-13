@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+
+    android:id="@+id/Rela_Home">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarhome"
+        android:background="#E9EBEE">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/logo"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/logo_login"
+                />
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_homecart"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/Img_Cart"
+                android:layout_marginEnd="@dimen/_20sdp"
+                />
+
+            <TextView
+                android:id="@+id/T_notification_numdetai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bc_txtcart"
+                android:padding="@dimen/_4sdp"
+                android:visibility="gone"
+                android:textColor="#ffff"
+                android:text="10"
+                android:textStyle="bold"
+                android:textSize="@dimen/_6sdp"
+                />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:id="@+id/SwipHome"
+            android:layout_marginTop="?actionBarSize"
+            >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            >
+
+
+        </androidx.viewpager.widget.ViewPager>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/view_pager_circle_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_160sdp"
+        app:ci_height="7dp"
+        app:ci_width="7dp"></me.relex.circleindicator.CircleIndicator>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_below="@+id/SwipHome"
+       android:background="#000"
+       android:alpha=".05"
+       android:layout_height="@dimen/_35sdp"/>
+   
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_below="@+id/SwipHome"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/E_Search"
+        android:maxLines="1"
+        android:hint="@string/search"
+        android:textSize="@dimen/_11sdp"
+        android:singleLine="true"
+        android:focusable="true"
+        android:textCursorDrawable="@null"
+        android:focusableInTouchMode="true"
+        android:drawablePadding="@dimen/_5sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColorHint="#777777"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_search"
+        android:background="@drawable/bc_search"
+        android:layout_height="@dimen/_25sdp"/>
+
+    <TextView
+        android:id="@+id/T_Offers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/E_Search"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_13sdp"
+        android:text="@string/flashsale"
+        android:textColor="#222222"
+        />
+
+        <TextView
+            android:id="@+id/T_TotalOffers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/E_Search"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/T_Offers"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="#95939d"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Deals"
+            android:layout_below="@+id/T_Offers"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_155sdp"
+            android:scrollbars="horizontal" />
+
+
+
+        <TextView
+            android:id="@+id/T_AllCatrgories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_Deals"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:text="@string/categories"
+            android:textColor="#222222"
+            />
+        <TextView
+            android:id="@+id/T_TotalCatrgories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_Deals"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/T_AllCatrgories"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="#95939d"
+            />
+
+        <TextView
+            android:id="@+id/T_SeeCategorues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_Deals"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/see_all"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="#000080"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Categroies"
+            android:layout_below="@+id/T_AllCatrgories"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:scrollbars="horizontal" />
+
+
+
+    <TextView
+        android:id="@+id/T_Feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_Categroies"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:text="@string/bes_selling"
+        android:textColor="#222222"
+        />
+        <TextView
+        android:id="@+id/T_TotalBestSalling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_Categroies"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_toEndOf="@+id/T_Feature"
+        android:textSize="@dimen/_9sdp"
+        android:textColor="#95939d"
+        />
+
+        <TextView
+            android:id="@+id/T_SeeBestSall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_Categroies"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/see_all"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="#000080"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_BestSales"
+            android:layout_below="@+id/T_Feature"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:scrollbars="horizontal" />
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
