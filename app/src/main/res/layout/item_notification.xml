@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_2sdp"
+    app:cardElevation="@dimen/_2sdp"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        >
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp"
+            />
+        <TextView
+            android:id="@+id/T_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:textColor="#000000"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_12sdp"
+            />
+<!--        <TextView-->
+<!--            android:id="@+id/orderid"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_toStartOf="@+id/T_order_id"-->
+<!--            android:text="@string/orderid"-->
+<!--            android:layout_marginTop="@dimen/_9sdp"-->
+<!--            android:layout_marginEnd="@dimen/_6sdp"-->
+<!--            android:textColor="#000000"-->
+<!--            android:textSize="@dimen/_12sdp"-->
+<!--            android:maxLines="1"/>-->
+
+        <TextView
+            android:id="@+id/Descrption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:layout_below="@+id/T_date"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:maxLines="1"
+            />
+
+        <!--<TextView
+            android:id="@+id/T_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="status"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:textColor="#838383"
+            android:textSize="@dimen/_12sdp"
+            android:layout_toEndOf="@+id/T_order_status"
+            android:layout_below="@+id/T_user_name"
+            />-->
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

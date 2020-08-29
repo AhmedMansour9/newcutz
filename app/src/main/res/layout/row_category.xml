@@ -4,59 +4,45 @@
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/_5sdp"
     android:layout_marginBottom="@dimen/_5sdp"
-    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
     app:cardElevation="1dp"
-    android:layout_marginStart="@dimen/_10sdp"
-    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:layout_width="@dimen/_130sdp"
+        android:layout_width="@dimen/_110sdp"
         android:layout_gravity="center"
+        android:padding="@dimen/_5sdp"
         android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_height="@dimen/_90sdp"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/PannerCard"
-            app:cardCornerRadius="@dimen/_10sdp"
-            app:cardElevation="5dp"
-            >
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
 
                 <ImageView
                     android:id="@+id/imag_product"
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/_90sdp"
                     android:scaleType="fitXY"
                     android:layout_centerHorizontal="true"
-                    android:layout_height="@dimen/_100sdp"
+                    android:layout_height="@dimen/_65sdp"
                     />
 
 
-            </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
+
 
 
 
         <TextView
-            android:layout_width="@dimen/_130sdp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:gravity="center"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_below="@+id/PannerCard"
-            android:id="@+id/T_Name"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:textStyle="bold"
-            android:text="ahemkdckjkfj"/>
+            android:textSize="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_below="@+id/imag_product"
+            android:id="@+id/T_Name" />
 
 
 

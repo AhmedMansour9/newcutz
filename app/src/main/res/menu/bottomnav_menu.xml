@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:icon="@drawable/home"
+        android:title="@string/home"
+        android:id="@+id/nav_home"
+        app:itemHorizontalTranslationEnabled="false"
+        />
+    <item android:icon="@drawable/ic_categories"
+        android:title="@string/categories"
+        android:id="@+id/T_Categories"
+        app:itemHorizontalTranslationEnabled="false"
+        />
+
+    <item android:icon="@drawable/offers"
+        android:title="@string/offers"
+        android:id="@+id/T_Offers"
+        app:itemHorizontalTranslationEnabled="false"
+        />
+    <item android:icon="@drawable/cart"
+        android:title="@string/cartt"
+        android:id="@+id/T_Cart"
+        app:itemHorizontalTranslationEnabled="false"
+        />
+<!--    <item android:icon="@drawable/language"-->
+<!--        android:title="@string/requests"-->
+<!--        android:id="@+id/T_Language"-->
+<!--        app:itemHorizontalTranslationEnabled="false"-->
+<!--        />-->
+    <item android:icon="@drawable/setting"
+        android:title="@string/my_acc"
+        android:id="@+id/T_Setting"
+        app:itemHorizontalTranslationEnabled="false"
+        />
+
+</menu>

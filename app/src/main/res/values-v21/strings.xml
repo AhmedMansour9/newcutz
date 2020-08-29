@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="forget_label">نسيت كلمه المرور؟</string>
+    <string name="login_label">تسجيل الدخول</string>
+    <string name="register_label">تسجيل</string>
+    <string name="register_msg_label">ليس عند حساب؟</string>
+</resources>

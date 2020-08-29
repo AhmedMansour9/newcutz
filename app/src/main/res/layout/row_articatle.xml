@@ -18,13 +18,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:gravity="start"
-        android:maxLines="1"
-        android:text="wleklkejfkjeklfjlkefjklefjdkjkwjlkjelkfjklf"
+        android:maxLines="2"
         android:ellipsize="end"
         android:layout_below="@+id/imag_product"
         android:layout_marginStart="@dimen/_5sdp"
         android:textStyle="bold"
-        android:textColor="#222222"
+        android:textColor="#777777"
         android:textSize="13sp"
        />
 

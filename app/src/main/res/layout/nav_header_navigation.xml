@@ -12,10 +12,35 @@
     <ImageView
         android:layout_width="@dimen/_180sdp"
         android:layout_height="@dimen/_100sdp"
+        android:id="@+id/logo"
         android:layout_centerInParent="true"
         android:src="@drawable/logo" />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:id="@+id/RelaLogin"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="@string/loginhome"
+            android:id="@+id/T_login"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:id="@+id/T_Register"
+            android:text="@string/registerhome"
+            android:layout_toEndOf="@+id/T_login"
+            />
 
+    </RelativeLayout>
 
 
 

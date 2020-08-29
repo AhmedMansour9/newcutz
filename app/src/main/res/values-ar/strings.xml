@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Dabberha</string>
+    <string name="app_name">جزر</string>
     <string name="email">البريد الالكتروني</string>
     <string name="password">الرقم السري</string>
     <string name="forgetpas">هل نسيت كلمة المرور ؟</string>
@@ -22,8 +22,8 @@
     <string name="addres">عنوان التسليم</string>
     <string name="edit">تعديل</string>
     <string name="myorders">طلباتي</string>
-    <string name="myprofile">الصفحة الشخصية</string>
-    <string name="recentorders">الطلبات الأخيرة</string>
+    <string name="myprofile"> الشخصية</string>
+    <string name="recentorders">طلباتي</string>
     <string name="myaddress">العنوان</string>
     <string name="aboutchick">معلومات عنا</string>
     <string name="follot">تابعنا</string>
@@ -35,7 +35,7 @@
     <string name="subtotal">المجموع :</string>
     <string name="tax">الضرائب : </string>
     <string name="ship">الشحن :</string>
-    <string name="checkout">الدفع : </string>
+    <string name="checkout">تكملة الطلب </string>
     <string name="selectbranch">حدد الفرغ</string>
     <string name="register">انشاء حساب</string>
     <string name="validemail">رجاء قم بإدخال بريد الكتروني صحيح</string>
@@ -67,7 +67,7 @@
     <string name="f_number">رقم الطابق</string>
     <string name="apartment_num">رقم الشقة</string>
     <string name="ordernow">اطلب الان</string>
-    <string name="ordersuccess">تهنئة تمت إضافة طلبك بنجاح</string>
+    <string name="ordersuccess"> تمت إضافة طلبك بنجاح</string>
     <string name="debit">بطاقة الائتمان</string>
     <string name="perviousorder">االطلبات السابقة</string>
     <string name="cash">نقدي</string>
@@ -79,7 +79,7 @@
     <string name="english">English</string>
     <string name="herbian">עברי</string>
     <string name="arabic">عربي</string>
-    <string name="payment_method">طريقة الدفع او السداد</string>
+    <string name="payment_method">طريقة الدفع </string>
     <string name="Deliveryaddress">عنوان التسليم</string>
     <string name="Items">العناصر</string>
 
@@ -102,7 +102,7 @@
     <string name="cart">عربة التسوق</string>
     <string name="descrption">التفاصيل</string>
     <string name="quantity">عدد</string>
-    <string name="total">التكلفة الإجمالية</string>
+    <string name="total">اجمالي الفاتورة </string>
     <string name="nofavproduct">لا يوجد منتجات لديك </string>
     <string name="nocartproduct">لا يوجد منتجات لديك في العربة</string>
 
@@ -113,7 +113,7 @@
     <string name="benfits">فوائد</string>
     <string name="inger">مكونات</string>
     <string name="nutr">التغذية</string>
-    <string name="product">منتج</string>
+    <string name="product">منتجات</string>
     <string name="t_price">السعر الكلي</string>
     <string name="profile">معلومات الملف الشخصي</string>
     <string name="reviews">تقييمات</string>
@@ -132,7 +132,7 @@
     <string name="feature">المنتج المميز</string>
     <string name="new_arriv">الوافدون الجدد</string>
     <string name="bes_selling">أفضل مبيعات</string>
-    <string name="our_blog">من مدونتنا</string>
+    <string name="our_blog">طبق اليوم</string>
     <string name="re_pas">تأكيد كلمة المرور</string>
     <string name="old_pass">كلمة سر قديمة</string>
     <string name="new_pass">كلمة السر الجديدة</string>
@@ -140,7 +140,7 @@
     <string name="langandcoun">اللغة</string>
     <string name="sizes">المقاسات</string>
     <string name="flashsale">عروض اليوم</string>
-    <string name="categories">التصنيفات</string>
+    <string name="categories">الاقسام</string>
     <string name="category">الفئة</string>
     <string name="addtocartsuccess"> تم إضافة المنتج إلى سلة التسوق</string>
     <string name="remove_cart">تم حذف المنتج من سلة التسوق</string>
@@ -148,8 +148,83 @@
     <string name="remove">احذف من السلة</string>
     <string name="ok">تم</string>
     <string name="prmocode">هل لديك كود خصم ؟</string>
-    <string name="enter">ادخل</string>
+    <string name="enter">تفعيل</string>
     <string name="loginfirst">يرجى تسجيل الدخول للوصول إلى الصفحة الشخصية الخاص بك</string>
     <string name="see_all">عرض الكل</string>
     <string name="search">بحث عن المنتج</string>
+    <string name="leave_review">قيم المنتج</string>
+    <string name="loginhome">(تسجيل الدخول/</string>
+    <string name="registerhome">انشاء حساب)</string>
+    <string name="comment">تعليق</string>
+    <string name="confirm">تأكيد</string>
+    <string name="exit_message">هل تريد الخروج ؟</string>
+    <string name="my_acc">حسابي</string>
+    <string name="wishlist">المفضلة</string>
+    <string name="reach_out">تواصل معنا</string>
+    <string name="setting">الاعدادات</string>
+    <string name="share">مشاركة</string>
+    <string name="share_promo">مشاركة كود الخصم </string>
+    <string name="your_promo">كود الخصم لديك :</string>
+    <string name="delivry_type">نوع التوصيل</string>
+    <string name="taxes">الضرائب</string>
+    <string name="delivry_price">مصاريف التوصيل</string>
+    <string name="off">خصم</string>
+    <string name="in_stock">في المخزن</string>
+    <string name="wight">الوزن</string>
+    <string name="noreviws">لا يوجد تقييمات</string>
+    <string name="forget_label">نسيت كلمه المرور؟</string>
+    <string name="login_label">تسجيل الدخول</string>
+    <string name="register_label">تسجيل</string>
+    <string name="register_msg_label">ليس عند حساب؟</string>
+    <string name="no_products">عدد المنتجات:</string>
+    <string name="state">الحي</string>
+    <string name="d_date">وقت التوصيل</string>
+    <string name="empty_gift">لا يوجد هدية لك </string>
+    <string name="congratulation">تهانينا</string>
+    <string name="chose_gift">أختر هديتك</string>
+    <string name="descount">كود خصم</string>
+    <string name="status">حالة الطلب</string>
+    <string name="gift_promo">انت لديك هدية </string>
+    <string name="promo">كود خصم</string>
+    <string name="pending">تحت الطلب</string>
+    <string name="shipping">جاري التحضير</string>
+    <string name="ondelivry">في الطريق</string>
+    <string name="completed">تم الاستلام</string>
+    <string name="requests">طلبات</string>
+    <string name="out_stock">إنتهى من المخزن</string>
+    <string name="please_enterstate">من فضلك ادخل الحي</string>
+    <string name="total_price">السعر الاجمالي</string>
+    <string name="policy">الأحكام والشروط</string>
+    <string name="checked">يرجى التأكد من التحقق من الخصوصية</string>
+    <string name="sub_cat">الفئات الفرعية</string>
+    <string name="similar_product">منتجات مماثلة</string>
+    <string name="checkoutorder">تأكيد الطلب</string>
+
+    <string name="day">يوم</string>
+    <string name="hour">ساعات</string>
+    <string name="min">دقائق</string>
+    <string name="paid">الدفع عند الاستلام</string>
+    <string name="addReview">اضف تقييم</string>
+    <string name="success_addreview">تمت إضافة التقييم بنجاح</string>
+    <string name="onarrival">علي وشك الوصول</string>
+    <string name="save">Save</string>
+    <string name="your_addres">عنوانك</string>
+    <string name="wallet">محفظتي</string>
+    <string name="no_points">عدد النقاط</string>
+    <string name="points">نقاط</string>
+    <string name="buy_now">اشتري الان</string>
+    <string name="note">عشان نخدمك بشكل افضل \n يرجي ادخال أي معلومات خاصة بالمنتج او العنوان </string>
+    <string name="number_products">عدد المنتجات</string>
+
+    <string name="t_cost">اجمالي الفاتورة</string>
+    <string name="reciet">فاتورتك من جزر</string>
+    <string name="follow">يمكنك مراجعة حالة الطلب من حسابك</string>
+    <string name="discountt">توفير</string>
+
+    <string-array name="types">
+        <item>توصيل مجمع يوميا</item>
+        <item>توصيل سريع</item>
+
+    </string-array>
+
 </resources>

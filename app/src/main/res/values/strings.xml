@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MGH</string>
+    <string name="app_name">Jazar</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgetpas">Forget Password?</string>
@@ -16,17 +16,17 @@
     <string name="menu">Categories</string>
     <string name="favourit">Favourit Product</string>
     <string name="more">More</string>
-    <string name="offers"> Top Products</string>
+    <string name="offers"> Offers</string>
     <string name="addres">Address</string>
     <string name="edit">Edit</string>
     <string name="myorders">My Orders</string>
     <string name="myprofile">My Profile</string>
-    <string name="recentorders">Recent Orders</string>
+    <string name="recentorders">Orders</string>
     <string name="myaddress">My Addresses</string>
     <string name="aboutchick">About Chic Chicken</string>
     <string name="follot">Follow Us</string>
     <string name="contactus">Contact Us</string>
-    <string name="logout">Log Out</string>
+    <string name="logout">Logout</string>
     <string name="about">About Us</string>
     <string name="addtocart">Add To Cart</string>
     <string name="include">Include</string>
@@ -66,7 +66,7 @@
     <string name="f_number">Floor Number</string>
     <string name="apartment_num">Apartment Number</string>
     <string name="ordernow">Order Now</string>
-    <string name="ordersuccess">Congratualtion Your Order added successfully</string>
+    <string name="ordersuccess"> Your Order added successfully</string>
     <string name="debit">Visa</string>
     <string name="perviousorder">PREVIOUS ORDERS</string>
     <string name="cash">Cash</string>
@@ -116,8 +116,7 @@
     <string name="benfits">Benfits</string>
     <string name="inger">Ingredients</string>
     <string name="nutr">Nutrition</string>
-    <string name="note">You should know the order must be more than 200</string>
-    <string name="product">Product</string>
+    <string name="product">Products</string>
     <string name="saudi">Saudi</string>
     <string name="emara">Emarat</string>
     <string name="kewait">Kewait</string>
@@ -128,7 +127,7 @@
     <string name="feature">Feature Product</string>
     <string name="new_arriv">NEW ARRIVALS</string>
     <string name="bes_selling">BESTSELLING</string>
-    <string name="our_blog">From our Blog</string>
+    <string name="our_blog">Today\'s dish</string>
     <string name="profile">Profile Information</string>
     <string name="reviews">Reviwes</string>
     <string name="n_cart">Number of Product</string>
@@ -162,8 +161,83 @@
     <string name="remove">Remove From Cart</string>
     <string name="ok">Ok</string>
     <string name="prmocode">Have Promo Code ?</string>
-    <string name="enter">Enter</string>
+    <string name="enter">Apply</string>
     <string name="loginfirst">Please Login To Access your Profile</string>
     <string name="forget_pas">Forget Password</string>
     <string name="search">Search For Product</string>
+
+    <string name="facebook_app_id">1990709114396351</string>
+    <string name="leave_review">Leave Review</string>
+    <string name="loginhome">(Login/</string>
+    <string name="registerhome">Register)</string>
+    <string name="comment">Comment</string>
+    <string name="confirm">ConFirm</string>
+    <string name="exit_message">Do You Want To Exit ?</string>
+    <string name="my_acc">My Account</string>
+    <string name="promo">Promo Code</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="reach_out">Reach Out To Us</string>
+    <string name="setting">Setting</string>
+    <string name="share">Share</string>
+    <string name="share_promo">Share PromoCode</string>
+    <string name="your_promo">Your Promo code is :</string>
+    <string name="delivry_type">Delivery Type</string>
+    <string name="fast_order">Fast Price</string>
+    <string name="slow_order">Slow Price</string>
+    <string name="taxes">Taxes</string>
+    <string name="delivry_price">Delivery Price</string>
+    <string name="off">OFF</string>
+    <string name="in_stock">In Stock</string>
+    <string name="wight">Wight</string>
+    <dimen name="spacing_large">15dp</dimen>
+    <string name="noreviws">No Reviwes</string>
+    <string name="forget_label">Forgot your password?</string>
+    <string name="login_label">Sign in</string>
+    <string name="register_label">Sign Up</string>
+    <string name="register_msg_label">I don\'t have an account?</string>
+    <string name="no_products">No Products:</string>
+    <string name="state">State</string>
+    <string name="d_date">Delivery Time</string>
+    <string name="empty_gift">Sorry, You Get Empty Gift</string>
+    <string name="congratulation">Congratulations</string>
+    <string name="chose_gift">Choose Your Gift</string>
+    <string name="descount">PromoCode Discount</string>
+    <string name="status">Order Status</string>
+    <string name="gift_promo">You have Gift </string>
+    <string name="pending">Pending</string>
+    <string name="shipping">In Shippping</string>
+    <string name="ondelivry">On Delivery</string>
+    <string name="completed">Completed</string>
+    <string name="requests">Requests</string>
+    <string name="out_stock">Out Of Stock</string>
+    <string name="please_enterstate">Please Enter State</string>
+    <string name="total_price">Total Price</string>
+    <string name="policy">Terms &amp; Conditions</string>
+    <string name="checked">Please Make Sure That You Check Privacy</string>
+    <string name="sub_cat">Sub Categories</string>
+    <string name="similar_product">Similar Product</string>
+    <string name="paid">Payment when Recieving Order</string>
+    <string name="checkoutorder">ConFirm</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="addReview">Add Review</string>
+    <string name="success_addreview">Review added Success</string>
+    <string name="onarrival">On Arrival</string>
+    <string name="canceled">Canceled</string>
+    <string name="save">Save</string>
+    <string name="your_addres">Your Address</string>
+    <string name="wallet">My Wallet</string>
+    <string name="no_points">Number Of Points</string>
+    <string name="points">Points</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="t_cost">Total Cost</string>
+    <string name="note">Write your nots about address or products</string>
+    <string name="number_products">In order to serve you better \n Please enter any product or address information</string>
+    <string name="reciet">Receipt from Jazar</string>
+    <string name="follow">Follow Your Order From your Account</string>
+    <string name="discountt">Discount</string>
+    <string-array name="types">
+        <item>Schedule</item>
+        <item>Immediately</item>
+    </string-array>
+
 </resources>

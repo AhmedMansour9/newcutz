@@ -1,8 +1,37 @@
 <resources>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+<!--        <item name="android:textColorHint">@android:color/white</item>-->
+
+
+<!--        <item name="colorControlNormal">@android:color/white</item>-->
+<!--        <item name="colorControlActivated">@android:color/white</item>-->
+
+    </style>
+
+    <style name="AppThemeRatingBar" parent="AppTheme.NoActionBar">
+        <item name="colorControlNormal">@color/yellow</item>
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="android:colorControlNormal">#B1B1B1</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="myTextInputLabel" parent="TextAppearance.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorHint">@android:color/tertiary_text_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@android:color/tertiary_text_dark</item>
+        <item name="colorControlActivated">@android:color/holo_orange_light</item>
     </style>
 </resources>

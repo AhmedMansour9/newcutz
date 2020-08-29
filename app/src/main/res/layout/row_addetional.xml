@@ -1,56 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/_5sdp"
-    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_3sdp"
     app:cardElevation="1dp"
+    android:background="@drawable/bc_white"
     android:layout_marginStart="@dimen/_10sdp"
     android:layout_marginEnd="@dimen/_10sdp"
-    android:layout_marginBottom="@dimen/_10sdp"
-    android:layout_height="wrap_content">
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:layout_height="@dimen/_70sdp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/image"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_profile"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="wrap_content"
             android:textColor="#0b2031"
             android:id="@+id/T_Titlee"
+            android:layout_toEndOf="@+id/image"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             />
-
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#898B8D"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_below="@+id/T_Titlee"
-            android:id="@+id/T_Desc"
-            android:text="@string/nutr"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-
+            android:textColor="#606060"
+            android:id="@+id/T_Date"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             />
-
-
 
         <RatingBar
             android:id="@+id/RatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/T_Desc"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/T_Titlee"
             style="?android:attr/ratingBarStyleSmall"
-            android:layout_marginBottom="@dimen/_10sdp"
             android:numStars="5"
-            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_toEndOf="@+id/image"
             android:progressTint="#fad477"
             android:stepSize="0.5" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#898B8D"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_below="@+id/RatingBar"
+            android:id="@+id/T_Desc"
+            android:text="@string/nutr"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/image"
+
+            />
+
+
+
+
     </RelativeLayout>
-</androidx.cardview.widget.CardView>
+</RelativeLayout>

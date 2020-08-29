@@ -1,268 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7f1f5">
-    <RelativeLayout
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ConfirmOrder">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/container_details_my_orders">
-        <!-- TODO: Update blank fragment layout -->
+        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fff">
-<!--            <TextView-->
-<!--                android:id="@id/T_title_bar"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/myorders"-->
-<!--                android:layout_centerHorizontal="true"-->
-<!--                android:textColor="#7d7c7e"-->
-<!--                android:textSize="@dimen/_14sdp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_alignParentTop="true"-->
-<!--                android:layout_marginTop="@dimen/_12sdp"/>-->
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:id="@+id/toolbar"
-                android:background="#E9EBEE">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_25sdp"
-                        android:src="@drawable/logo"
-                        android:layout_centerInParent="true"
-                        android:id="@+id/logo_login"
-                        />
+            android:layout_height="wrap_content">
 
 
-                </RelativeLayout>
-            </androidx.appcompat.widget.Toolbar>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOrders"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_below="@+id/toolbar"
-                android:layout_marginTop="@dimen/_24sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:background="@drawable/bc_orderdetails"
-                android:id="@+id/relative_deliver"
-                >
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#fff"
-                    >
-                    <TextView
-                        android:id="@+id/date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginTop="@dimen/_9sdp"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:layout_marginStart="@dimen/_6sdp"
-                        android:textColor="#a11c46"
-                        android:text="@string/order_code"
-                        android:textSize="@dimen/_12sdp"
-                        />
-                    <TextView
-                        android:id="@+id/T_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginTop="@dimen/_9sdp"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:layout_marginStart="@dimen/_2sdp"
-                        android:textColor="#000"
-                        android:layout_toEndOf="@+id/date"
-                        android:textSize="@dimen/_12sdp"
-                        />
-                    <TextView
-                        android:id="@+id/orderid"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_toStartOf="@+id/T_order_id"
-                        android:text="@string/orderid"
-                        android:layout_marginTop="@dimen/_9sdp"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:textColor="#a11c46"
-                        android:textSize="@dimen/_12sdp"
-                        android:maxLines="1"/>
-                    <TextView
-                        android:id="@+id/T_order_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="@dimen/_9sdp"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:textColor="#000"
-                        android:textSize="@dimen/_12sdp"
-                        android:maxLines="1"/>
-                    <TextView
-                        android:id="@+id/price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/price"
-                        android:layout_below="@+id/T_date"
-                        android:layout_marginTop="@dimen/_12sdp"
-                        android:layout_marginStart="@dimen/_6sdp"
-                        android:textColor="#a11c46"
-                        android:textSize="@dimen/_12sdp"
-                        android:maxLines="1"
-                        />
-                    <TextView
-                        android:id="@+id/T_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/price"
-                        android:layout_below="@+id/T_date"
-                        android:layout_marginTop="@dimen/_12sdp"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:textColor="#000"
-                        android:textSize="@dimen/_12sdp"
-                        android:maxLines="1"
-                        />
-
-
-                    <TextView
-                        android:id="@+id/T_order_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginBottom="@dimen/_7sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:layout_marginStart="@dimen/_6sdp"
-                        android:textColor="#fff"
-                        android:background="@drawable/bc_orderstatus"
-                        android:paddingStart="@dimen/_10sdp"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        android:layout_below="@+id/T_order_id"
-                        />
-                    <!--<TextView
-                        android:id="@+id/T_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="status"
-                        android:textStyle="bold"
-                        android:layout_marginTop="@dimen/_3sdp"
-                        android:layout_marginEnd="@dimen/_2sdp"
-                        android:layout_marginStart="@dimen/_1sdp"
-                        android:textColor="#838383"
-                        android:textSize="@dimen/_12sdp"
-                        android:layout_toEndOf="@+id/T_order_status"
-                        android:layout_below="@+id/T_user_name"
-                        />-->
-
-
-                </RelativeLayout>
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_260sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_below="@id/relative_deliver"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@drawable/bc_orderdetails"
-                android:id="@+id/relative_products"
-                >
-                <TextView
-                    android:id="@+id/items"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#a11c46"
-                    android:text="@string/Items"
-                    android:textStyle="bold"
-                    />
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_details_list_my_orders"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_210sdp"
-                    android:layout_marginLeft="@dimen/_6sdp"
-                    android:layout_marginRight="@dimen/_6sdp"
-                    android:layout_below="@+id/items"
-                    />
-                <!--<TextView
-                    android:id="@+id/product1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#747474"
-                    android:text="items"
-                    android:textStyle="bold"
-                    />
-                <TextView
-                    android:id="@+id/T_product1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#939292"
-                    android:text="2 items"
-
-                    android:layout_below="@id/product1"
-                    />
-                <TextView
-                    android:id="@+id/T_rate_product1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#cb7ea4"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:text="@string/Rate_product"
-                    android:layout_below="@id/T_product1"
-                    />-->
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_below="@id/relative_products"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@drawable/bc_orderdetails"
-                android:id="@+id/relative_total_amount"
-                >
-                <TextView
-                    android:id="@+id/T_sub_total"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:textSize="@dimen/_12sdp"
-                    android:textColor="#747474"
-                    android:textStyle="bold"
-                    />
-
-            </RelativeLayout>
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/app_name"
+                android:textColor="#fff"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                />
         </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarOrders"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/Card_Promo"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_1sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/orderid"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                android:maxLines="1"/>
+            <TextView
+                android:id="@+id/T_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderid"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000"
+                android:text="@string/date"
+                android:textSize="@dimen/_12sdp"
+                />
+            <TextView
+                android:id="@+id/T_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderid"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:layout_below="@+id/date"
+                android:id="@+id/FullName"
+                android:layout_height="wrap_content"
+                android:text="@string/fullname"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_below="@+id/date"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:textColor="#000000"
+                android:id="@+id/T_FullName"
+                android:layout_height="wrap_content"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000"
+                android:id="@+id/Phone"
+                android:layout_below="@+id/FullName"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:textColor="#000000"
+                android:id="@+id/T_Phone"
+                android:layout_below="@+id/FullName"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:id="@+id/City"
+                android:textColor="#000000"
+                android:layout_below="@+id/Phone"
+                android:layout_height="wrap_content"
+                android:text="@string/city"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:textColor="#000000"
+                android:id="@+id/T_City"
+                android:layout_below="@+id/Phone"
+                android:layout_height="wrap_content"
+                />
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:layout_marginStart="@dimen/_10sdp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:textColor="#000"-->
+            <!--                android:id="@+id/Delivry"-->
+            <!--                android:layout_below="@+id/T_City"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/delivry_type"/>-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:layout_marginStart="@dimen/_10sdp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:layout_toEndOf="@+id/T_DelivryPrice"-->
+            <!--                android:textColor="#8E8E8E"-->
+            <!--                android:id="@+id/T_Delivry"-->
+            <!--                android:layout_below="@+id/T_City"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000"
+                android:id="@+id/T_DelivryPrice"
+                android:layout_below="@+id/City"
+                android:layout_height="wrap_content"
+                android:text="@string/delivry_price"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:id="@+id/DelivryPrice"
+                android:layout_below="@+id/City"
+                android:layout_height="wrap_content"
+                android:text="@string/delivry_price"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:id="@+id/Street"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_below="@+id/T_DelivryPrice"
+                android:layout_height="wrap_content"
+                android:text="@string/total"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:id="@+id/T_Total"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_below="@+id/T_DelivryPrice"
+                android:layout_height="wrap_content"
+                android:text="@string/total"/>
+            <TextView
+                android:id="@+id/T_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#000"
+                android:layout_below="@+id/T_Total"
+                />
+
+            <TextView
+                android:id="@+id/T_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="#fff"
+                android:background="@drawable/bc_orderstatus"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/T_DelivryPrice"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/T_Total"
+                />
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:id="@+id/Image_Status"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/T_status"
+                android:layout_marginTop="@dimen/_20sdp"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_below="@+id/Image_Status"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/ic_map"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_details_list_my_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Card_Promo"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scrollbars="horizontal" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
 

@@ -41,8 +41,7 @@
         android:id="@+id/toolbarorders"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#E9EBEE"
-        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"        android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -57,16 +56,20 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/T_TitleOrders"-->
 <!--        tools:layout_editor_absoluteX="16dp" />-->
 
-    <ImageView
-        android:id="@+id/img_filter"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_25sdp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarorders"
-        app:layout_constraintEnd_toEndOf="@+id/toolbarorders"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/toolbarorders"
-        app:layout_constraintTop_toTopOf="@+id/toolbarorders"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarorders" />
 
     <View
         android:id="@+id/view2"

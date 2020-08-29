@@ -4,13 +4,13 @@
     android:background="@drawable/bc_rowproduct"
     android:id="@+id/Rela_Product"
     android:layout_marginTop="@dimen/_10sdp"
-    android:layout_height="@dimen/_115sdp">
+    android:layout_height="@dimen/_120sdp">
 
 
     <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_10sdp"
     android:textColor="#000"
     android:textSize="@dimen/_12sdp"
     android:text="Ahmed Mansour"
@@ -25,17 +25,15 @@
         android:layout_width="@dimen/_15sdp"
         android:layout_height="@dimen/_15sdp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
+        android:tint="@color/colorPrimary"
         android:src="@drawable/delete"
         android:id="@+id/img_delete"
         />
     <ImageView
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_120sdp"
-        android:scaleType="fitXY"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
         android:layout_centerVertical="true"
         android:layout_marginStart="@dimen/_5sdp"
         android:id="@+id/img_cart"
@@ -58,6 +56,29 @@
         android:textColor="#706E7B"
         android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_toEndOf="@+id/img_cart"
+        android:id="@+id/ic_price"
+        android:textColor="#000"
+        android:text="@string/total_price"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_below="@+id/T_SmallDescrip"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:textColor="#706E7B"
+        android:maxLines="1"
+        android:layout_below="@+id/T_SmallDescrip"
+        android:id="@+id/T_TotalPrice"
+        android:layout_toEndOf="@+id/ic_price"
+        />
+
     <ImageView
         android:layout_width="@dimen/_10sdp"
         android:src="@drawable/ic_price"
@@ -65,7 +86,7 @@
         android:layout_toEndOf="@+id/img_cart"
         android:id="@+id/dele"
         android:layout_marginStart="@dimen/_5sdp"
-        android:layout_below="@+id/T_SmallDescrip"
+        android:layout_below="@+id/ic_price"
         android:layout_height="@dimen/_10sdp"/>
 
     <TextView
@@ -75,44 +96,40 @@
         android:layout_marginStart="@dimen/_2sdp"
         android:textColor="#706E7B"
         android:maxLines="1"
-        android:layout_below="@+id/T_SmallDescrip"
+        android:layout_below="@+id/ic_price"
         android:id="@+id/T_Price"
         android:layout_toEndOf="@+id/dele"
         />
 
-    <TextView
+    <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/T_SmallDescrip"
-        android:text="+"
-        android:textColor="#222222"
+        android:layout_below="@+id/ic_price"
+        android:src="@drawable/plus"
         android:layout_marginTop="@dimen/_7sdp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:gravity="center"
-        android:background="@drawable/bc_plus"
         android:id="@+id/T_Plus"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/T_SmallDescrip"
+        android:layout_below="@+id/ic_price"
         android:id="@+id/T_Counter"
         android:textColor="#262626"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_toStartOf="@+id/T_Plus"
         android:layout_marginEnd="@dimen/_10sdp"
         />
-    <TextView
+    <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/T_SmallDescrip"
-        android:text="--"
+        android:layout_below="@+id/ic_price"
         android:textColor="#222222"
         android:gravity="center"
         android:layout_marginTop="@dimen/_7sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/bc_plus"
+        android:src="@drawable/minus"
         android:layout_toStartOf="@+id/T_Counter"
         android:id="@+id/T_Minus"
         />
