@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@android:color/transparent"
+    tools:context=".Activities.Congratulation">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="0dp"
+        app:elevation="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:padding="@dimen/_15sdp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_MAxPrice"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/max_price"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_MaxPrice"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view1"
+                android:layout_below="@+id/T_MAxPrice"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view1"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_MinPrice"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/min_price"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view1"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_MinPrice"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view2"
+                android:layout_below="@+id/T_MinPrice"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_InCart"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/in_cart"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/view2"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_InCart"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view3"
+                android:visibility="gone"
+                android:layout_below="@+id/T_InCart"
+                android:layout_height="@dimen/_1sdp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/view3"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_InFavourit"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/in_fav"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/view3"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_InFavourit"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view4"
+                android:visibility="gone"
+                android:layout_below="@+id/T_InFavourit"
+                android:layout_height="@dimen/_1sdp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_Limited"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/limited"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view2"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_Limited"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view5"
+                android:layout_below="@+id/T_Limited"
+                android:layout_height="@dimen/_1sdp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view5"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_New"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/is_new"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view5"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_New"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view6"
+                android:layout_below="@+id/T_New"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/view6"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/T_Best"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/best"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/view6"
+                android:buttonTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/Check_Best"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f0f0f0"
+                android:id="@+id/view7"
+                android:visibility="gone"
+                android:layout_below="@+id/T_Best"
+                android:layout_height="@dimen/_1sdp"/>
+
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:text="@string/filtert"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_15sdp"
+                android:background="@drawable/bc_buttons"
+                app:cornerRadius="5dp"
+                android:layout_below="@+id/view6" />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</RelativeLayout>

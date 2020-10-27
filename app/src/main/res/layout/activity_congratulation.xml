@@ -39,6 +39,7 @@
                 android:id="@+id/T_Message"
                 android:layout_centerHorizontal="true"
                 android:textSize="@dimen/_13sdp"
+                android:gravity="center"
                 android:layout_marginTop="@dimen/_80sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

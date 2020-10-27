@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.gazr.Fragments.HomeFragment"
+        android:name="com.cairocart.Fragments.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -44,7 +44,7 @@
 <!--        tools:layout="@layout/fragment_menu" />-->
     <fragment
         android:id="@+id/T_Offers"
-        android:name="com.gazr.Fragments.Offers"
+        android:name="com.cairocart.Fragments.Offers"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_offers" >
         <action
@@ -54,15 +54,18 @@
 
     <fragment
         android:id="@+id/T_Categories"
-        android:name="com.gazr.Fragments.Menu_Categories"
+        android:name="com.cairocart.Fragments.Menu_Categories"
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_T_Categories_to_allFilterProducts"
             app:destination="@id/allFilterProducts" />
+        <action
+            android:id="@+id/action_T_Categories_to_subCategories"
+            app:destination="@id/subCategories" />
     </fragment>
     <fragment
         android:id="@+id/T_Cart"
-        android:name="com.gazr.Fragments.Cart"
+        android:name="com.cairocart.Fragments.Cart"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_cart" >
         <action
@@ -73,7 +76,7 @@
 
     <fragment
         android:id="@+id/T_Setting"
-        android:name="com.gazr.Fragments.MyAccount"
+        android:name="com.cairocart.Fragments.MyAccount"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_my_account" >
         <action
@@ -113,31 +116,31 @@
     <fragment
         android:id="@+id/myProfile2"
         tools:layout="@layout/fragment_my_profile"
-        android:name="com.gazr.Fragments.MyProfile"
+        android:name="com.cairocart.Fragments.MyProfile"
         android:label="MyProfile" />
     <fragment
         android:id="@+id/sharePromo"
-        android:name="com.gazr.Fragments.SharePromo"
+        android:name="com.cairocart.Fragments.SharePromo"
         android:label="fragment_share_promo"
         tools:layout="@layout/fragment_share_promo" />
     <fragment
         android:id="@+id/about_Us"
-        android:name="com.gazr.Fragments.About_Us"
+        android:name="com.cairocart.Fragments.About_Us"
         android:label="fragment_about__us"
         tools:layout="@layout/fragment_about__us" />
     <fragment
         android:id="@+id/countries"
-        android:name="com.gazr.Fragments.Contact_Us"
+        android:name="com.cairocart.Fragments.Contact_Us"
         android:label="fragment_contact__us"
         tools:layout="@layout/fragment_contact__us" />
     <activity
         android:id="@+id/login"
-        android:name="com.gazr.Activities.Login"
+        android:name="com.cairocart.Activities.Login"
         tools:layout="@layout/activity_login"
         android:label="Login" />
     <fragment
         android:id="@+id/favourit2"
-        android:name="com.gazr.Fragments.Favourit"
+        android:name="com.cairocart.Fragments.Favourit"
         android:label="Favourit"
         tools:layout="@layout/fragment_favourit">
         <action
@@ -149,7 +152,7 @@
     </fragment>
     <fragment
         android:id="@+id/recent_Orders"
-        android:name="com.gazr.Fragments.Recent_Orders"
+        android:name="com.cairocart.Fragments.Recent_Orders"
         tools:layout="@layout/fragment_my_orders"
         android:label="Recent_Orders" >
         <action
@@ -160,16 +163,16 @@
         android:id="@+id/details_OrdersFragment"
         app:popUpTo="@+id/recent_Orders"
         tools:layout="@layout/fragment_details__orders"
-        android:name="com.gazr.Fragments.Details_OrdersFragment"
+        android:name="com.cairocart.Fragments.Details_OrdersFragment"
         android:label="Details_OrdersFragment" />
     <fragment
         android:id="@+id/product_Details"
         tools:layout="@layout/fragment_offers__details"
-        android:name="com.gazr.Fragments.Product_Details"
+        android:name="com.cairocart.Fragments.Product_Details"
         android:label="Product_Details" />
     <fragment
         android:id="@+id/allFilterProducts"
-        android:name="com.gazr.Fragments.AllFilterProducts"
+        android:name="com.cairocart.Fragments.AllFilterProducts"
         android:label="AllFilterProducts" >
         <action
             android:id="@+id/action_allFilterProducts_to_product_Details"
@@ -177,7 +180,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderLocation_Fragmet"
-        android:name="com.gazr.Fragments.OrderLocation_Fragmet"
+        android:name="com.cairocart.Fragments.OrderLocation_Fragmet"
         android:label="fragment_order_location__fragmet"
         app:popUpTo="@+id/confirmOrder"
         tools:layout="@layout/fragment_order_location__fragmet" >
@@ -187,16 +190,16 @@
     </fragment>
     <fragment
         android:id="@+id/confirmOrder"
-        android:name="com.gazr.Fragments.ConfirmOrder"
+        android:name="com.cairocart.Fragments.ConfirmOrder"
         android:label="fragment_confirm_order"
         tools:layout="@layout/fragment_confirm_order" />
     <fragment
         android:id="@+id/detailsArticatle_Fragment"
-        android:name="com.gazr.Fragments.DetailsArticatle_Fragment"
+        android:name="com.cairocart.Fragments.DetailsArticatle_Fragment"
         android:label="DetailsArticatle_Fragment" />
     <fragment
         android:id="@+id/subCategories"
-        android:name="com.gazr.Fragments.SubCategories"
+        android:name="com.cairocart.Fragments.SubCategories"
         android:label="fragment_sub_categories"
         tools:layout="@layout/fragment_sub_categories" >
         <action
@@ -205,16 +208,16 @@
     </fragment>
     <fragment
         android:id="@+id/editAddress"
-        android:name="com.gazr.Fragments.EditAddress"
+        android:name="com.cairocart.Fragments.EditAddress"
         android:label="EditAddress" />
     <fragment
         android:id="@+id/wallet"
-        android:name="com.gazr.Fragments.Wallet"
+        android:name="com.cairocart.Fragments.Wallet"
         android:label="fragment_wallet"
         tools:layout="@layout/fragment_wallet" />
     <fragment
         android:id="@+id/allNotifications"
-        android:name="com.gazr.Fragments.AllNotifications"
+        android:name="com.cairocart.Fragments.AllNotifications"
         android:label="AllNotifications" />
 
 

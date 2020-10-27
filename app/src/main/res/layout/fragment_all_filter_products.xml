@@ -20,6 +20,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <ImageView
+            android:id="@+id/Img_Filter"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginStart="364dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
             <EditText
                 android:id="@+id/E_Search"
@@ -51,14 +62,13 @@
                 app:layout_constraintVertical_bias="0.93" />
 
 
-            <TextView
+            <ImageView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="@string/app_name"
+                android:src="@drawable/logo_gzr"
                 android:textColor="#fff"
                 android:textSize="@dimen/_16sdp"
                 android:textStyle="bold"

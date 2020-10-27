@@ -31,7 +31,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
+            <ImageView
+                android:id="@+id/Img_Filter"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_filter"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
     <TextView

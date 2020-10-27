@@ -56,13 +56,13 @@
     <!--        app:layout_constraintTop_toBottomOf="@+id/T_TitleOrders"-->
     <!--        tools:layout_editor_absoluteX="16dp" />-->
 
-    <TextView
+    <ImageView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/app_name"
+        android:src="@drawable/logo_gzr"
         android:textColor="#fff"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"

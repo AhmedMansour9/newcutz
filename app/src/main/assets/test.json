@@ -1,0 +1,4869 @@
+
+
+{
+  "status": {
+    "code": 200,
+    "message": "Done"
+  },
+  "data": {
+    "id": 3,
+    "parent_id": 1,
+    "name": "CairoCart Store",
+    "image": null,
+    "is_active": true,
+    "position": 2,
+    "level": 1,
+    "product_count": 12624,
+    "children_data": [
+      {
+        "id": 100,
+        "parent_id": 3,
+        "name": "الأجهزة المنزلية",
+        "image": null,
+        "is_active": true,
+        "position": 1,
+        "level": 2,
+        "product_count": 2113,
+        "children_data": [
+          {
+            "id": 109,
+            "parent_id": 100,
+            "name": "الاجهزة المنزلية الكبيرة",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 1398,
+            "children_data": [
+              {
+                "id": 110,
+                "parent_id": 109,
+                "name": "ثلاجات و ديب فريزر",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 463,
+                "children_data": [
+                  {
+                    "id": 613,
+                    "parent_id": 110,
+                    "name": "ديب فريزر",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 39,
+                    "children_data": []
+                  },
+                  {
+                    "id": 685,
+                    "parent_id": 110,
+                    "name": "ميني بار",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 112,
+                "parent_id": 109,
+                "name": "غسالات اطباق",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 104,
+                "children_data": []
+              },
+              {
+                "id": 113,
+                "parent_id": 109,
+                "name": "تكييفات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 210,
+                "children_data": []
+              },
+              {
+                "id": 114,
+                "parent_id": 109,
+                "name": "سخانات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 208,
+                "children_data": []
+              },
+              {
+                "id": 115,
+                "parent_id": 109,
+                "name": "بوتاجازات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 125,
+                "children_data": []
+              },
+              {
+                "id": 693,
+                "parent_id": 109,
+                "name": "غسالات ملابس و مجففات",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 277,
+                "children_data": [
+                  {
+                    "id": 111,
+                    "parent_id": 693,
+                    "name": "غسالات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 271,
+                    "children_data": []
+                  },
+                  {
+                    "id": 694,
+                    "parent_id": 693,
+                    "name": "مجففات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 17,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 501,
+                "parent_id": 109,
+                "name": "مولدات كهرباء",
+                "image": null,
+                "is_active": false,
+                "position": 7,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 141,
+        "parent_id": 3,
+        "name": "البلت إن",
+        "image": null,
+        "is_active": true,
+        "position": 2,
+        "level": 2,
+        "product_count": 1143,
+        "children_data": [
+          {
+            "id": 250,
+            "parent_id": 141,
+            "name": "اطقم كاملة",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 284,
+            "children_data": []
+          },
+          {
+            "id": 145,
+            "parent_id": 141,
+            "name": "شفاطات",
+            "image": "hood100.png",
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 262,
+            "children_data": []
+          },
+          {
+            "id": 143,
+            "parent_id": 141,
+            "name": "مسطحات",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 380,
+            "children_data": []
+          },
+          {
+            "id": 142,
+            "parent_id": 141,
+            "name": "افران",
+            "image": null,
+            "is_active": true,
+            "position": 5,
+            "level": 3,
+            "product_count": 249,
+            "children_data": []
+          },
+          {
+            "id": 144,
+            "parent_id": 141,
+            "name": "ميكرويف",
+            "image": null,
+            "is_active": false,
+            "position": 6,
+            "level": 3,
+            "product_count": 17,
+            "children_data": []
+          },
+          {
+            "id": 428,
+            "parent_id": 141,
+            "name": "شوايات و قلايات",
+            "image": null,
+            "is_active": false,
+            "position": 7,
+            "level": 3,
+            "product_count": 4,
+            "children_data": []
+          },
+          {
+            "id": 660,
+            "parent_id": 141,
+            "name": "اجهزة بيلت ان",
+            "image": null,
+            "is_active": true,
+            "position": 8,
+            "level": 3,
+            "product_count": 36,
+            "children_data": [
+              {
+                "id": 687,
+                "parent_id": 660,
+                "name": "غسالات و ثلاجات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 15,
+                "children_data": []
+              },
+              {
+                "id": 661,
+                "parent_id": 660,
+                "name": "ميكرويف",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              },
+              {
+                "id": 664,
+                "parent_id": 660,
+                "name": "قلايات و شوايات",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "parent_id": 3,
+        "name": "الاجهزة اﻟﺻﻐﻴﺮة",
+        "image": null,
+        "is_active": true,
+        "position": 3,
+        "level": 2,
+        "product_count": 1938,
+        "children_data": [
+          {
+            "id": 688,
+            "parent_id": 116,
+            "name": "اجهزة منزلية صغيرة",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 830,
+            "children_data": [
+              {
+                "id": 117,
+                "parent_id": 688,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 313,
+                "children_data": [
+                  {
+                    "id": 331,
+                    "parent_id": 117,
+                    "name": "ادوات التنظيف",
+                    "image": null,
+                    "is_active": false,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 180,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 118,
+                "parent_id": 688,
+                "name": "مراوح و شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 182,
+                "children_data": []
+              },
+              {
+                "id": 119,
+                "parent_id": 688,
+                "name": "مبردات مياة و فلاتر",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 101,
+                "children_data": []
+              },
+              {
+                "id": 120,
+                "parent_id": 688,
+                "name": "مكواة",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 130,
+                "children_data": []
+              },
+              {
+                "id": 121,
+                "parent_id": 688,
+                "name": "دفايات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 73,
+                "children_data": []
+              },
+              {
+                "id": 341,
+                "parent_id": 688,
+                "name": "موازين",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 34,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 123,
+            "parent_id": 116,
+            "name": "اجهزة المطبخ",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 1089,
+            "children_data": [
+              {
+                "id": 534,
+                "parent_id": 123,
+                "name": "اجهزة الطهي المختلفة",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 348,
+                "children_data": [
+                  {
+                    "id": 238,
+                    "parent_id": 534,
+                    "name": "ميكروويف و افران",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 151,
+                    "children_data": []
+                  },
+                  {
+                    "id": 124,
+                    "parent_id": 534,
+                    "name": "قلايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 43,
+                    "children_data": []
+                  },
+                  {
+                    "id": 132,
+                    "parent_id": 534,
+                    "name": "شوايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 34,
+                    "children_data": []
+                  },
+                  {
+                    "id": 125,
+                    "parent_id": 534,
+                    "name": "توستر و صانع الساندويتشات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 57,
+                    "children_data": []
+                  },
+                  {
+                    "id": 338,
+                    "parent_id": 534,
+                    "name": "حلل الطهي ",
+                    "image": null,
+                    "is_active": true,
+                    "position": 5,
+                    "level": 5,
+                    "product_count": 28,
+                    "children_data": []
+                  },
+                  {
+                    "id": 275,
+                    "parent_id": 534,
+                    "name": "طهي بالبخار",
+                    "image": null,
+                    "is_active": true,
+                    "position": 6,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  },
+                  {
+                    "id": 231,
+                    "parent_id": 534,
+                    "name": "صانع الزبادي",
+                    "image": null,
+                    "is_active": true,
+                    "position": 8,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  },
+                  {
+                    "id": 229,
+                    "parent_id": 534,
+                    "name": "صانع الحلويات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 9,
+                    "level": 5,
+                    "product_count": 20,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 689,
+                "parent_id": 123,
+                "name": "اجهزة تحضير الطعام",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 365,
+                "children_data": [
+                  {
+                    "id": 131,
+                    "parent_id": 689,
+                    "name": "محضر طعام",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 108,
+                    "children_data": [
+                      {
+                        "id": 134,
+                        "parent_id": 131,
+                        "name": "كيتشن ماشين",
+                        "image": null,
+                        "is_active": false,
+                        "position": 1,
+                        "level": 6,
+                        "product_count": 23,
+                        "children_data": []
+                      },
+                      {
+                        "id": 194,
+                        "parent_id": 131,
+                        "name": "ملحقات كيتشين ماشين",
+                        "image": null,
+                        "is_active": false,
+                        "position": 2,
+                        "level": 6,
+                        "product_count": 6,
+                        "children_data": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": 133,
+                    "parent_id": 689,
+                    "name": "عجانات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 135,
+                    "children_data": []
+                  },
+                  {
+                    "id": 129,
+                    "parent_id": 689,
+                    "name": "خلاطات و كبة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 227,
+                    "children_data": []
+                  },
+                  {
+                    "id": 172,
+                    "parent_id": 689,
+                    "name": "مضارب البيض و العجين",
+                    "image": null,
+                    "is_active": true,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 48,
+                    "children_data": []
+                  },
+                  {
+                    "id": 176,
+                    "parent_id": 689,
+                    "name": "مفارم",
+                    "image": null,
+                    "is_active": true,
+                    "position": 5,
+                    "level": 5,
+                    "product_count": 17,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 644,
+                "parent_id": 123,
+                "name": "المشروبات و القهوة",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 350,
+                "children_data": [
+                  {
+                    "id": 128,
+                    "parent_id": 644,
+                    "name": "ماكينات تحضير القهوة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 101,
+                    "children_data": []
+                  },
+                  {
+                    "id": 130,
+                    "parent_id": 644,
+                    "name": "غلايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 155,
+                    "children_data": []
+                  },
+                  {
+                    "id": 170,
+                    "parent_id": 644,
+                    "name": "عصارات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 52,
+                    "children_data": []
+                  },
+                  {
+                    "id": 535,
+                    "parent_id": 644,
+                    "name": "اعداد المشروبات و القهوة",
+                    "image": null,
+                    "is_active": false,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 153,
+                    "children_data": [
+                      {
+                        "id": 127,
+                        "parent_id": 535,
+                        "name": "فلاتر مياه",
+                        "image": null,
+                        "is_active": true,
+                        "position": 1,
+                        "level": 6,
+                        "product_count": 40,
+                        "children_data": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 553,
+        "parent_id": 3,
+        "name": "شاشات و صوتيات",
+        "image": null,
+        "is_active": true,
+        "position": 4,
+        "level": 2,
+        "product_count": 807,
+        "children_data": [
+          {
+            "id": 105,
+            "parent_id": 553,
+            "name": "شاشات",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 349,
+            "children_data": [
+              {
+                "id": 106,
+                "parent_id": 105,
+                "name": "شاشات  ",
+                "image": null,
+                "is_active": false,
+                "position": 15,
+                "level": 4,
+                "product_count": 311,
+                "children_data": []
+              },
+              {
+                "id": 108,
+                "parent_id": 105,
+                "name": "اجهزة استقبال و ريسيفر",
+                "image": null,
+                "is_active": false,
+                "position": 16,
+                "level": 4,
+                "product_count": 19,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 107,
+            "parent_id": 553,
+            "name": "اجهزة الصوت و اﻟﻣﺳﺮح اﻟﻣﻧﺰﻟﻲ",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 28,
+            "children_data": []
+          },
+          {
+            "id": 554,
+            "parent_id": 553,
+            "name": "الكترونيات",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 340,
+            "children_data": [
+              {
+                "id": 555,
+                "parent_id": 554,
+                "name": "طابعات و احبار",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 195,
+                "children_data": [
+                  {
+                    "id": 557,
+                    "parent_id": 555,
+                    "name": "طابعات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 84,
+                    "children_data": []
+                  },
+                  {
+                    "id": 556,
+                    "parent_id": 555,
+                    "name": "حبارات و لوازم الطباعة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 65,
+                    "children_data": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 617,
+            "parent_id": 553,
+            "name": "موبايل و تابلت",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 95,
+            "children_data": [
+              {
+                "id": 618,
+                "parent_id": 617,
+                "name": "موبايلات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 90,
+                "children_data": []
+              },
+              {
+                "id": 619,
+                "parent_id": 617,
+                "name": "تابلت",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              },
+              {
+                "id": 620,
+                "parent_id": 617,
+                "name": "إكسسوارات",
+                "image": null,
+                "is_active": false,
+                "position": 3,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 122,
+        "parent_id": 3,
+        "name": "المطبخ",
+        "image": null,
+        "is_active": false,
+        "position": 5,
+        "level": 2,
+        "product_count": 1173,
+        "children_data": []
+      },
+      {
+        "id": 513,
+        "parent_id": 3,
+        "name": "المنزل و الديكور",
+        "image": null,
+        "is_active": true,
+        "position": 6,
+        "level": 2,
+        "product_count": 2917,
+        "children_data": [
+          {
+            "id": 609,
+            "parent_id": 513,
+            "name": "احواض و خلاطات",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 88,
+            "children_data": [
+              {
+                "id": 610,
+                "parent_id": 609,
+                "name": "احواض المطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 62,
+                "children_data": []
+              },
+              {
+                "id": 624,
+                "parent_id": 609,
+                "name": "حنفيات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 22,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 645,
+            "parent_id": 513,
+            "name": "الأثاث و الديكور",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 930,
+            "children_data": [
+              {
+                "id": 550,
+                "parent_id": 645,
+                "name": "ديكور المنزل",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 525,
+                "children_data": []
+              },
+              {
+                "id": 551,
+                "parent_id": 645,
+                "name": "اثاث منزلي",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 263,
+                "children_data": []
+              },
+              {
+                "id": 681,
+                "parent_id": 645,
+                "name": "وحدات تليفزيون",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 75,
+                "children_data": []
+              },
+              {
+                "id": 682,
+                "parent_id": 645,
+                "name": "ترابيزات ",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 83,
+                "children_data": []
+              },
+              {
+                "id": 683,
+                "parent_id": 645,
+                "name": "جزامات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 90,
+                "children_data": []
+              },
+              {
+                "id": 684,
+                "parent_id": 645,
+                "name": "سراير و دواليب",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 85,
+                "children_data": []
+              },
+              {
+                "id": 594,
+                "parent_id": 645,
+                "name": "كراسي و كنب",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 57,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 565,
+            "parent_id": 513,
+            "name": "مستلزمات الحديقة و الاماكن الخارجية",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 838,
+            "children_data": [
+              {
+                "id": 514,
+                "parent_id": 565,
+                "name": "بين باج",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 533,
+                "children_data": []
+              },
+              {
+                "id": 526,
+                "parent_id": 565,
+                "name": "مستلزمات الحيوانات الأليفة",
+                "image": null,
+                "is_active": false,
+                "position": 2,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 566,
+                "parent_id": 565,
+                "name": "مستلزمات السفر و التخييم",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 197,
+                "children_data": []
+              },
+              {
+                "id": 567,
+                "parent_id": 565,
+                "name": "العناية بالحدائق و قص الحشائش",
+                "image": null,
+                "is_active": false,
+                "position": 4,
+                "level": 4,
+                "product_count": 39,
+                "children_data": []
+              },
+              {
+                "id": 527,
+                "parent_id": 565,
+                "name": " أدوات تخزين و تنظيم",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 52,
+                "children_data": []
+              },
+              {
+                "id": 568,
+                "parent_id": 565,
+                "name": "اثاث الحديقة و الاماكن الخارجية",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 22,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 136,
+            "parent_id": 513,
+            "name": "اواني و ادوات الطبخ",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 1105,
+            "children_data": [
+              {
+                "id": 528,
+                "parent_id": 136,
+                "name": "اواني الطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 548,
+                "children_data": [
+                  {
+                    "id": 279,
+                    "parent_id": 528,
+                    "name": "صواني",
+                    "image": null,
+                    "is_active": false,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": [
+                      {
+                        "id": 308,
+                        "parent_id": 279,
+                        "name": "غير لاصقة",
+                        "image": null,
+                        "is_active": false,
+                        "position": 1,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      },
+                      {
+                        "id": 313,
+                        "parent_id": 279,
+                        "name": "استانلس ستيل",
+                        "image": null,
+                        "is_active": false,
+                        "position": 2,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      },
+                      {
+                        "id": 309,
+                        "parent_id": 279,
+                        "name": "سيراميك",
+                        "image": null,
+                        "is_active": false,
+                        "position": 3,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      },
+                      {
+                        "id": 344,
+                        "parent_id": 279,
+                        "name": "Glass",
+                        "image": null,
+                        "is_active": false,
+                        "position": 4,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      },
+                      {
+                        "id": 348,
+                        "parent_id": 279,
+                        "name": "Vitroceramic",
+                        "image": null,
+                        "is_active": false,
+                        "position": 5,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": 137,
+                    "parent_id": 528,
+                    "name": "حلل و قدور",
+                    "image": null,
+                    "is_active": false,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 335,
+                    "children_data": [
+                      {
+                        "id": 303,
+                        "parent_id": 137,
+                        "name": "غير لاصقة",
+                        "image": null,
+                        "is_active": true,
+                        "position": 1,
+                        "level": 6,
+                        "product_count": 27,
+                        "children_data": []
+                      },
+                      {
+                        "id": 304,
+                        "parent_id": 137,
+                        "name": "استانلس ستيل",
+                        "image": null,
+                        "is_active": true,
+                        "position": 2,
+                        "level": 6,
+                        "product_count": 94,
+                        "children_data": []
+                      },
+                      {
+                        "id": 305,
+                        "parent_id": 137,
+                        "name": "حديد زهر",
+                        "image": null,
+                        "is_active": true,
+                        "position": 3,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      },
+                      {
+                        "id": 306,
+                        "parent_id": 137,
+                        "name": "بايريكس",
+                        "image": null,
+                        "is_active": true,
+                        "position": 4,
+                        "level": 6,
+                        "product_count": 0,
+                        "children_data": []
+                      },
+                      {
+                        "id": 347,
+                        "parent_id": 137,
+                        "name": "سيراميك",
+                        "image": null,
+                        "is_active": true,
+                        "position": 6,
+                        "level": 6,
+                        "product_count": 32,
+                        "children_data": []
+                      },
+                      {
+                        "id": 486,
+                        "parent_id": 137,
+                        "name": "Granite",
+                        "image": null,
+                        "is_active": true,
+                        "position": 7,
+                        "level": 6,
+                        "product_count": 3,
+                        "children_data": []
+                      },
+                      {
+                        "id": 488,
+                        "parent_id": 137,
+                        "name": "Aluminium",
+                        "image": null,
+                        "is_active": true,
+                        "position": 8,
+                        "level": 6,
+                        "product_count": 54,
+                        "children_data": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": 396,
+                    "parent_id": 528,
+                    "name": "اطباق",
+                    "image": null,
+                    "is_active": false,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 1,
+                    "children_data": []
+                  },
+                  {
+                    "id": 292,
+                    "parent_id": 528,
+                    "name": "مالتي كوك",
+                    "image": null,
+                    "is_active": false,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 529,
+                "parent_id": 136,
+                "name": "ادوات الخبز و العجين",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 200,
+                "children_data": [
+                  {
+                    "id": 290,
+                    "parent_id": 529,
+                    "name": "قوالب كيك و حلويات",
+                    "image": null,
+                    "is_active": false,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 289,
+                "parent_id": 136,
+                "name": "معدات الطبخ و تحضير الطعام",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 460,
+                "children_data": [
+                  {
+                    "id": 138,
+                    "parent_id": 289,
+                    "name": "سكاكين وقشارات",
+                    "image": null,
+                    "is_active": false,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 1,
+                    "children_data": []
+                  },
+                  {
+                    "id": 139,
+                    "parent_id": 289,
+                    "name": "أطقم بهارات",
+                    "image": null,
+                    "is_active": false,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 531,
+                "parent_id": 136,
+                "name": "ادوات المائدة و المشروبات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 31,
+                "children_data": [
+                  {
+                    "id": 278,
+                    "parent_id": 531,
+                    "name": "ابريق شاي و تيرموس",
+                    "image": null,
+                    "is_active": false,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  },
+                  {
+                    "id": 140,
+                    "parent_id": 531,
+                    "name": "اكواب",
+                    "image": null,
+                    "is_active": false,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  },
+                  {
+                    "id": 395,
+                    "parent_id": 531,
+                    "name": "اطقم كاملة",
+                    "image": null,
+                    "is_active": false,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 277,
+                "parent_id": 136,
+                "name": "حافظات طعام",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 34,
+                "children_data": []
+              },
+              {
+                "id": 532,
+                "parent_id": 136,
+                "name": "Kitchen Storage",
+                "image": null,
+                "is_active": false,
+                "position": 7,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 559,
+            "parent_id": 513,
+            "name": "مستلزمات غرف النوم",
+            "image": null,
+            "is_active": false,
+            "position": 5,
+            "level": 3,
+            "product_count": 34,
+            "children_data": [
+              {
+                "id": 569,
+                "parent_id": 559,
+                "name": "Mattresses",
+                "image": null,
+                "is_active": false,
+                "position": 1,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 570,
+                "parent_id": 559,
+                "name": "Bedroom Furniture",
+                "image": null,
+                "is_active": false,
+                "position": 2,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 146,
+        "parent_id": 3,
+        "name": "الصحة و الجمال",
+        "image": null,
+        "is_active": false,
+        "position": 7,
+        "level": 2,
+        "product_count": 2459,
+        "children_data": [
+          {
+            "id": 353,
+            "parent_id": 146,
+            "name": "العناية بالرجل",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 111,
+            "children_data": [
+              {
+                "id": 147,
+                "parent_id": 353,
+                "name": "الحلاقة و مستلزماتها",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 111,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 148,
+            "parent_id": 146,
+            "name": "العناية بالمرآة",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 369,
+            "children_data": [
+              {
+                "id": 217,
+                "parent_id": 148,
+                "name": "اجهزة ازالة الشعر",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 149,
+                "children_data": []
+              },
+              {
+                "id": 218,
+                "parent_id": 148,
+                "name": "اجهزة فرد و تصفيف الشعر",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 165,
+                "children_data": []
+              },
+              {
+                "id": 219,
+                "parent_id": 148,
+                "name": "مجففات الشعر",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 52,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 525,
+            "parent_id": 146,
+            "name": "عطور و مستحضرات تجميل",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 368,
+            "children_data": [
+              {
+                "id": 521,
+                "parent_id": 525,
+                "name": "عطور رجالي",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 214,
+                "children_data": []
+              },
+              {
+                "id": 522,
+                "parent_id": 525,
+                "name": "عطور حريمي",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 109,
+                "children_data": []
+              },
+              {
+                "id": 544,
+                "parent_id": 525,
+                "name": "مستحضرات تجميل",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 45,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 571,
+            "parent_id": 146,
+            "name": "ساعات و اكسسوارات",
+            "image": null,
+            "is_active": false,
+            "position": 4,
+            "level": 3,
+            "product_count": 1586,
+            "children_data": [
+              {
+                "id": 572,
+                "parent_id": 571,
+                "name": "للرجال",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 860,
+                "children_data": []
+              },
+              {
+                "id": 573,
+                "parent_id": 571,
+                "name": "للنساء",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 334,
+                "children_data": []
+              },
+              {
+                "id": 575,
+                "parent_id": 571,
+                "name": "اكسسوارات",
+                "image": null,
+                "is_active": false,
+                "position": 3,
+                "level": 4,
+                "product_count": 173,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 597,
+            "parent_id": 146,
+            "name": "مستلزمات الأطفال",
+            "image": null,
+            "is_active": true,
+            "position": 5,
+            "level": 3,
+            "product_count": 26,
+            "children_data": [
+              {
+                "id": 598,
+                "parent_id": 597,
+                "name": "حفاضات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              },
+              {
+                "id": 599,
+                "parent_id": 597,
+                "name": "مستلزمات الاطفال",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 600,
+                "parent_id": 597,
+                "name": "الاستحمام و العناية بالبشرة",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 149,
+        "parent_id": 3,
+        "name": "السفر و الرحلات",
+        "image": null,
+        "is_active": false,
+        "position": 8,
+        "level": 2,
+        "product_count": 39,
+        "children_data": [
+          {
+            "id": 150,
+            "parent_id": 149,
+            "name": "مستلزمات السفر",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 29,
+            "children_data": []
+          },
+          {
+            "id": 151,
+            "parent_id": 149,
+            "name": "Garden",
+            "image": null,
+            "is_active": false,
+            "position": 2,
+            "level": 3,
+            "product_count": 10,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 360,
+        "parent_id": 3,
+        "name": "عدد و ادوات",
+        "image": null,
+        "is_active": true,
+        "position": 9,
+        "level": 2,
+        "product_count": 2060,
+        "children_data": [
+          {
+            "id": 361,
+            "parent_id": 360,
+            "name": "ادوات كهربائية",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 378,
+            "children_data": []
+          },
+          {
+            "id": 362,
+            "parent_id": 360,
+            "name": "معدات يدوية",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 1422,
+            "children_data": []
+          },
+          {
+            "id": 363,
+            "parent_id": 360,
+            "name": "ادوات القياس",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 20,
+            "children_data": []
+          },
+          {
+            "id": 364,
+            "parent_id": 360,
+            "name": "تجهيزات الوقاية و السلامة",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 2,
+            "children_data": []
+          },
+          {
+            "id": 523,
+            "parent_id": 360,
+            "name": "حقائب وأدوات تخزين",
+            "image": null,
+            "is_active": true,
+            "position": 5,
+            "level": 3,
+            "product_count": 52,
+            "children_data": []
+          },
+          {
+            "id": 524,
+            "parent_id": 360,
+            "name": "اكسسوارات المعدات اليدوية و الكهربائية ",
+            "image": null,
+            "is_active": true,
+            "position": 6,
+            "level": 3,
+            "product_count": 143,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 152,
+        "parent_id": 3,
+        "name": "تسوق بالماركة",
+        "image": null,
+        "is_active": false,
+        "position": 10,
+        "level": 2,
+        "product_count": 64,
+        "children_data": [
+          {
+            "id": 153,
+            "parent_id": 152,
+            "name": "ال جي",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 73,
+            "children_data": [
+              {
+                "id": 155,
+                "parent_id": 153,
+                "name": "غسالات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 22,
+                "children_data": []
+              },
+              {
+                "id": 154,
+                "parent_id": 153,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 20,
+                "children_data": []
+              },
+              {
+                "id": 207,
+                "parent_id": 153,
+                "name": "ميكرويف",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 211,
+                "parent_id": 153,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 214,
+                "parent_id": 153,
+                "name": "غسالات اطباق",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 354,
+                "parent_id": 153,
+                "name": "ثلاجات و ديب فريزر",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              },
+              {
+                "id": 359,
+                "parent_id": 153,
+                "name": "اجهزة المسرح المنزلي",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 158,
+            "parent_id": 152,
+            "name": "سامسونج",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 44,
+            "children_data": [
+              {
+                "id": 159,
+                "parent_id": 158,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              },
+              {
+                "id": 208,
+                "parent_id": 158,
+                "name": "ميكرويف",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 210,
+                "parent_id": 158,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              },
+              {
+                "id": 215,
+                "parent_id": 158,
+                "name": "ثلاجات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              },
+              {
+                "id": 216,
+                "parent_id": 158,
+                "name": "غسالات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 156,
+            "parent_id": 152,
+            "name": "توشيبا",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 0,
+            "children_data": [
+              {
+                "id": 157,
+                "parent_id": 156,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 160,
+            "parent_id": 152,
+            "name": "تورنادو",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 15,
+            "children_data": [
+              {
+                "id": 161,
+                "parent_id": 160,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 162,
+            "parent_id": 152,
+            "name": "سوني",
+            "image": null,
+            "is_active": false,
+            "position": 5,
+            "level": 3,
+            "product_count": 0,
+            "children_data": [
+              {
+                "id": 163,
+                "parent_id": 162,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 164,
+            "parent_id": 152,
+            "name": "شارب",
+            "image": null,
+            "is_active": true,
+            "position": 6,
+            "level": 3,
+            "product_count": 17,
+            "children_data": [
+              {
+                "id": 355,
+                "parent_id": 164,
+                "name": "ثلاجات و ديب فريزر",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 209,
+                "parent_id": 164,
+                "name": "ميكرويف",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 165,
+                "parent_id": 164,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 322,
+                "parent_id": 164,
+                "name": "اجهزة تكييف",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 166,
+            "parent_id": 152,
+            "name": " تي سي ال",
+            "image": null,
+            "is_active": false,
+            "position": 7,
+            "level": 3,
+            "product_count": 0,
+            "children_data": [
+              {
+                "id": 167,
+                "parent_id": 166,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 168,
+            "parent_id": 152,
+            "name": "مولينكس",
+            "image": null,
+            "is_active": true,
+            "position": 8,
+            "level": 3,
+            "product_count": 16,
+            "children_data": [
+              {
+                "id": 169,
+                "parent_id": 168,
+                "name": "خلاطات و مفارم",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 174,
+                "parent_id": 168,
+                "name": "محضر طعام",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 173,
+                "parent_id": 168,
+                "name": "مضارب البيض و العجين",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 171,
+                "parent_id": 168,
+                "name": "عصارات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 179,
+                "parent_id": 168,
+                "name": "قلايات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 175,
+                "parent_id": 168,
+                "name": "صانع الساندوتشات و الوافل",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 177,
+                "parent_id": 168,
+                "name": "مفرمة اللحوم",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 178,
+                "parent_id": 168,
+                "name": "صانع القهوة",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 230,
+                "parent_id": 168,
+                "name": "صانع الزبادي",
+                "image": null,
+                "is_active": true,
+                "position": 9,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 180,
+            "parent_id": 152,
+            "name": "تيفال",
+            "image": null,
+            "is_active": true,
+            "position": 9,
+            "level": 3,
+            "product_count": 38,
+            "children_data": [
+              {
+                "id": 485,
+                "parent_id": 180,
+                "name": "ادوات المطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 26,
+                "children_data": []
+              },
+              {
+                "id": 496,
+                "parent_id": 180,
+                "name": "الأجهزه المنزليه",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 11,
+                "children_data": [
+                  {
+                    "id": 181,
+                    "parent_id": 496,
+                    "name": "مكوة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 3,
+                    "children_data": []
+                  },
+                  {
+                    "id": 182,
+                    "parent_id": 496,
+                    "name": "غلايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 1,
+                    "children_data": []
+                  },
+                  {
+                    "id": 183,
+                    "parent_id": 496,
+                    "name": "قلايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 2,
+                    "children_data": []
+                  },
+                  {
+                    "id": 184,
+                    "parent_id": 496,
+                    "name": "مراوح",
+                    "image": null,
+                    "is_active": true,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  },
+                  {
+                    "id": 185,
+                    "parent_id": 496,
+                    "name": "ماكينة القهوة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 5,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  },
+                  {
+                    "id": 186,
+                    "parent_id": 496,
+                    "name": "شوايات و توستر",
+                    "image": null,
+                    "is_active": true,
+                    "position": 6,
+                    "level": 5,
+                    "product_count": 3,
+                    "children_data": []
+                  },
+                  {
+                    "id": 325,
+                    "parent_id": 496,
+                    "name": "طهي بالبخار",
+                    "image": null,
+                    "is_active": true,
+                    "position": 7,
+                    "level": 5,
+                    "product_count": 2,
+                    "children_data": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 187,
+            "parent_id": 152,
+            "name": "كينوود",
+            "image": null,
+            "is_active": true,
+            "position": 10,
+            "level": 3,
+            "product_count": 78,
+            "children_data": [
+              {
+                "id": 196,
+                "parent_id": 187,
+                "name": "محضر طعام",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 200,
+                "parent_id": 187,
+                "name": "كيتشن ماشين",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 195,
+                "parent_id": 187,
+                "name": "ملحقات كيتشن ماشين",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 197,
+                "parent_id": 187,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 191,
+                "parent_id": 187,
+                "name": "خلاطات و مفارم",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 188,
+                "parent_id": 187,
+                "name": "مضارب بيض و عجين",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 192,
+                "parent_id": 187,
+                "name": "غلايات",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 189,
+                "parent_id": 187,
+                "name": "صانع الساندوتشات و الوافل",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 190,
+                "parent_id": 187,
+                "name": "مكوة",
+                "image": null,
+                "is_active": true,
+                "position": 9,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 203,
+                "parent_id": 187,
+                "name": "ميكرويف",
+                "image": null,
+                "is_active": true,
+                "position": 10,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 193,
+                "parent_id": 187,
+                "name": "شوايات",
+                "image": null,
+                "is_active": true,
+                "position": 11,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 198,
+                "parent_id": 187,
+                "name": "مفرمة اللحوم",
+                "image": null,
+                "is_active": true,
+                "position": 12,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 199,
+                "parent_id": 187,
+                "name": "عصارات",
+                "image": null,
+                "is_active": true,
+                "position": 13,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 202,
+                "parent_id": 187,
+                "name": "صانعة الخبز",
+                "image": null,
+                "is_active": true,
+                "position": 14,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 204,
+            "parent_id": 152,
+            "name": "ديلونجى",
+            "image": null,
+            "is_active": true,
+            "position": 11,
+            "level": 3,
+            "product_count": 56,
+            "children_data": [
+              {
+                "id": 224,
+                "parent_id": 204,
+                "name": "دفايات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 225,
+                "parent_id": 204,
+                "name": "ماكينة القهوة",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 226,
+                "parent_id": 204,
+                "name": "قلايات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 227,
+                "parent_id": 204,
+                "name": "توستر",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              },
+              {
+                "id": 228,
+                "parent_id": 204,
+                "name": "اخرى",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 205,
+            "parent_id": 152,
+            "name": "ميانتا",
+            "image": null,
+            "is_active": true,
+            "position": 12,
+            "level": 3,
+            "product_count": 82,
+            "children_data": [
+              {
+                "id": 256,
+                "parent_id": 205,
+                "name": "خلاطات ومفارم",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 257,
+                "parent_id": 205,
+                "name": "ساندوتش ميكر و توستر",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 259,
+                "parent_id": 205,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 268,
+                "parent_id": 205,
+                "name": "غلايات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 269,
+                "parent_id": 205,
+                "name": "مراوح",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 270,
+                "parent_id": 205,
+                "name": "مايكروويف و افران",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 271,
+                "parent_id": 205,
+                "name": "محضر طعام",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 272,
+                "parent_id": 205,
+                "name": "خلاطات وصانع العصائر",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 258,
+                "parent_id": 205,
+                "name": "العناية الشخصية",
+                "image": null,
+                "is_active": true,
+                "position": 9,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 273,
+                "parent_id": 205,
+                "name": "مكوة",
+                "image": null,
+                "is_active": true,
+                "position": 10,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 274,
+                "parent_id": 205,
+                "name": "قلايات و غلايات",
+                "image": null,
+                "is_active": true,
+                "position": 11,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 276,
+                "parent_id": 205,
+                "name": "شاوايات",
+                "image": null,
+                "is_active": true,
+                "position": 12,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 206,
+            "parent_id": 152,
+            "name": "براون",
+            "image": null,
+            "is_active": true,
+            "position": 13,
+            "level": 3,
+            "product_count": 116,
+            "children_data": [
+              {
+                "id": 220,
+                "parent_id": 206,
+                "name": "العناية الشخصية",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 57,
+                "children_data": [
+                  {
+                    "id": 221,
+                    "parent_id": 220,
+                    "name": "العناية بالرجل",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 15,
+                    "children_data": []
+                  },
+                  {
+                    "id": 222,
+                    "parent_id": 220,
+                    "name": "العناية بالمرآة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 42,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 249,
+                "parent_id": 206,
+                "name": "البيت و المطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 50,
+                "children_data": [
+                  {
+                    "id": 246,
+                    "parent_id": 249,
+                    "name": "خلاطات يدوية",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 11,
+                    "children_data": []
+                  },
+                  {
+                    "id": 245,
+                    "parent_id": 249,
+                    "name": "محضر طعام و غلايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  },
+                  {
+                    "id": 247,
+                    "parent_id": 249,
+                    "name": "عصارات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 5,
+                    "children_data": []
+                  },
+                  {
+                    "id": 242,
+                    "parent_id": 249,
+                    "name": "خلاطات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 2,
+                    "children_data": []
+                  },
+                  {
+                    "id": 243,
+                    "parent_id": 249,
+                    "name": "غلايات",
+                    "image": null,
+                    "is_active": true,
+                    "position": 5,
+                    "level": 5,
+                    "product_count": 8,
+                    "children_data": []
+                  },
+                  {
+                    "id": 244,
+                    "parent_id": 249,
+                    "name": "مفرمة لحوم",
+                    "image": null,
+                    "is_active": true,
+                    "position": 6,
+                    "level": 5,
+                    "product_count": 3,
+                    "children_data": []
+                  },
+                  {
+                    "id": 241,
+                    "parent_id": 249,
+                    "name": "توستر ",
+                    "image": null,
+                    "is_active": true,
+                    "position": 7,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  },
+                  {
+                    "id": 239,
+                    "parent_id": 249,
+                    "name": "صانع القهوة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 8,
+                    "level": 5,
+                    "product_count": 0,
+                    "children_data": []
+                  },
+                  {
+                    "id": 248,
+                    "parent_id": 249,
+                    "name": "مكوة",
+                    "image": null,
+                    "is_active": true,
+                    "position": 9,
+                    "level": 5,
+                    "product_count": 14,
+                    "children_data": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 212,
+            "parent_id": 152,
+            "name": "هوڤر",
+            "image": null,
+            "is_active": false,
+            "position": 14,
+            "level": 3,
+            "product_count": 0,
+            "children_data": [
+              {
+                "id": 213,
+                "parent_id": 212,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 223,
+            "parent_id": 152,
+            "name": "بيبيليس",
+            "image": null,
+            "is_active": true,
+            "position": 15,
+            "level": 3,
+            "product_count": 109,
+            "children_data": [
+              {
+                "id": 266,
+                "parent_id": 223,
+                "name": "رجال",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 25,
+                "children_data": []
+              },
+              {
+                "id": 267,
+                "parent_id": 223,
+                "name": "سيدات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 83,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 232,
+            "parent_id": 152,
+            "name": "بلاك اند ديكر",
+            "image": null,
+            "is_active": true,
+            "position": 16,
+            "level": 3,
+            "product_count": 124,
+            "children_data": [
+              {
+                "id": 233,
+                "parent_id": 232,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 18,
+                "children_data": []
+              },
+              {
+                "id": 234,
+                "parent_id": 232,
+                "name": "خلاطات ومفارم",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 17,
+                "children_data": []
+              },
+              {
+                "id": 235,
+                "parent_id": 232,
+                "name": "الطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 236,
+                "parent_id": 232,
+                "name": "مايكروويف و افران",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              },
+              {
+                "id": 237,
+                "parent_id": 232,
+                "name": "توستر و ساندوتش ميكر ",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              },
+              {
+                "id": 332,
+                "parent_id": 232,
+                "name": "ادوات التنظيف",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              },
+              {
+                "id": 333,
+                "parent_id": 232,
+                "name": "مكاوي",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              },
+              {
+                "id": 334,
+                "parent_id": 232,
+                "name": "عصارات",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 335,
+                "parent_id": 232,
+                "name": "مفرمة لحوم",
+                "image": null,
+                "is_active": true,
+                "position": 9,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 336,
+                "parent_id": 232,
+                "name": "مضارب بيض و عجين",
+                "image": null,
+                "is_active": true,
+                "position": 10,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              },
+              {
+                "id": 337,
+                "parent_id": 232,
+                "name": "محضر طعام",
+                "image": null,
+                "is_active": true,
+                "position": 11,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 339,
+                "parent_id": 232,
+                "name": "ماكينة القهوة",
+                "image": null,
+                "is_active": true,
+                "position": 12,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 340,
+                "parent_id": 232,
+                "name": "غلايات",
+                "image": null,
+                "is_active": true,
+                "position": 13,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              },
+              {
+                "id": 342,
+                "parent_id": 232,
+                "name": "موازين",
+                "image": null,
+                "is_active": true,
+                "position": 14,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 381,
+                "parent_id": 232,
+                "name": "Fans",
+                "image": null,
+                "is_active": true,
+                "position": 15,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 382,
+                "parent_id": 232,
+                "name": "Heater",
+                "image": null,
+                "is_active": true,
+                "position": 16,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 251,
+            "parent_id": 152,
+            "name": "أريستون",
+            "image": null,
+            "is_active": true,
+            "position": 17,
+            "level": 3,
+            "product_count": 182,
+            "children_data": [
+              {
+                "id": 255,
+                "parent_id": 251,
+                "name": "اطقم بيلت إن",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 42,
+                "children_data": []
+              },
+              {
+                "id": 252,
+                "parent_id": 251,
+                "name": "بوتجاز سطحي",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 26,
+                "children_data": []
+              },
+              {
+                "id": 253,
+                "parent_id": 251,
+                "name": "افران بيلت إن",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 10,
+                "children_data": []
+              },
+              {
+                "id": 254,
+                "parent_id": 251,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 262,
+                "parent_id": 251,
+                "name": "غسالات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 26,
+                "children_data": []
+              },
+              {
+                "id": 297,
+                "parent_id": 251,
+                "name": "مكانس",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 298,
+                "parent_id": 251,
+                "name": "مايكروويف بيلت ان",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              },
+              {
+                "id": 319,
+                "parent_id": 251,
+                "name": "بوتجاز ",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 320,
+                "parent_id": 251,
+                "name": "غسالات اطباق",
+                "image": null,
+                "is_active": true,
+                "position": 9,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              },
+              {
+                "id": 326,
+                "parent_id": 251,
+                "name": "ديب فريزر",
+                "image": null,
+                "is_active": true,
+                "position": 10,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 429,
+                "parent_id": 251,
+                "name": "سخانات مياة",
+                "image": null,
+                "is_active": true,
+                "position": 11,
+                "level": 4,
+                "product_count": 40,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 260,
+            "parent_id": 152,
+            "name": "وايل",
+            "image": null,
+            "is_active": true,
+            "position": 18,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 261,
+            "parent_id": 152,
+            "name": "فيليبس",
+            "image": null,
+            "is_active": true,
+            "position": 19,
+            "level": 3,
+            "product_count": 63,
+            "children_data": [
+              {
+                "id": 294,
+                "parent_id": 261,
+                "name": "عناية شخصية",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 63,
+                "children_data": [
+                  {
+                    "id": 295,
+                    "parent_id": 294,
+                    "name": "Men",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 27,
+                    "children_data": []
+                  },
+                  {
+                    "id": 296,
+                    "parent_id": 294,
+                    "name": "Women",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 36,
+                    "children_data": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 263,
+            "parent_id": 152,
+            "name": "تيلي مصر",
+            "image": null,
+            "is_active": false,
+            "position": 20,
+            "level": 3,
+            "product_count": 0,
+            "children_data": [
+              {
+                "id": 264,
+                "parent_id": 263,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 299,
+                "parent_id": 263,
+                "name": "اجهزة مطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 301,
+                "parent_id": 263,
+                "name": "اجهزة منزل",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 265,
+            "parent_id": 152,
+            "name": "كاسل",
+            "image": null,
+            "is_active": false,
+            "position": 21,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 280,
+            "parent_id": 152,
+            "name": "بايريكس",
+            "image": null,
+            "is_active": true,
+            "position": 22,
+            "level": 3,
+            "product_count": 108,
+            "children_data": []
+          },
+          {
+            "id": 302,
+            "parent_id": 152,
+            "name": "لا فيتا",
+            "image": null,
+            "is_active": true,
+            "position": 23,
+            "level": 3,
+            "product_count": 67,
+            "children_data": [
+              {
+                "id": 310,
+                "parent_id": 302,
+                "name": "اواني و قلايات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 311,
+                "parent_id": 302,
+                "name": "شوايات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 312,
+                "parent_id": 302,
+                "name": "ادوات مطبخ",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 314,
+            "parent_id": 152,
+            "name": "انديسيت",
+            "image": null,
+            "is_active": true,
+            "position": 24,
+            "level": 3,
+            "product_count": 54,
+            "children_data": [
+              {
+                "id": 315,
+                "parent_id": 314,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              },
+              {
+                "id": 316,
+                "parent_id": 314,
+                "name": "غسالات اطباق",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 7,
+                "children_data": []
+              },
+              {
+                "id": 318,
+                "parent_id": 314,
+                "name": "غسالات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 349,
+                "parent_id": 314,
+                "name": "مسطحات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 350,
+                "parent_id": 314,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 321,
+            "parent_id": 152,
+            "name": "Carrier",
+            "image": null,
+            "is_active": false,
+            "position": 25,
+            "level": 3,
+            "product_count": 11,
+            "children_data": []
+          },
+          {
+            "id": 324,
+            "parent_id": 152,
+            "name": "دايوو",
+            "image": null,
+            "is_active": false,
+            "position": 26,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 327,
+            "parent_id": 152,
+            "name": "استرا",
+            "image": null,
+            "is_active": false,
+            "position": 27,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 328,
+            "parent_id": 152,
+            "name": "دالي ستار",
+            "image": null,
+            "is_active": false,
+            "position": 28,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 329,
+            "parent_id": 152,
+            "name": "هيوماكس",
+            "image": null,
+            "is_active": false,
+            "position": 29,
+            "level": 3,
+            "product_count": 1,
+            "children_data": []
+          },
+          {
+            "id": 351,
+            "parent_id": 152,
+            "name": "اريتي",
+            "image": null,
+            "is_active": false,
+            "position": 30,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 352,
+            "parent_id": 152,
+            "name": "جالانز",
+            "image": null,
+            "is_active": false,
+            "position": 31,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 356,
+            "parent_id": 152,
+            "name": "White Whale",
+            "image": null,
+            "is_active": false,
+            "position": 32,
+            "level": 3,
+            "product_count": 164,
+            "children_data": []
+          },
+          {
+            "id": 357,
+            "parent_id": 152,
+            "name": "La Germania",
+            "image": null,
+            "is_active": false,
+            "position": 33,
+            "level": 3,
+            "product_count": 12,
+            "children_data": [
+              {
+                "id": 358,
+                "parent_id": 357,
+                "name": "Cooker",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 365,
+            "parent_id": 152,
+            "name": "ايكوماتيك",
+            "image": null,
+            "is_active": true,
+            "position": 34,
+            "level": 3,
+            "product_count": 241,
+            "children_data": [
+              {
+                "id": 366,
+                "parent_id": 365,
+                "name": "مسطحات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 88,
+                "children_data": []
+              },
+              {
+                "id": 368,
+                "parent_id": 365,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 39,
+                "children_data": []
+              },
+              {
+                "id": 367,
+                "parent_id": 365,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 41,
+                "children_data": []
+              },
+              {
+                "id": 369,
+                "parent_id": 365,
+                "name": "اطقم كاملة",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 370,
+            "parent_id": 152,
+            "name": "بومباني",
+            "image": null,
+            "is_active": true,
+            "position": 35,
+            "level": 3,
+            "product_count": 46,
+            "children_data": [
+              {
+                "id": 371,
+                "parent_id": 370,
+                "name": "مسطحات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 21,
+                "children_data": []
+              },
+              {
+                "id": 372,
+                "parent_id": 370,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 373,
+                "parent_id": 370,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 16,
+                "children_data": []
+              },
+              {
+                "id": 384,
+                "parent_id": 370,
+                "name": "Full Sets",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 376,
+            "parent_id": 152,
+            "name": "البا",
+            "image": null,
+            "is_active": true,
+            "position": 36,
+            "level": 3,
+            "product_count": 21,
+            "children_data": [
+              {
+                "id": 377,
+                "parent_id": 376,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 16,
+                "children_data": []
+              },
+              {
+                "id": 378,
+                "parent_id": 376,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 14,
+                "children_data": []
+              },
+              {
+                "id": 379,
+                "parent_id": 376,
+                "name": "مسطحات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 17,
+                "children_data": []
+              },
+              {
+                "id": 380,
+                "parent_id": 376,
+                "name": "ميكروويف",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 463,
+                "parent_id": 376,
+                "name": "بوتجازات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 464,
+                "parent_id": 376,
+                "name": "شوايات و قلايات",
+                "image": null,
+                "is_active": false,
+                "position": 6,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 405,
+            "parent_id": 152,
+            "name": "جرونيا",
+            "image": null,
+            "is_active": true,
+            "position": 37,
+            "level": 3,
+            "product_count": 33,
+            "children_data": [
+              {
+                "id": 406,
+                "parent_id": 405,
+                "name": "Hoods",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 15,
+                "children_data": []
+              },
+              {
+                "id": 407,
+                "parent_id": 405,
+                "name": "Hobs",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 27,
+                "children_data": []
+              },
+              {
+                "id": 408,
+                "parent_id": 405,
+                "name": "Ovens",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 18,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 460,
+            "parent_id": 152,
+            "name": "فرانكي",
+            "image": null,
+            "is_active": true,
+            "position": 38,
+            "level": 3,
+            "product_count": 23,
+            "children_data": []
+          },
+          {
+            "id": 394,
+            "parent_id": 152,
+            "name": "لومينارك",
+            "image": null,
+            "is_active": true,
+            "position": 39,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 404,
+            "parent_id": 152,
+            "name": "ترودو",
+            "image": null,
+            "is_active": true,
+            "position": 40,
+            "level": 3,
+            "product_count": 121,
+            "children_data": []
+          },
+          {
+            "id": 409,
+            "parent_id": 152,
+            "name": "ميديا تك",
+            "image": null,
+            "is_active": true,
+            "position": 41,
+            "level": 3,
+            "product_count": 75,
+            "children_data": [
+              {
+                "id": 410,
+                "parent_id": 409,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              },
+              {
+                "id": 411,
+                "parent_id": 409,
+                "name": "ساندوتش ميكر",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 1,
+                "children_data": []
+              },
+              {
+                "id": 412,
+                "parent_id": 409,
+                "name": "خلاطات و مفارم",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 413,
+                "parent_id": 409,
+                "name": "شوايات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 4,
+                "children_data": []
+              },
+              {
+                "id": 414,
+                "parent_id": 409,
+                "name": "قلايات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 2,
+                "children_data": []
+              },
+              {
+                "id": 415,
+                "parent_id": 409,
+                "name": "غلايات",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 416,
+                "parent_id": 409,
+                "name": "توستر",
+                "image": null,
+                "is_active": true,
+                "position": 7,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 417,
+                "parent_id": 409,
+                "name": "مكوة",
+                "image": null,
+                "is_active": true,
+                "position": 8,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 418,
+                "parent_id": 409,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 9,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 419,
+                "parent_id": 409,
+                "name": "كشاف طوارئ قابل للشحن ",
+                "image": null,
+                "is_active": true,
+                "position": 10,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              },
+              {
+                "id": 420,
+                "parent_id": 409,
+                "name": "موزع ومبرد مياه",
+                "image": null,
+                "is_active": true,
+                "position": 11,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 421,
+                "parent_id": 409,
+                "name": "اجهزة تكييف",
+                "image": null,
+                "is_active": true,
+                "position": 12,
+                "level": 4,
+                "product_count": 3,
+                "children_data": []
+              },
+              {
+                "id": 422,
+                "parent_id": 409,
+                "name": "سخانات مياه",
+                "image": null,
+                "is_active": true,
+                "position": 13,
+                "level": 4,
+                "product_count": 10,
+                "children_data": []
+              },
+              {
+                "id": 484,
+                "parent_id": 409,
+                "name": "مراوح",
+                "image": null,
+                "is_active": true,
+                "position": 14,
+                "level": 4,
+                "product_count": 7,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 423,
+            "parent_id": 152,
+            "name": "جليم جاز",
+            "image": null,
+            "is_active": true,
+            "position": 42,
+            "level": 3,
+            "product_count": 41,
+            "children_data": [
+              {
+                "id": 424,
+                "parent_id": 423,
+                "name": "مسطحات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 14,
+                "children_data": []
+              },
+              {
+                "id": 425,
+                "parent_id": 423,
+                "name": "افران",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              },
+              {
+                "id": 426,
+                "parent_id": 423,
+                "name": "شفاطات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              },
+              {
+                "id": 427,
+                "parent_id": 423,
+                "name": "اطقم كاملة",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 5,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 434,
+            "parent_id": 152,
+            "name": "بيزل",
+            "image": null,
+            "is_active": false,
+            "position": 43,
+            "level": 3,
+            "product_count": 5,
+            "children_data": []
+          },
+          {
+            "id": 437,
+            "parent_id": 152,
+            "name": "TVS",
+            "image": null,
+            "is_active": false,
+            "position": 44,
+            "level": 3,
+            "product_count": 24,
+            "children_data": []
+          },
+          {
+            "id": 439,
+            "parent_id": 152,
+            "name": "راسل هوبز",
+            "image": null,
+            "is_active": true,
+            "position": 45,
+            "level": 3,
+            "product_count": 17,
+            "children_data": []
+          },
+          {
+            "id": 440,
+            "parent_id": 152,
+            "name": "ريمنجتون",
+            "image": null,
+            "is_active": true,
+            "position": 46,
+            "level": 3,
+            "product_count": 31,
+            "children_data": [
+              {
+                "id": 441,
+                "parent_id": 440,
+                "name": "Persional Care",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 28,
+                "children_data": [
+                  {
+                    "id": 442,
+                    "parent_id": 441,
+                    "name": "Women",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 19,
+                    "children_data": []
+                  },
+                  {
+                    "id": 443,
+                    "parent_id": 441,
+                    "name": "Men",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 12,
+                    "children_data": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 445,
+            "parent_id": 152,
+            "name": "Brita",
+            "image": null,
+            "is_active": false,
+            "position": 47,
+            "level": 3,
+            "product_count": 2,
+            "children_data": []
+          },
+          {
+            "id": 446,
+            "parent_id": 152,
+            "name": "هارڤي",
+            "image": null,
+            "is_active": true,
+            "position": 48,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 447,
+            "parent_id": 152,
+            "name": "كوناير",
+            "image": null,
+            "is_active": true,
+            "position": 49,
+            "level": 3,
+            "product_count": 11,
+            "children_data": []
+          },
+          {
+            "id": 448,
+            "parent_id": 152,
+            "name": "إمجوي",
+            "image": null,
+            "is_active": true,
+            "position": 50,
+            "level": 3,
+            "product_count": 37,
+            "children_data": []
+          },
+          {
+            "id": 449,
+            "parent_id": 152,
+            "name": "تاوروس",
+            "image": null,
+            "is_active": true,
+            "position": 51,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          },
+          {
+            "id": 450,
+            "parent_id": 152,
+            "name": "ATA",
+            "image": null,
+            "is_active": false,
+            "position": 52,
+            "level": 3,
+            "product_count": 3,
+            "children_data": []
+          },
+          {
+            "id": 468,
+            "parent_id": 152,
+            "name": "دومينكس",
+            "image": null,
+            "is_active": true,
+            "position": 53,
+            "level": 3,
+            "product_count": 16,
+            "children_data": []
+          },
+          {
+            "id": 469,
+            "parent_id": 152,
+            "name": "برستيج",
+            "image": null,
+            "is_active": true,
+            "position": 54,
+            "level": 3,
+            "product_count": 43,
+            "children_data": []
+          },
+          {
+            "id": 487,
+            "parent_id": 152,
+            "name": "زهران",
+            "image": null,
+            "is_active": true,
+            "position": 55,
+            "level": 3,
+            "product_count": 272,
+            "children_data": []
+          },
+          {
+            "id": 495,
+            "parent_id": 152,
+            "name": "يونيون اير",
+            "image": null,
+            "is_active": true,
+            "position": 56,
+            "level": 3,
+            "product_count": 103,
+            "children_data": []
+          },
+          {
+            "id": 500,
+            "parent_id": 152,
+            "name": "باناسونيك",
+            "image": null,
+            "is_active": true,
+            "position": 57,
+            "level": 3,
+            "product_count": 44,
+            "children_data": []
+          },
+          {
+            "id": 499,
+            "parent_id": 152,
+            "name": "هوم",
+            "image": null,
+            "is_active": true,
+            "position": 58,
+            "level": 3,
+            "product_count": 235,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 323,
+        "parent_id": 3,
+        "name": "افضل العروض",
+        "image": null,
+        "is_active": false,
+        "position": 12,
+        "level": 2,
+        "product_count": 14,
+        "children_data": [
+          {
+            "id": 471,
+            "parent_id": 323,
+            "name": "الاجهزة المنزلية",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 76,
+            "children_data": [
+              {
+                "id": 476,
+                "parent_id": 471,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              },
+              {
+                "id": 478,
+                "parent_id": 471,
+                "name": "غسالات",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              },
+              {
+                "id": 479,
+                "parent_id": 471,
+                "name": "ثلاجات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              },
+              {
+                "id": 480,
+                "parent_id": 471,
+                "name": "اجهزة منزلية",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 16,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 472,
+            "parent_id": 323,
+            "name": "أدوات المطبخ",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 40,
+            "children_data": []
+          },
+          {
+            "id": 473,
+            "parent_id": 323,
+            "name": "أجهزة المطبخ",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 31,
+            "children_data": []
+          },
+          {
+            "id": 474,
+            "parent_id": 323,
+            "name": "البلت ان",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 46,
+            "children_data": [
+              {
+                "id": 475,
+                "parent_id": 474,
+                "name": "Ariston",
+                "image": null,
+                "is_active": false,
+                "position": 1,
+                "level": 4,
+                "product_count": 32,
+                "children_data": []
+              },
+              {
+                "id": 477,
+                "parent_id": 474,
+                "name": "franke",
+                "image": null,
+                "is_active": false,
+                "position": 2,
+                "level": 4,
+                "product_count": 14,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 481,
+            "parent_id": 323,
+            "name": "العناية الشخصية",
+            "image": null,
+            "is_active": true,
+            "position": 5,
+            "level": 3,
+            "product_count": 20,
+            "children_data": []
+          },
+          {
+            "id": 483,
+            "parent_id": 323,
+            "name": "كينوود & ديلونجي",
+            "image": null,
+            "is_active": true,
+            "position": 6,
+            "level": 3,
+            "product_count": 139,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 461,
+        "parent_id": 3,
+        "name": "Specials",
+        "image": null,
+        "is_active": false,
+        "position": 15,
+        "level": 2,
+        "product_count": 0,
+        "children_data": [
+          {
+            "id": 462,
+            "parent_id": 461,
+            "name": "البا و جرونيا",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 108,
+            "children_data": [
+              {
+                "id": 465,
+                "parent_id": 462,
+                "name": "Hoods",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 21,
+                "children_data": []
+              },
+              {
+                "id": 466,
+                "parent_id": 462,
+                "name": "Hobs",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 34,
+                "children_data": []
+              },
+              {
+                "id": 467,
+                "parent_id": 462,
+                "name": "Ovens",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 14,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 498,
+        "parent_id": 3,
+        "name": "مولينكس و تيفال",
+        "image": null,
+        "is_active": true,
+        "position": 17,
+        "level": 2,
+        "product_count": 23,
+        "children_data": []
+      },
+      {
+        "id": 505,
+        "parent_id": 3,
+        "name": "اريستون - انديست",
+        "image": null,
+        "is_active": true,
+        "position": 18,
+        "level": 2,
+        "product_count": 268,
+        "children_data": []
+      },
+      {
+        "id": 603,
+        "parent_id": 3,
+        "name": "سامسونج",
+        "image": null,
+        "is_active": true,
+        "position": 19,
+        "level": 2,
+        "product_count": 129,
+        "children_data": []
+      },
+      {
+        "id": 506,
+        "parent_id": 3,
+        "name": "احجز شفاطك!",
+        "image": null,
+        "is_active": false,
+        "position": 22,
+        "level": 2,
+        "product_count": 38,
+        "children_data": []
+      },
+      {
+        "id": 507,
+        "parent_id": 3,
+        "name": "مهرجان البيلت إن",
+        "image": null,
+        "is_active": true,
+        "position": 23,
+        "level": 2,
+        "product_count": 99,
+        "children_data": [
+          {
+            "id": 509,
+            "parent_id": 507,
+            "name": "hoods",
+            "image": null,
+            "is_active": false,
+            "position": 1,
+            "level": 3,
+            "product_count": 20,
+            "children_data": []
+          },
+          {
+            "id": 510,
+            "parent_id": 507,
+            "name": "hobs",
+            "image": null,
+            "is_active": false,
+            "position": 2,
+            "level": 3,
+            "product_count": 35,
+            "children_data": []
+          },
+          {
+            "id": 511,
+            "parent_id": 507,
+            "name": "Ovens",
+            "image": null,
+            "is_active": false,
+            "position": 3,
+            "level": 3,
+            "product_count": 20,
+            "children_data": []
+          },
+          {
+            "id": 512,
+            "parent_id": 507,
+            "name": "Sets",
+            "image": null,
+            "is_active": false,
+            "position": 4,
+            "level": 3,
+            "product_count": 24,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 520,
+        "parent_id": 3,
+        "name": "كوبونات سوبر",
+        "image": "coupons-image.png",
+        "is_active": true,
+        "position": 26,
+        "level": 2,
+        "product_count": 30,
+        "children_data": []
+      },
+      {
+        "id": 537,
+        "parent_id": 3,
+        "name": "عروض سوبر",
+        "image": null,
+        "is_active": true,
+        "position": 28,
+        "level": 2,
+        "product_count": 282,
+        "children_data": [
+          {
+            "id": 549,
+            "parent_id": 537,
+            "name": "Personal Care ",
+            "image": null,
+            "is_active": false,
+            "position": 8,
+            "level": 3,
+            "product_count": 22,
+            "children_data": []
+          },
+          {
+            "id": 641,
+            "parent_id": 537,
+            "name": "سوبر عروض",
+            "image": null,
+            "is_active": true,
+            "position": 13,
+            "level": 3,
+            "product_count": 0,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 715,
+        "parent_id": 3,
+        "name": "تخفيضات السنة الجديدة",
+        "image": null,
+        "is_active": true,
+        "position": 29,
+        "level": 2,
+        "product_count": 282,
+        "children_data": [
+          {
+            "id": 714,
+            "parent_id": 715,
+            "name": "اثاث و ديكور ",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 16,
+            "children_data": []
+          },
+          {
+            "id": 713,
+            "parent_id": 715,
+            "name": "عدد و ادوات",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 15,
+            "children_data": []
+          },
+          {
+            "id": 695,
+            "parent_id": 715,
+            "name": "بلت ان",
+            "image": null,
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 70,
+            "children_data": [
+              {
+                "id": 696,
+                "parent_id": 695,
+                "name": "hoods",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              },
+              {
+                "id": 697,
+                "parent_id": 695,
+                "name": "اطقم التوفير",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 17,
+                "children_data": []
+              },
+              {
+                "id": 698,
+                "parent_id": 695,
+                "name": "مسطحات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              },
+              {
+                "id": 699,
+                "parent_id": 695,
+                "name": "افران بلت ان",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 10,
+                "children_data": []
+              },
+              {
+                "id": 706,
+                "parent_id": 695,
+                "name": "Top-10",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 0,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 643,
+            "parent_id": 715,
+            "name": "اجهزة منزلية صغيرة",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 37,
+            "children_data": [
+              {
+                "id": 707,
+                "parent_id": 643,
+                "name": "Microwaves",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 708,
+                "parent_id": 643,
+                "name": "Kitchen Appliances",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 17,
+                "children_data": []
+              },
+              {
+                "id": 710,
+                "parent_id": 643,
+                "name": "Coffee Makers",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 711,
+                "parent_id": 643,
+                "name": "Small Home Appliances",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 642,
+            "parent_id": 715,
+            "name": "تصفيات نهاية السنة",
+            "image": null,
+            "is_active": true,
+            "position": 5,
+            "level": 3,
+            "product_count": 44,
+            "children_data": []
+          },
+          {
+            "id": 546,
+            "parent_id": 715,
+            "name": "الاجهزة المنزلية الكبيرة",
+            "image": null,
+            "is_active": true,
+            "position": 7,
+            "level": 3,
+            "product_count": 66,
+            "children_data": [
+              {
+                "id": 700,
+                "parent_id": 546,
+                "name": "غسالات و مجففات",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              },
+              {
+                "id": 701,
+                "parent_id": 546,
+                "name": "غسالات اطباق",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 9,
+                "children_data": []
+              },
+              {
+                "id": 702,
+                "parent_id": 546,
+                "name": "ثلاجات",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 14,
+                "children_data": []
+              },
+              {
+                "id": 703,
+                "parent_id": 546,
+                "name": "تكييفات",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 12,
+                "children_data": []
+              },
+              {
+                "id": 704,
+                "parent_id": 546,
+                "name": "شاشات",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 13,
+                "children_data": []
+              },
+              {
+                "id": 705,
+                "parent_id": 546,
+                "name": "Top10",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 10,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 608,
+        "parent_id": 3,
+        "name": "دفايات و سخانات",
+        "image": null,
+        "is_active": true,
+        "position": 31,
+        "level": 2,
+        "product_count": 239,
+        "children_data": []
+      },
+      {
+        "id": 612,
+        "parent_id": 3,
+        "name": "اريستون - جرونيا - فرانكي",
+        "image": null,
+        "is_active": true,
+        "position": 32,
+        "level": 2,
+        "product_count": 31,
+        "children_data": []
+      },
+      {
+        "id": 622,
+        "parent_id": 3,
+        "name": "كوبونات الخصم",
+        "image": null,
+        "is_active": true,
+        "position": 33,
+        "level": 2,
+        "product_count": 0,
+        "children_data": []
+      },
+      {
+        "id": 623,
+        "parent_id": 3,
+        "name": "كينوود & ديلونجي",
+        "image": null,
+        "is_active": true,
+        "position": 34,
+        "level": 2,
+        "product_count": 210,
+        "children_data": []
+      },
+      {
+        "id": 680,
+        "parent_id": 3,
+        "name": "عروض التقسيط",
+        "image": "banner.png",
+        "is_active": true,
+        "position": 35,
+        "level": 2,
+        "product_count": 38,
+        "children_data": []
+      }
+    ]
+  }
+}

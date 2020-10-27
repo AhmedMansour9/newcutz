@@ -13,6 +13,26 @@
     <RelativeLayout
         android:layout_width="@dimen/_145sdp"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_limited"
+            android:layout_width="@dimen/_32sdp"
+            android:visibility="gone"
+            android:layout_height="@dimen/_35sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/limit"
+                android:id="@+id/vertical_text_view_name"/>
+
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="@dimen/_30sdp"

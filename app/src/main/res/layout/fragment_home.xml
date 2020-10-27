@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -30,6 +31,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ImageView
+                        android:id="@+id/Img_Notification"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_marginStart="364dp"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/ic_notification"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/T_notification_numdetai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:background="@drawable/bc_txtcart"
+                        android:padding="@dimen/_4sdp"
+                        android:textColor="#ffff"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_6sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        custom:layout_constraintEnd_toEndOf="parent"
+                        />
                     <EditText
                         android:id="@+id/E_Search"
                         android:layout_width="match_parent"
@@ -61,20 +90,18 @@
                         app:layout_constraintVertical_bias="0.93" />
 
 
-                    <TextView
+                    <ImageView
                         android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/app_name"
+                        android:src="@drawable/logo_gzr"
                         android:textColor="#fff"
-                        android:textSize="@dimen/_16sdp"
+                        custom:layout_constraintTop_toTopOf="parent"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -254,4 +281,17 @@
     </ScrollView>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.github.ag.floatingactionmenu.OptionsFabLayout
+        android:id="@+id/fab_l"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:color="@color/colorPrimary"
+        custom:options_color="@color/colorPrimary"
+        custom:fabSize="mini"
+        custom:options_menu="@menu/menu_floating"
+        custom:src="@drawable/ic_exitfloating" />
+
+
+</RelativeLayout>

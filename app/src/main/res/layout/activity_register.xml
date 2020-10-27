@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash">
+    android:background="#fff">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,56 +39,86 @@
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="@string/fullname"
+                android:hint="@string/first_name"
                 app:backgroundTint="#fff"
                 app:boxBackgroundColor="@android:color/white"
                 app:boxStrokeColor="@android:color/white"
                 app:boxStrokeWidth="2dp"
-                app:hintTextColor="@android:color/white"
+                app:theme="@style/MyTextInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/logo"
-                app:startIconDrawable="@drawable/ic_name"
-                app:startIconTint="@android:color/white">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
-                    android:id="@+id/E_FullName"
+                    android:id="@+id/E_FirstName"
+                    android:drawableEnd="@drawable/ic_name"
+                    android:drawableTint="#0BAAFC"
                     android:fontFamily="@font/product_sans_bold"
                     android:inputType="text"
                     android:singleLine="true"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneInputField"
+                android:id="@+id/LastnameInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="@string/phone"
+                android:hint="@string/last_name"
                 app:backgroundTint="#fff"
                 app:boxBackgroundColor="@android:color/white"
-                app:boxStrokeColor="@android:color/white"
                 app:boxStrokeWidth="2dp"
-                app:hintTextColor="@android:color/white"
+                app:theme="@style/MyTextInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/nameInputField"
-                app:startIconDrawable="@drawable/ic_phonr"
-                app:startIconTint="@android:color/white">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
-                    android:id="@+id/E_Phone"
+                    android:id="@+id/E_LastName"
+                    android:drawableEnd="@drawable/ic_name"
+                    android:drawableTint="#0BAAFC"
                     android:fontFamily="@font/product_sans_bold"
-                    android:inputType="phone"
+                    android:inputType="text"
                     android:singleLine="true"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/phoneInputField"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/_20sdp"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:layout_marginEnd="@dimen/_20sdp"-->
+<!--                android:hint="@string/phone"-->
+<!--                app:backgroundTint="#fff"-->
+<!--                app:boxBackgroundColor="@android:color/white"-->
+<!--                app:boxStrokeColor="@android:color/white"-->
+<!--                app:boxStrokeWidth="2dp"-->
+<!--                app:hintTextColor="@android:color/white"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/LastnameInputField">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:imeOptions="actionNext"-->
+<!--                    android:id="@+id/E_Phone"-->
+<!--                    android:drawableEnd="@drawable/ic_phonr"-->
+<!--                    android:drawableTint="#0BAAFC"-->
+<!--                    android:fontFamily="@font/product_sans_bold"-->
+<!--                    android:inputType="phone"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textColor="@android:color/white" />-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailInputField"
@@ -102,20 +132,20 @@
                 app:boxBackgroundColor="@android:color/white"
                 app:boxStrokeColor="@android:color/white"
                 app:boxStrokeWidth="2dp"
-                app:hintTextColor="@android:color/white"
-                app:layout_constraintTop_toBottomOf="@+id/phoneInputField"
-                app:startIconDrawable="@drawable/ic_email"
-                app:startIconTint="@android:color/white">
+                app:layout_constraintTop_toBottomOf="@+id/LastnameInputField">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
                     android:id="@+id/E_Email"
+                    android:drawableEnd="@drawable/ic_email"
+                    android:drawableTint="#0BAAFC"
+
                     android:fontFamily="@font/product_sans_bold"
                     android:inputType="textEmailAddress"
                     android:singleLine="true"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,23 +157,22 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:hint="@string/password"
-                app:boxStrokeColor="@android:color/white"
                 app:boxStrokeWidth="2dp"
-                app:hintTextColor="@android:color/white"
                 app:layout_constraintTop_toBottomOf="@+id/emailInputField"
-                app:startIconDrawable="@drawable/ic_password"
-                app:startIconTint="@android:color/white">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHint="#fff"
                     android:imeOptions="actionNext"
+                    android:drawableEnd="@drawable/ic_password"
+                    android:drawableTint="#0BAAFC"
                     android:inputType="textPassword"
                     android:id="@+id/E_Password"
                     android:fontFamily="@font/product_sans_bold"
                     android:singleLine="true"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,6 +182,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
+                android:visibility="gone"
                 android:textColor="#a2a2a2"
                 android:layout_marginTop="@dimen/_9sdp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -165,6 +195,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_toEndOf="@+id/CheckBox"
+                android:visibility="gone"
                 android:text="@string/policy"
                 android:textColor="#fff"
                 android:textSize="@dimen/_11sdp"
@@ -185,8 +216,8 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_15sdp"
-                app:backgroundTint="#F98210"
-                app:cornerRadius="30dp"
+                app:backgroundTint="#0BAAFC"
+                app:cornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.175"
                 app:layout_constraintLeft_toLeftOf="parent"

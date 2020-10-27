@@ -18,17 +18,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
+
+            <ImageView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_60sdp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="@string/app_name"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_gzr"
                 android:textColor="#fff"
                 android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
@@ -537,7 +537,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="#000"
 
-                        android:text="@string/number_products"
+                        android:text="@string/n_products"
                         android:textSize="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:id="@+id/TotalNumber"
@@ -696,7 +696,7 @@
 
                 <RadioButton
                     android:id="@+id/radiocash"
-                    android:layout_width="@dimen/_160sdp"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/_30sdp"
                     android:buttonTint="@color/orange"
                     android:checked="true"

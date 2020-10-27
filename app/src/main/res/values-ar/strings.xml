@@ -18,7 +18,7 @@
     <string name="menu">القائمة</string>
     <string name="favourit">المفضلة</string>
     <string name="more">المزيد</string>
-    <string name="offers">العروض</string>
+    <string name="offers">ما يغلاش عليك</string>
     <string name="addres">عنوان التسليم</string>
     <string name="edit">تعديل</string>
     <string name="myorders">طلباتي</string>
@@ -103,7 +103,7 @@
     <string name="descrption">التفاصيل</string>
     <string name="quantity">عدد</string>
     <string name="total">اجمالي الفاتورة </string>
-    <string name="nofavproduct">لا يوجد منتجات لديك </string>
+    <string name="nofavproduct">لا يوجد منتجات  </string>
     <string name="nocartproduct">لا يوجد منتجات لديك في العربة</string>
 
     <string name="yes">Yes</string>
@@ -220,6 +220,20 @@
     <string name="reciet">فاتورتك من جزر</string>
     <string name="follow">يمكنك مراجعة حالة الطلب من حسابك</string>
     <string name="discountt">توفير</string>
+
+    <string name="max_price">الاعلي سعر</string>
+    <string name="min_price">الاقل سعر</string>
+    <string name="in_cart">في السلة</string>
+    <string name="in_fav">في المفضلة</string>
+    <string name="limited">كمية محدودة</string>
+    <string name="is_new">المنتجات الجديدة</string>
+    <string name="best">الاكثر مبيعا</string>
+    <string name="filtert">بحث متقدم</string>
+    <string name="canceled">تم الغاءه</string>
+    <string name="limit">كمية محدودة</string>
+    <string name="success_addcomment">تم ارسال الرد بنجاح</string>
+    <string name="n_products">عدد المنتجات</string>
+
 
     <string-array name="types">
         <item>توصيل مجمع يوميا</item>

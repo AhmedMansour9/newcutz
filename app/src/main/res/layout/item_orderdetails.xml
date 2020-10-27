@@ -16,7 +16,7 @@
         app:cardCornerRadius="@dimen/_5sdp"
         app:cardElevation="2dp"
         android:id="@+id/Card_Deal"
-        android:layout_height="@dimen/_85sdp"
+        android:layout_height="@dimen/_100sdp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -114,8 +114,8 @@
                 android:text="@string/addReview"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_below="@+id/T_SmallDescripHome"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_below="@+id/RatingBarHome"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:textStyle="bold"
                 android:textColor="#fff"

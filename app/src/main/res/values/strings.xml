@@ -7,7 +7,7 @@
     <string name="or">Or</string>
     <string name="loginface">LOGIN WITH FCAEBOOK</string>
     <string name="noacc">Don\'t Have Account?</string>
-    <string name="signupnow">SIGN UP</string>
+    <string name="signupnow">CREATE AN ACCOUNT</string>
     <string name="fullname">Full Name</string>
     <string name="phone">Phone</string>
     <string name="city">City</string>
@@ -235,6 +235,22 @@
     <string name="reciet">Receipt from Jazar</string>
     <string name="follow">Follow Your Order From your Account</string>
     <string name="discountt">Discount</string>
+    <string name="max_price">Max Price</string>
+    <string name="min_price">Min Price</string>
+    <string name="in_cart">In Cart</string>
+    <string name="in_fav">In Favourit</string>
+    <string name="limited">Limited Quantity</string>
+    <string name="is_new">New Products</string>
+    <string name="best">Best Products</string>
+    <string name="filtert">Filtert</string>
+    <string name="limit">Limited</string>
+    <string name="success_addcomment">Replay Send Success</string>
+    <string name="n_products">No Products</string>
+    <string name="new_customer">NEW CUSTOMERS</string>
+    <string name="creating">Creating an account has many benefits: checkout faster,\n keep more than one address, track orders and more.</string>
+     <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+
     <string-array name="types">
         <item>Schedule</item>
         <item>Immediately</item>
