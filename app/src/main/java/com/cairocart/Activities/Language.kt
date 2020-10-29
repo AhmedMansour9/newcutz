@@ -5,13 +5,13 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.Window
-import com.cairocart.BaseActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.cairocart.ChangeLanguage
 import com.cairocart.R
 import com.yariksoffice.lingver.Lingver
 import kotlinx.android.synthetic.main.activity_language.*
 
-class Language : BaseActivity() {
+class Language : AppCompatActivity() {
     internal lateinit var share: SharedPreferences.Editor
 
     override fun onCreate(savedInstanceState: Bundle?) {

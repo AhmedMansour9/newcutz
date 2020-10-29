@@ -10,15 +10,15 @@ import android.os.Parcelable
 @Parcelize
 data class Categories_Response(
     @SerializedName("data")
-    var `data`: Data?,
+    var `data`: DataCategory?,
     @SerializedName("status")
     var status: Status?
 ) : Parcelable {
     @SuppressLint("ParcelCreator")
     @Parcelize
-    data class Data(
+    data class DataCategory(
         @SerializedName("children_data")
-        var childrenData: List<ChildrenData?>?,
+        var childrenData: List<ChildrenDataa?>?,
         @SerializedName("id")
         var id: Int?,
         @SerializedName("image")
@@ -38,10 +38,9 @@ data class Categories_Response(
     ) : Parcelable {
         @SuppressLint("ParcelCreator")
         @Parcelize
-        data class
-        ChildrenData(
+        data class ChildrenDataa(
             @SerializedName("children_data")
-            var childrenData: List<ChildrenData?>?,
+            var childrenData: List<ChildrenDataa?>?,
             @SerializedName("id")
             var id: Int?,
             @SerializedName("image")

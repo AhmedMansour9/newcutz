@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.content.Intent
 import android.content.SharedPreferences
 import android.view.Window
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
-import com.cairocart.BaseActivity
 import com.cairocart.R
 import kotlinx.android.synthetic.main.activity_log_out.*
 
 
-class LogOut : BaseActivity() {
+class LogOut : AppCompatActivity() {
     private lateinit var dataSaver: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {

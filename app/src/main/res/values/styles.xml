@@ -11,9 +11,9 @@
     <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" >
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:background">@android:color/white</item>
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="android:background">@android:color/white</item>-->
 
         <!--        <item name="android:textColorHint">@android:color/white</item>-->
 <!--        <item name="colorControlNormal">@android:color/white</item>-->
@@ -25,6 +25,8 @@
         <item name="colorControlActivated">@color/grey</item>
 <!--        <item name="android:background">@color/grey</item>-->
 
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorPrimaryDark">@color/grey</item>
 
 
     </style>
@@ -50,7 +52,7 @@
         <item name="android:windowBackground">@android:color/transparent</item>
 
     </style>
-    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
-        @null
-    </style>
+<!--    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">-->
+<!--        @null-->
+<!--    </style>-->
 </resources>

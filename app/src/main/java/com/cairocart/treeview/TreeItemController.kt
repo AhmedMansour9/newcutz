@@ -1,20 +1,20 @@
 package com.cairocart.treeview
 
 import com.airbnb.epoxy.TypedEpoxyController
-import com.cairocart.domain.Category
+import com.cairocart.Model.CatModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 
 @ExperimentalCoroutinesApi
 class TreeItemController(
-    val onClicked: (node: Node<Category>) -> Unit
-) : TypedEpoxyController< Node<Category>>() {
+    val onClicked: (node: Node<CatModel>) -> Unit
+) : TypedEpoxyController< Node<CatModel>>() {
 
-    override fun buildModels(root: Node<Category>) {
+    override fun buildModels(root: Node<CatModel>) {
         buildTreeItemsModels(root.children)
     }
 
-    private fun buildTreeItemsModels(nodes: List<Node<Category>>) {
+    private fun buildTreeItemsModels(nodes: List<Node<CatModel>>) {
         nodes.forEach { node ->
 
             treeItemView {

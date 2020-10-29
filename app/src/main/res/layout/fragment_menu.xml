@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff"
+    android:background="#ECECEC"
     android:id="@+id/RelaMenu">
 
     <androidx.appcompat.widget.Toolbar
@@ -59,21 +59,21 @@
         />
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_2sdp"
         android:layout_below="@+id/T_Categories"
         android:layout_marginBottom="@dimen/_10sdp"
         android:layout_height="match_parent"
         android:id="@+id/SwipCategories"
         >
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_Categroies"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:visibility="gone"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginTop="?actionBarSize"
-            android:scrollbars="horizontal" />
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recycler_Categroies"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginStart="@dimen/_20sdp"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_marginEnd="@dimen/_20sdp"-->
+<!--            android:layout_marginTop="?actionBarSize"-->
+<!--            android:scrollbars="horizontal" />-->
 
 
         <com.airbnb.epoxy.EpoxyRecyclerView
@@ -81,7 +81,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="8dp"
-            android:visibility="gone"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:paddingBottom="16dp"

@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
@@ -17,9 +18,7 @@ import com.facebook.FacebookException
 import com.facebook.GraphRequest
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
-import com.cairocart.BaseActivity
 import com.cairocart.ChangeLanguage
-import com.cairocart.Model.MessageEvent
 import com.cairocart.Model.Register_Model
 import com.cairocart.R
 import com.cairocart.SharedPrefManager
@@ -28,7 +27,6 @@ import com.cairocart.utils.Loading
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.auth.api.signin.GoogleSignInResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
@@ -37,7 +35,7 @@ import org.greenrobot.eventbus.EventBus
 import java.util.*
 import java.util.regex.Pattern
 
-class Login : BaseActivity() {
+class Login : AppCompatActivity() {
     var DeviceLang:String?= String()
     var DeviceToken:String?= String()
     private lateinit var dataSaver: SharedPreferences
@@ -66,7 +64,6 @@ class Login : BaseActivity() {
         getUserToken()
         openRegister()
         openHome()
-        openForget()
 
     }
 
@@ -91,13 +88,13 @@ class Login : BaseActivity() {
             finish()
         }
     }
-    private fun openForget() {
-        btnForget.setOnClickListener(){
-            val intent = Intent(this, ForgetPassword::class.java)
-            startActivity(intent)
-
-        }
-    }
+//    private fun openForget() {
+//        btnForget.setOnClickListener(){
+//            val intent = Intent(this, ForgetPassword::class.java)
+//            startActivity(intent)
+//
+//        }
+//    }
     fun openHome(){
         btnLogin.setOnClickListener() {
             if (!ValidateEmailLogin() or !ValidatePasswordLogin()) {
@@ -121,7 +118,6 @@ class Login : BaseActivity() {
                     if (loginmodel!=null) {
                         if(loginmodel.status?.code==200){
                             dataSaver.edit().putString("token", loginmodel.data?.token).apply()
-                            EventBus.getDefault().postSticky(MessageEvent("login"))
                             SharedPrefManager.getInstance(this).saveToken(loginmodel.data?.token)
                             val intent = Intent(this, TabsLayout::class.java)
                             startActivity(intent)
@@ -253,7 +249,6 @@ class Login : BaseActivity() {
 
                         val customer_id = loginmodel.data?.token
                         dataSaver.edit().putString("token", customer_id).apply()
-                        EventBus.getDefault().postSticky(MessageEvent("login"))
                         finish()
                     } else {
 
@@ -268,11 +263,11 @@ class Login : BaseActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         callbackManager?.onActivityResult(requestCode, resultCode, data)
         if(requestCode==RequestSignInCode){
-            var googleSignInResult: GoogleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            if (googleSignInResult.isSuccess()) {
-                var googleSignInAccount: GoogleSignInAccount = googleSignInResult.signInAccount!!;
-                FirebaseUserAuth(googleSignInAccount);
-            }
+//            var googleSignInResult: GoogleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+//            if (googleSignInResult.isSuccess()) {
+//                var googleSignInAccount: GoogleSignInAccount = googleSignInResult.signInAccount!!;
+//                FirebaseUserAuth(googleSignInAccount);
+//            }
 
         }
 

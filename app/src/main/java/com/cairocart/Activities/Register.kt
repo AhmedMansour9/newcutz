@@ -8,24 +8,22 @@ import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
-import com.cairocart.BaseActivity
 import com.cairocart.ChangeLanguage
-import com.cairocart.Model.MessageEvent
 import com.cairocart.Model.Register_Model
 import com.cairocart.R
 import com.cairocart.SharedPrefManager
 import com.cairocart.ViewModel.Register_ViewModel
 import com.cairocart.utils.Loading
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
 import org.greenrobot.eventbus.EventBus
 import java.util.regex.Pattern
 
 
-class Register : BaseActivity() {
+class Register : AppCompatActivity() {
     internal lateinit var shared: SharedPreferences
      var DeviceLang:String?= String()
     var DeviceToken:String?= String()
@@ -43,19 +41,9 @@ class Register : BaseActivity() {
         setContentView(R.layout.activity_register)
         getLanguage()
         getUserToken()
-        openPrivacy()
     }
 
-    fun openPrivacy() {
-        Privacy.setOnClickListener(View.OnClickListener {
-            startActivity(
-                Intent(
-                    this,
-                    com.cairocart.Activities.Privacy::class.java
-                )
-            )
-        })
-    }
+
 
     private fun getUserToken(){
       dataSaver = PreferenceManager.getDefaultSharedPreferences(this);
@@ -98,7 +86,6 @@ class Register : BaseActivity() {
                         if (loginmodel!=null) {
                             if(loginmodel.status?.code==200){
                                 dataSaver.edit().putString("token", loginmodel.data?.token).apply()
-                                EventBus.getDefault().postSticky(MessageEvent("login"))
                                 SharedPrefManager.getInstance(this).saveToken(loginmodel.data?.token)
                                 val intent = Intent(this, TabsLayout::class.java)
                                 startActivity(intent)

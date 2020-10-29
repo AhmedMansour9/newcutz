@@ -96,7 +96,6 @@
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/logo_gzr"
                         android:textColor="#fff"
                         custom:layout_constraintTop_toTopOf="parent"
                         android:textStyle="bold"
@@ -129,169 +128,18 @@
                 app:sliderStartAutoCycle="true" />
 
 
-            <TextView
-                android:id="@+id/T_Offers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/flashsale"
-                android:textColor="#39AB52"
-                android:textSize="@dimen/_13sdp"
-                android:layout_below="@+id/sliderView"/>
-
-
-            <TextView
-                android:id="@+id/T_TotalOffers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/T_Offers"
-                android:textColor="#95939d"
-                android:textSize="@dimen/_9sdp"
-                android:layout_below="@+id/sliderView" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_Deals"
-                    android:layout_below="@+id/T_Offers"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_155sdp"
-                    android:scrollbars="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/T_Offers" />
-
-            <TextView
-                android:id="@+id/T_AllCatrgories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_Deals"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:textSize="@dimen/_13sdp"
-                android:text="@string/categories"
-                android:textColor="#39AB52"
-                />
-            <TextView
-                android:id="@+id/T_TotalCatrgories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_Deals"
-                android:layout_marginTop="@dimen/_13sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_toEndOf="@+id/T_AllCatrgories"
-                android:textSize="@dimen/_9sdp"
-                android:textColor="#95939d"
-                />
-
-            <TextView
-                android:id="@+id/T_SeeCategorues"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_Deals"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:text="@string/see_all"
-                android:layout_alignParentEnd="true"
-                android:textSize="@dimen/_9sdp"
-                android:textColor="#000"
-                />
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_Categroies"
-                android:layout_below="@+id/T_AllCatrgories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:scrollbars="horizontal" />
-
-
-
-            <TextView
-                android:id="@+id/T_Feature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_Categroies"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:textSize="@dimen/_13sdp"
-                android:text="@string/bes_selling"
-                android:textColor="#39AB52"
-                />
-            <TextView
-                android:id="@+id/T_TotalBestSalling"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_Categroies"
-                android:layout_marginTop="@dimen/_13sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_toEndOf="@+id/T_Feature"
-                android:textSize="@dimen/_9sdp"
-                android:textColor="#95939d"
-                />
-
-            <TextView
-                android:id="@+id/T_SeeBestSall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_Categroies"
-                android:layout_marginTop="@dimen/_11sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:text="@string/see_all"
-                android:layout_alignParentEnd="true"
-                android:textSize="@dimen/_9sdp"
-                android:textColor="#000"
-                />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_BestSales"
-                android:layout_below="@+id/T_Feature"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:scrollbars="horizontal" />
-
-            <TextView
-                android:id="@+id/T_OurBlog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_BestSales"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginTop="21dp"
-                android:textSize="@dimen/_13sdp"
-                android:text="@string/our_blog"
-                android:textColor="#222222"
-                />
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_Blog"
-                android:layout_below="@+id/T_OurBlog"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_height="@dimen/_170sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:scrollbars="horizontal" />
+<!--    <com.github.ag.floatingactionmenu.OptionsFabLayout-->
+<!--        android:id="@+id/fab_l"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:color="@color/colorPrimary"-->
+<!--        custom:options_color="@color/colorPrimary"-->
+<!--        custom:fabSize="mini"-->
+<!--        custom:options_menu="@menu/menu_floating"-->
+<!--        custom:src="@drawable/ic_exitfloating" />-->
 
         </RelativeLayout>
     </ScrollView>
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-
-    <com.github.ag.floatingactionmenu.OptionsFabLayout
-        android:id="@+id/fab_l"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:color="@color/colorPrimary"
-        custom:options_color="@color/colorPrimary"
-        custom:fabSize="mini"
-        custom:options_menu="@menu/menu_floating"
-        custom:src="@drawable/ic_exitfloating" />
-
 
 </RelativeLayout>

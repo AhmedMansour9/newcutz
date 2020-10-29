@@ -12,7 +12,7 @@ import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
 import com.cairocart.R
 import com.cairocart.databinding.ViewTreeItemBinding
-import com.cairocart.domain.Category
+import com.cairocart.Model.CatModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
@@ -38,37 +38,45 @@ class TreeItemView @JvmOverloads constructor(
         @CallbackProp set
 
     init {
-//        setBackgroundColorRes(R.color.colorPrimaryDark)
+// setBackgroundColorRes(R.color.colorPrimaryDark)
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-//        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
-//        viewScope = scope
+        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+        viewScope = scope
 
-//        binding.expandIv.clicks()
-//            .debounce(250)
-//            .onEach { itemClickedListener?.invoke() }
-//            .launchIn(scope)
-//
-//        clicks()
-//            .debounce(250)
-//            .onEach { itemClickedListener?.invoke() }
-//            .launchIn(scope)
+        binding.expandIv.clicks()
+            .debounce(250)
+            .onEach { itemClickedListener?.invoke() }
+            .launchIn(scope)
+
+        clicks()
+            .debounce(250)
+            .onEach { itemClickedListener?.invoke() }
+            .launchIn(scope)
     }
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
-//        viewScope?.cancel()
+        viewScope?.cancel()
     }
 
 
     @ModelProp
-    fun setItemData(category: Category) {
-        binding.titleTv.text = category.name
+    fun setItemData(CatModel: CatModel) {
+        binding.titleTv.text = CatModel.name
 
-        setMargins(category.level * 16)
+        setMargins(CatModel.level * 16)
+        binding.expandIv.setImageResource(
 
+                if (CatModel.isExpanded) {
+                    R.drawable.ic_baseline_remove_circle_24
+                } else {
+                    R.drawable.ic_baseline_add_circle_24
+                }
+
+        )
 
     }
 

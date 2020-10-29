@@ -248,7 +248,7 @@
     <string name="n_products">No Products</string>
     <string name="new_customer">NEW CUSTOMERS</string>
     <string name="creating">Creating an account has many benefits: checkout faster,\n keep more than one address, track orders and more.</string>
-     <string name="first_name">First Name</string>
+    <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
 
     <string-array name="types">

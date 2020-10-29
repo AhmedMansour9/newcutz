@@ -1,24 +1,24 @@
 package com.cairocart.treeview
 
 import com.cairocart.Model.Categories_Response
-import com.cairocart.domain.Category
+import com.cairocart.Model.CatModel
 
 
-fun Categories_Response.Data.toTree(): Node<Category>? {
-    val root: Node<Category> = Node(Category(-1, null, false, -1, "", -1, -1, false))
+fun Categories_Response.DataCategory.toTree(): Node<CatModel>? {
+    val root: Node<CatModel> = Node(CatModel(-1, null, false, -1, "", -1, -1, false))
     root.children = toCategories(childrenData) ?: mutableListOf()
     return root
 }
 
- fun toCategories(childrenData: List<Categories_Response.Data.ChildrenData?>?): MutableList<Node<Category>>? {
+ fun toCategories(childrenData: List<Categories_Response.DataCategory.ChildrenDataa?>?): MutableList<Node<CatModel>>? {
     return childrenData?.mapNotNullTo(mutableListOf()) { children ->
         val id = children?.id
         val name = children?.name
         if (id == null || name == null)
             null
         else {
-            val node: Node<Category> = Node(
-                Category(
+            val node: Node<CatModel> = Node(
+                CatModel(
                     id = id,
                     image = children.image,
                     name = name,

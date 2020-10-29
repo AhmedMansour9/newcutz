@@ -9,7 +9,6 @@ import com.cairocart.Model.SendRegisterRequest_Model
 import com.cairocart.Model.SendRequestLogin_Model
 import com.cairocart.Retrofit.ApiClient
 import com.cairocart.Retrofit.Service
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
@@ -70,15 +69,7 @@ class Register_ViewModel : ViewModel() {
 
     private fun getDataValues(Email: String,Password:String, FirstName:String,
                               LastName:String) {
-      var map= HashMap<String,String>()
-//        map.put("email",Email)
-//        map.put("password",Password)
-//        map.put("password_confirmation",Password)
-////        map.put("phone",phone)
-//        map.put("full_name",Name)
-//        map.put("requestType","create")
-//        map.put("gender","male")
-        var model=SendRegisterRequest_Model(
+        var model= SendRegisterRequest_Model(
             SendRegisterRequest_Model.Customer(
                 Email,FirstName,LastName
         ),Password)
@@ -119,7 +110,7 @@ class Register_ViewModel : ViewModel() {
         map.put("email",Email)
         map.put("password",Password)
 
-        var model=SendRequestLogin_Model(
+        var model= SendRequestLogin_Model(
             Email,Password)
 
         var service = ApiClient.getClient()?.create(Service::class.java)

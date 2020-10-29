@@ -8,7 +8,7 @@
         android:id="@+id/nav_home"
         app:itemHorizontalTranslationEnabled="false"
         />
-    <item android:icon="@drawable/btm_categories"
+    <item android:icon="@drawable/ic_categories"
         android:title="@string/categories"
         android:id="@+id/T_Categories"
         app:itemHorizontalTranslationEnabled="false"
