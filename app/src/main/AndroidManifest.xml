@@ -34,7 +34,7 @@
             android:name="com.cairocart.Activities.LogOut"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name="com.cairocart.Activities.TabsLayout"
+            android:name="com.cairocart.Activities.BottomNavigation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden">

@@ -31,7 +31,6 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_login.*
-import org.greenrobot.eventbus.EventBus
 import java.util.*
 import java.util.regex.Pattern
 
@@ -119,7 +118,7 @@ class Login : AppCompatActivity() {
                         if(loginmodel.status?.code==200){
                             dataSaver.edit().putString("token", loginmodel.data?.token).apply()
                             SharedPrefManager.getInstance(this).saveToken(loginmodel.data?.token)
-                            val intent = Intent(this, TabsLayout::class.java)
+                            val intent = Intent(this, BottomNavigation::class.java)
                             startActivity(intent)
                             finish()
                         }else {

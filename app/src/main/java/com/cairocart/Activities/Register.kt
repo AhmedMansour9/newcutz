@@ -19,7 +19,6 @@ import com.cairocart.SharedPrefManager
 import com.cairocart.ViewModel.Register_ViewModel
 import com.cairocart.utils.Loading
 import kotlinx.android.synthetic.main.activity_register.*
-import org.greenrobot.eventbus.EventBus
 import java.util.regex.Pattern
 
 
@@ -87,7 +86,7 @@ class Register : AppCompatActivity() {
                             if(loginmodel.status?.code==200){
                                 dataSaver.edit().putString("token", loginmodel.data?.token).apply()
                                 SharedPrefManager.getInstance(this).saveToken(loginmodel.data?.token)
-                                val intent = Intent(this, TabsLayout::class.java)
+                                val intent = Intent(this, BottomNavigation::class.java)
                                 startActivity(intent)
                                 finish()
                             }else {

@@ -24,7 +24,7 @@ class LogOut : AppCompatActivity() {
         }
         Rela_Accept.setOnClickListener(){
             dataSaver.edit().putString("token", null).apply()
-            val intent = Intent(this, TabsLayout::class.java)
+            val intent = Intent(this, BottomNavigation::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)

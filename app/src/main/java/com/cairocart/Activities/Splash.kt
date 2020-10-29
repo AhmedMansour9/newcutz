@@ -6,9 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import androidx.preference.PreferenceManager
-import kotlinx.android.synthetic.main.activity_splash.*
-import android.view.View
-import android.view.animation.AnimationUtils
 import com.cairocart.R
 import com.google.firebase.messaging.FirebaseMessaging
 
@@ -31,7 +28,7 @@ class Splash : AppCompatActivity() {
         Handler().postDelayed({
             val UserToken: String? =DataSaver.getString("token",null);
             if(UserToken!=null) {
-                val intent = Intent(this, TabsLayout::class.java)
+                val intent = Intent(this, BottomNavigation::class.java)
                 startActivity(intent)
                 finish()
             }else {

@@ -28,7 +28,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-class TabsLayout : AppCompatActivity() {
+class BottomNavigation : AppCompatActivity() {
     lateinit var navController: NavController
     var toolbar: Toolbar?=null
     private lateinit var DataSaver: SharedPreferences

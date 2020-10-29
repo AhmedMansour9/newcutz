@@ -33,7 +33,7 @@ class Language : AppCompatActivity() {
             share.putString("Lann", "ar")
             share.commit()
             Lingver.getInstance().setLocale(this, ChangeLanguage.getLanguage(this), "")
-            val intent = Intent(this, TabsLayout::class.java)
+            val intent = Intent(this, BottomNavigation::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
@@ -47,7 +47,7 @@ class Language : AppCompatActivity() {
             share.putString("Lann", "en")
             share.commit()
             Lingver.getInstance().setLocale(this, ChangeLanguage.getLanguage(this), "")
-            val intent = Intent(this, TabsLayout::class.java)
+            val intent = Intent(this, BottomNavigation::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
