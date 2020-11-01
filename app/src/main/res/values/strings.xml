@@ -39,7 +39,8 @@
     <string name="register">Register</string>
     <string name="validemail">Please enter a valid email address</string>
     <string name="feildempty">Fill input with valid data</string>
-    <string name="pasweak">Password too weak</string>
+    <string name="pasweak">The password should contain at least one digit &amp; at least one special char
+     /n at least one upper case &amp;  at least 8 characters</string>
     <string name="selectarea">Select District</string>
     <string name="validcity">Please Select City</string>
     <string name="validarea">Please Select Area</string>
@@ -250,6 +251,22 @@
     <string name="creating">Creating an account has many benefits: checkout faster,\n keep more than one address, track orders and more.</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="create_one">Create one.</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="or_login_with">Or Login With</string>
+    <string name="create_msg_label">Let\'s get started</string>
+    <string name="firstLabel">First Name</string>
+    <string name="lastLabel">Last Name</string>
+    <string name="emailAddressLabel">Email</string>
+    <string name="passwordLabel">Password</string>
+    <string name="continueLabel">Register</string>
+    <string name="tell_us_about_yourself">Tell us about yourself</string>
+    <string name="sign_up">Sign up</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="log_in">log in</string>
+    <string name="cairo">Cairo</string>
+    <string name="cartLabel">Cart</string>
+
 
     <string-array name="types">
         <item>Schedule</item>

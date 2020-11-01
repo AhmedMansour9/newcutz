@@ -233,6 +233,20 @@
     <string name="limit">كمية محدودة</string>
     <string name="success_addcomment">تم ارسال الرد بنجاح</string>
     <string name="n_products">عدد المنتجات</string>
+    <string name="create_one">Create one.</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="or_login_with">Or Login With</string>
+    <string name="create_msg_label">Let\'s Start with creating your account</string>
+    <string name="firstLabel">First Name</string>
+    <string name="emailAddressLabel">Email</string>
+    <string name="passwordLabel">Password</string>
+    <string name="continueLabel">Register</string>
+    <string name="tell_us_about_yourself">Tell us about yourself</string>
+    <string name="sign_up">Sign up</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="log_in">log in</string>
+    <string name="cairo">Cairo</string>
+    <string name="cartLabel">Cart</string>
 
 
     <string-array name="types">

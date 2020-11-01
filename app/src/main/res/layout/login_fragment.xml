@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.cairocart.ui.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:hint="@string/email"
+            emailVaild="@{`Please enter a valid email address`}"
+            app:backgroundTint="@android:color/white"
+            app:hintTextColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:theme="@style/MyTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/E_EmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_bold"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:text="@={loginViewModel.loginRequest.username}"
+                android:textColor="@color/addition1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:hint="@string/password"
+            passwordloginValid="@{`Password too weak`}"
+            app:hintTextColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/emailInputField"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#069EEC"
+            app:theme="@style/MyTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/E_PasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/product_sans_bold"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text="@={loginViewModel.loginRequest.password}"
+                android:textColor="@color/addition1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/btnForget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="@font/product_sans_bold"
+            android:onClick="@{()->loginViewModel.navigator.forgetPasswordClick()}"
+            android:text="@string/forgetpas"
+            android:textColor="@color/lines_color"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInputField" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:onClick="@{()->loginViewModel.navigator.loginClick()}"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16sdp"
+            app:backgroundTint="#069EEC"
+            app:cornerRadius="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnForget" />
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/or_login_with"
+            android:textColor="@color/addition1"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/faceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:onClick="@{()->loginViewModel.navigator.loginFacebookClick()}"
+            android:src="@drawable/icc_facebook"
+            android:tint="#3B5998"
+            app:backgroundTint="#fff"
+            app:elevation="1dp"
+            app:layout_constraintEnd_toStartOf="@+id/googleBtn"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/or" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/googleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:onClick="@{()->loginViewModel.navigator.loginGoogleClick()}"
+            android:src="@drawable/icc_google"
+            app:backgroundTint="@android:color/white"
+            app:elevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/faceBtn"
+            app:layout_constraintTop_toBottomOf="@+id/or" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="@color/addition1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/createAccount"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+        <TextView
+            android:id="@+id/createAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="@font/product_sans_bold"
+            android:onClick="@{()->loginViewModel.navigator.createAccoutClick()}"
+            android:text="@string/create_one"
+            android:textColor="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@+id/title1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/title1"
+            app:layout_constraintTop_toTopOf="@+id/title1"
+
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
