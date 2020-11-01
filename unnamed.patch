@@ -1,0 +1,45 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 76d7acdfd1ef5f972bb71f1ff6fb9790bbd2bad3)
++++ .idea/misc.xml	(date 1604262297004)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision 76d7acdfd1ef5f972bb71f1ff6fb9790bbd2bad3)
++++ .idea/codeStyles/Project.xml	(date 1604262296106)
+@@ -1,22 +1,6 @@
+ <component name="ProjectCodeStyleConfiguration">
+   <code_scheme name="Project" version="173">
+     <JetCodeStyleSettings>
+-      <option name="PACKAGES_TO_USE_STAR_IMPORTS">
+-        <value>
+-          <package name="java.util" alias="false" withSubpackages="false" />
+-          <package name="kotlinx.android.synthetic" alias="false" withSubpackages="true" />
+-          <package name="io.ktor" alias="false" withSubpackages="true" />
+-        </value>
+-      </option>
+-      <option name="PACKAGES_IMPORT_LAYOUT">
+-        <value>
+-          <package name="" alias="false" withSubpackages="true" />
+-          <package name="java" alias="false" withSubpackages="true" />
+-          <package name="javax" alias="false" withSubpackages="true" />
+-          <package name="kotlin" alias="false" withSubpackages="true" />
+-          <package name="" alias="true" withSubpackages="true" />
+-        </value>
+-      </option>
+       <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+     </JetCodeStyleSettings>
+     <codeStyleSettings language="XML">

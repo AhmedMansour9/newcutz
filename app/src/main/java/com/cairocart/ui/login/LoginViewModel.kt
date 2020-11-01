@@ -1,5 +1,6 @@
 package com.cairocart.ui.login
 
+import android.util.Log
 import androidx.datastore.preferences.edit
 import androidx.datastore.preferences.preferencesKey
 import androidx.hilt.lifecycle.ViewModelInject
@@ -18,7 +19,6 @@ class LoginViewModel @ViewModelInject constructor(dataCenterManager: DataCenterM
 
     var loginRequest: LoginRequest = LoginRequest()
 
-
     private val _accountResponse = MutableLiveData<Resource<AccountResponse>>()
     val accountResponse: LiveData<Resource<AccountResponse>>
         get() = _accountResponse
@@ -29,14 +29,19 @@ class LoginViewModel @ViewModelInject constructor(dataCenterManager: DataCenterM
                 _accountResponse.postValue(Resource.loading(null))
                 dataCenterManager.loginAccount(loginRequest)
                     .let {
-                        if (it.isSuccessful) {
+                        Log.d("RegisterFragment", "login: "+it.code())
+
+                        if (it.isSuccessful && it.code() == 200) {
+                            val accountResponse:AccountResponse=it.body()!!
                             dataCenterManager.dataSourcePrefrences()
                                 .edit { preferences ->
                                     preferences[preferencesKey<Boolean>("sign_in")] = true
                                 }
+
                             dataCenterManager.dataSourcePrefrences().edit { preferences ->
-                                preferences[preferencesKey<AccountResponse>("accountResponse")] =
-                                    it.body()!! // Save Account Response
+                                preferences[preferencesKey<String>("access_token")] =
+                                    accountResponse.data?.accountToken?:""
+                                // Save Account Response
                             }
 
 

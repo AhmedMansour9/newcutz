@@ -15,7 +15,7 @@ class Loading {
                .setCancellable(false)
                .setAnimationSpeed(2)
                .setDimAmount(0.5f)
-               .show();
+               .show()
        }
        fun Disable(){
            hud.dismiss()

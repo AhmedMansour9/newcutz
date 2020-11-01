@@ -1,19 +1,15 @@
 package com.cairocart.base
 
-import android.annotation.SuppressLint
 import android.app.Dialog
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.cairocart.R
-import com.cairocart.utils.Loading
 import com.github.ybq.android.spinkit.style.FoldingCube
+import com.kaopiz.kprogresshud.KProgressHUD
 
 abstract class BaseFragment<T : ViewDataBinding>() :
     Fragment() {
@@ -23,6 +19,8 @@ abstract class BaseFragment<T : ViewDataBinding>() :
     lateinit var mViewDataBinding: T
     private var dailog: Dialog? = null
     private var foldingCube: FoldingCube? = null
+    private lateinit var hud: KProgressHUD
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,12 +44,16 @@ abstract class BaseFragment<T : ViewDataBinding>() :
 
 
     fun showLoading() {
-        Loading.Show(requireContext())
-
+        hud = KProgressHUD.create(requireActivity())
+            .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+            .setCancellable(false)
+            .setAnimationSpeed(2)
+            .setDimAmount(0.5f)
+            .show()
     }
 
     fun dismissLoading() {
-        Loading.Disable()
+        hud.dismiss()
     }
 
 }

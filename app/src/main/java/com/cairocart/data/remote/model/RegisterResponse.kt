@@ -5,14 +5,14 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
-@Parcelize
-data class AccountResponse(
-    @SerializedName("data")
-    var `data`: RegisterResponse.Data?,
-    @SerializedName("status")
-    var status: RegisterResponse.Status?
-) : Parcelable {
 
+@Parcelize
+data class RegisterResponse(
+    @SerializedName("data")
+    var `data`: Data?,
+    @SerializedName("status")
+    var status: Status?
+) : Parcelable {
     @SuppressLint("ParcelCreator")
     @Parcelize
     data class Data(
@@ -70,6 +70,4 @@ data class AccountResponse(
         @SerializedName("message")
         var message: String?
     ) : Parcelable
-
-
 }
