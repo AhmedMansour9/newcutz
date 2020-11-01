@@ -1,14 +1,17 @@
 package com.cairocart
 
 import android.app.Application
+import android.util.Log
+import androidx.datastore.DataStore
+import androidx.datastore.preferences.Preferences
 import com.cairocart.ChangeLanguage
 import com.yariksoffice.lingver.Lingver
+import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 
+
+@HiltAndroidApp
 class App :Application(){
-
-//    override fun attachBaseContext(base: Context?) {
-//        super.attachBaseContext(base)
-//    }
 
     @Suppress("UNUSED_VARIABLE")
     override fun onCreate() {
