@@ -1,0 +1,660 @@
+{
+  "status": {
+    "code": 200,
+    "message": "Done"
+  },
+  "data": {
+    "id": 3,
+    "parent_id": 1,
+    "name": "CairoCart Store",
+    "image": null,
+    "is_active": true,
+    "position": 2,
+    "level": 1,
+    "product_count": 12624,
+    "children_data": [
+      {
+        "id": 100,
+        "parent_id": 3,
+        "name": "Appliances",
+        "image": null,
+        "is_active": true,
+        "position": 1,
+        "level": 2,
+        "product_count": 2113,
+        "children_data": [
+          {
+            "id": 109,
+            "parent_id": 100,
+            "name": "Large Appliances",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 1398,
+            "children_data": [
+              {
+                "id": 110,
+                "parent_id": 109,
+                "name": "Refrigerators",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 463,
+                "children_data": [
+                  {
+                    "id": 613,
+                    "parent_id": 110,
+                    "name": "Deep Freezers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 39,
+                    "children_data": []
+                  },
+                  {
+                    "id": 685,
+                    "parent_id": 110,
+                    "name": "Mini Bar",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 112,
+                "parent_id": 109,
+                "name": "Dishwashers",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 104,
+                "children_data": []
+              },
+              {
+                "id": 113,
+                "parent_id": 109,
+                "name": "Air Conditioners",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 210,
+                "children_data": []
+              },
+              {
+                "id": 114,
+                "parent_id": 109,
+                "name": "Water Heaters",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 208,
+                "children_data": []
+              },
+              {
+                "id": 115,
+                "parent_id": 109,
+                "name": "Cookers",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 125,
+                "children_data": []
+              },
+              {
+                "id": 693,
+                "parent_id": 109,
+                "name": "Washing Machines & Dryers",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 277,
+                "children_data": [
+                  {
+                    "id": 111,
+                    "parent_id": 693,
+                    "name": "Washing Machines",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 271,
+                    "children_data": []
+                  },
+                  {
+                    "id": 694,
+                    "parent_id": 693,
+                    "name": "Dryers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 17,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 501,
+                "parent_id": 109,
+                "name": "Generators",
+                "image": null,
+                "is_active": false,
+                "position": 7,
+                "level": 4,
+                "product_count": 6,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 141,
+        "parent_id": 3,
+        "name": "Built In",
+        "image": null,
+        "is_active": true,
+        "position": 2,
+        "level": 2,
+        "product_count": 1143,
+        "children_data": [
+          {
+            "id": 250,
+            "parent_id": 141,
+            "name": "Built in Bundles",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 284,
+            "children_data": []
+          },
+          {
+            "id": 145,
+            "parent_id": 141,
+            "name": "Hoods",
+            "image": "hood100.png",
+            "is_active": true,
+            "position": 3,
+            "level": 3,
+            "product_count": 262,
+            "children_data": []
+          },
+          {
+            "id": 143,
+            "parent_id": 141,
+            "name": "Hobs",
+            "image": null,
+            "is_active": true,
+            "position": 4,
+            "level": 3,
+            "product_count": 380,
+            "children_data": []
+          },
+          {
+            "id": 142,
+            "parent_id": 141,
+            "name": "Ovens",
+            "image": null,
+            "is_active": true,
+            "position": 5,
+            "level": 3,
+            "product_count": 249,
+            "children_data": []
+          },
+          {
+            "id": 144,
+            "parent_id": 141,
+            "name": "Microwaves",
+            "image": null,
+            "is_active": false,
+            "position": 6,
+            "level": 3,
+            "product_count": 17,
+            "children_data": []
+          },
+          {
+            "id": 428,
+            "parent_id": 141,
+            "name": "Grill & Fryer",
+            "image": null,
+            "is_active": false,
+            "position": 7,
+            "level": 3,
+            "product_count": 4,
+            "children_data": []
+          },
+          {
+            "id": 660,
+            "parent_id": 141,
+            "name": "Built in Appliances",
+            "image": null,
+            "is_active": true,
+            "position": 8,
+            "level": 3,
+            "product_count": 36,
+            "children_data": [
+              {
+                "id": 687,
+                "parent_id": 660,
+                "name": "Washers & Refrigerators",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 15,
+                "children_data": []
+              },
+              {
+                "id": 661,
+                "parent_id": 660,
+                "name": "Microwaves",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 11,
+                "children_data": []
+              },
+              {
+                "id": 664,
+                "parent_id": 660,
+                "name": "Fryers & Grills",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 8,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "parent_id": 3,
+        "name": "Small Appliances",
+        "image": null,
+        "is_active": true,
+        "position": 3,
+        "level": 2,
+        "product_count": 1938,
+        "children_data": [
+          {
+            "id": 688,
+            "parent_id": 116,
+            "name": "Small Home Appliances",
+            "image": null,
+            "is_active": true,
+            "position": 1,
+            "level": 3,
+            "product_count": 830,
+            "children_data": [
+              {
+                "id": 117,
+                "parent_id": 688,
+                "name": "Vacuum Cleaners",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 313,
+                "children_data": [
+                  {
+                    "id": 331,
+                    "parent_id": 117,
+                    "name": "Cleaning tools",
+                    "image": null,
+                    "is_active": false,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 180,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 118,
+                "parent_id": 688,
+                "name": "Fans & Ventilators ",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 182,
+                "children_data": []
+              },
+              {
+                "id": 119,
+                "parent_id": 688,
+                "name": "Water Dispensers & Filters",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 101,
+                "children_data": []
+              },
+              {
+                "id": 120,
+                "parent_id": 688,
+                "name": "Irons",
+                "image": null,
+                "is_active": true,
+                "position": 4,
+                "level": 4,
+                "product_count": 130,
+                "children_data": []
+              },
+              {
+                "id": 121,
+                "parent_id": 688,
+                "name": "Heaters",
+                "image": null,
+                "is_active": true,
+                "position": 5,
+                "level": 4,
+                "product_count": 73,
+                "children_data": []
+              },
+              {
+                "id": 341,
+                "parent_id": 688,
+                "name": "Scales",
+                "image": null,
+                "is_active": true,
+                "position": 6,
+                "level": 4,
+                "product_count": 34,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 123,
+            "parent_id": 116,
+            "name": "Kitchen Appliances",
+            "image": null,
+            "is_active": true,
+            "position": 2,
+            "level": 3,
+            "product_count": 1089,
+            "children_data": [
+              {
+                "id": 534,
+                "parent_id": 123,
+                "name": "Cooking Appliances",
+                "image": null,
+                "is_active": true,
+                "position": 1,
+                "level": 4,
+                "product_count": 348,
+                "children_data": [
+                  {
+                    "id": 238,
+                    "parent_id": 534,
+                    "name": "Microwaves & Ovens",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 151,
+                    "children_data": []
+                  },
+                  {
+                    "id": 124,
+                    "parent_id": 534,
+                    "name": "Fryers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 43,
+                    "children_data": []
+                  },
+                  {
+                    "id": 132,
+                    "parent_id": 534,
+                    "name": "Grills",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 34,
+                    "children_data": []
+                  },
+                  {
+                    "id": 125,
+                    "parent_id": 534,
+                    "name": "Toaster & sandwich maker",
+                    "image": null,
+                    "is_active": true,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 57,
+                    "children_data": []
+                  },
+                  {
+                    "id": 338,
+                    "parent_id": 534,
+                    "name": "Cooking Pots",
+                    "image": null,
+                    "is_active": true,
+                    "position": 5,
+                    "level": 5,
+                    "product_count": 28,
+                    "children_data": []
+                  },
+                  {
+                    "id": 275,
+                    "parent_id": 534,
+                    "name": "Steamers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 6,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  },
+                  {
+                    "id": 231,
+                    "parent_id": 534,
+                    "name": "Youghurt Makers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 8,
+                    "level": 5,
+                    "product_count": 7,
+                    "children_data": []
+                  },
+                  {
+                    "id": 229,
+                    "parent_id": 534,
+                    "name": "Fun cooking",
+                    "image": null,
+                    "is_active": true,
+                    "position": 9,
+                    "level": 5,
+                    "product_count": 20,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 689,
+                "parent_id": 123,
+                "name": "Food Preparation",
+                "image": null,
+                "is_active": true,
+                "position": 2,
+                "level": 4,
+                "product_count": 365,
+                "children_data": [
+                  {
+                    "id": 131,
+                    "parent_id": 689,
+                    "name": "Food Processors",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 108,
+                    "children_data": [
+                      {
+                        "id": 134,
+                        "parent_id": 131,
+                        "name": "Kitchen Machines",
+                        "image": null,
+                        "is_active": false,
+                        "position": 1,
+                        "level": 6,
+                        "product_count": 23,
+                        "children_data": []
+                      },
+                      {
+                        "id": 194,
+                        "parent_id": 131,
+                        "name": "Kitchen Machine Attachments",
+                        "image": null,
+                        "is_active": false,
+                        "position": 2,
+                        "level": 6,
+                        "product_count": 6,
+                        "children_data": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": 133,
+                    "parent_id": 689,
+                    "name": "Kitchen machines",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 135,
+                    "children_data": []
+                  },
+                  {
+                    "id": 129,
+                    "parent_id": 689,
+                    "name": "Blenders & Choppers ",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 227,
+                    "children_data": []
+                  },
+                  {
+                    "id": 172,
+                    "parent_id": 689,
+                    "name": "Mixers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 48,
+                    "children_data": []
+                  },
+                  {
+                    "id": 176,
+                    "parent_id": 689,
+                    "name": "Meat Mincers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 5,
+                    "level": 5,
+                    "product_count": 17,
+                    "children_data": []
+                  }
+                ]
+              },
+              {
+                "id": 644,
+                "parent_id": 123,
+                "name": "Coffee & Beverages",
+                "image": null,
+                "is_active": true,
+                "position": 3,
+                "level": 4,
+                "product_count": 350,
+                "children_data": [
+                  {
+                    "id": 128,
+                    "parent_id": 644,
+                    "name": "Espresso & Coffee Maker",
+                    "image": null,
+                    "is_active": true,
+                    "position": 1,
+                    "level": 5,
+                    "product_count": 101,
+                    "children_data": []
+                  },
+                  {
+                    "id": 130,
+                    "parent_id": 644,
+                    "name": "Kettles",
+                    "image": null,
+                    "is_active": true,
+                    "position": 2,
+                    "level": 5,
+                    "product_count": 155,
+                    "children_data": []
+                  },
+                  {
+                    "id": 170,
+                    "parent_id": 644,
+                    "name": "Juicers",
+                    "image": null,
+                    "is_active": true,
+                    "position": 3,
+                    "level": 5,
+                    "product_count": 52,
+                    "children_data": []
+                  },
+                  {
+                    "id": 535,
+                    "parent_id": 644,
+                    "name": "Beverages & Coffee",
+                    "image": null,
+                    "is_active": false,
+                    "position": 4,
+                    "level": 5,
+                    "product_count": 153,
+                    "children_data": [
+                      {
+                        "id": 127,
+                        "parent_id": 535,
+                        "name": "Water Treatment",
+                        "image": null,
+                        "is_active": true,
+                        "position": 1,
+                        "level": 6,
+                        "product_count": 40,
+                        "children_data": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

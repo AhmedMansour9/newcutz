@@ -17,7 +17,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
     }
+
 
 }

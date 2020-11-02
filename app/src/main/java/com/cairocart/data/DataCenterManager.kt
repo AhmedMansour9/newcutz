@@ -3,6 +3,7 @@ package com.cairocart.data
 import androidx.datastore.DataStore
 import androidx.datastore.preferences.Preferences
 import com.cairocart.data.remote.model.AccountResponse
+import com.cairocart.data.remote.model.CategoryResponse
 import com.cairocart.data.remote.model.LoginRequest
 import com.cairocart.data.remote.model.RegisterRequest
 import retrofit2.Response
@@ -15,7 +16,9 @@ interface DataCenterManager {
 
     suspend fun loginFacebook(map: Map<String, String>): Response<AccountResponse>
 
-    fun dataSourcePrefrences():DataStore<Preferences>
+    suspend fun getCategories(language: String): Response<CategoryResponse>
+
+    fun dataSourcePreference(): DataStore<Preferences>
 
 
 }

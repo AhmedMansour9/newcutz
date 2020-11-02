@@ -45,6 +45,7 @@ class BottomNavigation : AppCompatActivity() {
         NavigationUI.setupWithNavController(bottomNavigationView, navHostFragment.navController)
         var appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home,R.id.T_Categories,R.id.nav_home, R.id.T_Offers,
              R.id.T_Cart, R.id.T_Setting))
+
         setupActionBarWithNavController(navHostFragment.navController,appBarConfiguration)
         status=intent.getStringExtra("status")
         bottomNavigationView.setItemIconTintList(null);

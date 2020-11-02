@@ -34,12 +34,12 @@ class RegisterViewModel @ViewModelInject constructor(dataCenterManager: DataCent
                         Log.d("RegisterFragment", "register: "+it.code())
 
                         if (it.isSuccessful && it.code() == 200) {
-                            dataCenterManager.dataSourcePrefrences()
+                            dataCenterManager.dataSourcePreference()
                                 .edit { preferences ->
                                     preferences[preferencesKey<Boolean>("sign_in")] = true
                                 }
 
-                            dataCenterManager.dataSourcePrefrences().edit { preferences ->
+                            dataCenterManager.dataSourcePreference().edit { preferences ->
                                 preferences[preferencesKey<String>("access_token")] =
                                     it.body()?.data?.accountToken!!
                             }

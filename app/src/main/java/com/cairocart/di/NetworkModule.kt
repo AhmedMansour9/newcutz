@@ -1,8 +1,6 @@
 package com.cairocart.di
 
 import com.cairocart.BuildConfig
-import com.cairocart.data.remote.api.ApiHelper
-import com.cairocart.data.remote.api.ApiHelperImpl
 import com.cairocart.data.remote.api.ApiService
 import dagger.Module
 import dagger.Provides
@@ -13,7 +11,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -69,11 +66,6 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit) = retrofit.create(ApiService::class.java)
-
-    @Provides
-    @Singleton
-    fun provideApiHelper(apiHelper: ApiHelperImpl): ApiHelper = apiHelper
-
 
 }
 

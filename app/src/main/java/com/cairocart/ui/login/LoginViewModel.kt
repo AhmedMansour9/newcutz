@@ -33,12 +33,12 @@ class LoginViewModel @ViewModelInject constructor(dataCenterManager: DataCenterM
 
                         if (it.isSuccessful && it.code() == 200) {
                             val accountResponse:AccountResponse=it.body()!!
-                            dataCenterManager.dataSourcePrefrences()
+                            dataCenterManager.dataSourcePreference()
                                 .edit { preferences ->
                                     preferences[preferencesKey<Boolean>("sign_in")] = true
                                 }
 
-                            dataCenterManager.dataSourcePrefrences().edit { preferences ->
+                            dataCenterManager.dataSourcePreference().edit { preferences ->
                                 preferences[preferencesKey<String>("access_token")] =
                                     accountResponse.data?.accountToken?:""
                                 // Save Account Response
