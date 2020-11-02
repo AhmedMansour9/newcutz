@@ -2,10 +2,7 @@ package com.cairocart.data
 
 import androidx.datastore.DataStore
 import androidx.datastore.preferences.Preferences
-import com.cairocart.data.remote.model.AccountResponse
-import com.cairocart.data.remote.model.CategoryResponse
-import com.cairocart.data.remote.model.LoginRequest
-import com.cairocart.data.remote.model.RegisterRequest
+import com.cairocart.data.remote.model.*
 import com.cairocart.data.remote.repository.ApiRepository
 import retrofit2.Response
 import javax.inject.Inject
@@ -25,7 +22,7 @@ class DataCenterImpl @Inject constructor(
     override suspend fun loginFacebook(map: Map<String, String>): Response<AccountResponse> =
         apiRepository.loginFacebook(map)
 
-    override suspend fun getCategories(language: String): Response<CategoryResponse> =
+    override suspend fun getCategories(language: String): Response<Categories_Response> =
         apiRepository.fetchCategories(language)
 
     override fun dataSourcePreference(): DataStore<Preferences> = dataStore

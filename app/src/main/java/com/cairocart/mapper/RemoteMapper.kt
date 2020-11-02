@@ -1,7 +1,8 @@
-package com.cairocart.old.treeview
+package com.cairocart.mapper
 
-import com.cairocart.old.Model.Categories_Response
-import com.cairocart.old.Model.CatModel
+import com.cairocart.data.remote.model.Node
+import com.cairocart.data.remote.model.Categories_Response
+import com.cairocart.data.remote.model.CatModel
 
 
 fun Categories_Response.DataCategory.toTree(): Node<CatModel>? {

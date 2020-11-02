@@ -15,7 +15,7 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_homeFragment2"
-            app:destination="@id/homeFragment2" />
+            app:destination="@id/bottomNavigationView" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -24,12 +24,12 @@
         android:label="RegisterFragment" >
         <action
             android:id="@+id/action_registerFragment_to_homeFragment2"
-            app:destination="@id/homeFragment2" />
+            app:destination="@id/bottomNavigationView" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment2"
-        tools:layout="@layout/home_fragment"
-        android:name="com.cairocart.ui.home.HomeFragment"
+        android:id="@+id/bottomNavigationView"
+        tools:layout="@layout/bottom_fragment"
+        android:name="com.cairocart.ui.bottomnavigate.BottomNavigateFragment"
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/splashFragment"
@@ -46,6 +46,6 @@
             />
         <action
             android:id="@+id/action_splashFragment_to_homeFragment2"
-            app:destination="@id/homeFragment2" />
+            app:destination="@id/bottomNavigationView" />
     </fragment>
 </navigation>

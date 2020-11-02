@@ -1,5 +1,6 @@
 package com.cairocart.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -13,6 +14,7 @@ import androidx.navigation.Navigation
 import com.cairocart.R
 import com.cairocart.base.BaseFragment
 import com.cairocart.databinding.SplashFragmentBinding
+import com.cairocart.ui.bottomnavigate.BottomNavigateFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.map
 
@@ -45,8 +47,10 @@ class SplashFragment : BaseFragment<SplashFragmentBinding>() {
 
     private fun navigateToHome() {
         setupCounterDown {
-            Navigation.findNavController(requireActivity(), R.id.navigationFragment)
-                .navigate(R.id.action_splashFragment_to_homeFragment2)
+            startActivity(Intent(context,BottomNavigateFragment::class.java))
+            activity?.finish()
+//            Navigation.findNavController(requireActivity(), R.id.navigationFragment)
+//                .navigate(R.id.action_splashFragment_to_homeFragment2)
         }
 
     }

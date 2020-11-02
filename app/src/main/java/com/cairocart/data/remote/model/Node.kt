@@ -1,4 +1,4 @@
-package com.cairocart.old.treeview
+package com.cairocart.data.remote.model
 
 class Node<T>(var value: T) {
     var parent: Node<T>? = null

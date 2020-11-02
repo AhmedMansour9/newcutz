@@ -1,11 +1,6 @@
 package com.cairocart.data.remote.api
 
-import com.cairocart.data.remote.model.LoginRequest
-import com.cairocart.data.remote.model.RegisterRequest
-import com.cairocart.data.remote.model.AccountResponse
-import com.cairocart.data.remote.model.CategoryResponse
-import com.cairocart.old.Model.Categories_Response
-import retrofit2.Call
+import com.cairocart.data.remote.model.*
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -21,7 +16,7 @@ interface ApiService {
     suspend fun loginFacebook(@QueryMap map: Map<String, String>): Response<AccountResponse>
 
     @GET("{language}"+"/rest/V1/mstore/categories")
-    suspend fun fetchCategories(@Path(value = "language", encoded = true)language:String): Response<CategoryResponse>
+    suspend fun fetchCategories(@Path(value = "language", encoded = true)language:String): Response<Categories_Response>
 
 
 }

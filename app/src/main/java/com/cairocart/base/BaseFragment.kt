@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.ui.AppBarConfiguration
 import com.github.ybq.android.spinkit.style.FoldingCube
 import com.kaopiz.kprogresshud.KProgressHUD
 
@@ -19,7 +21,7 @@ abstract class BaseFragment<T : ViewDataBinding>() :
     lateinit var mViewDataBinding: T
     private var dailog: Dialog? = null
     private var foldingCube: FoldingCube? = null
-    private lateinit var hud: KProgressHUD
+    private  lateinit var hud: KProgressHUD
 
 
     override fun onCreateView(
@@ -53,7 +55,13 @@ abstract class BaseFragment<T : ViewDataBinding>() :
     }
 
     fun dismissLoading() {
-        hud.dismiss()
+        if( this::hud.isInitialized){
+            if(hud.isShowing){
+                hud.dismiss()
+            }
+        }
+
     }
+
 
 }

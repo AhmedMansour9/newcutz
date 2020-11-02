@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.bottomnavigate.BottomNavigateFragment"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
 
         <!--        <activity android:name="com.cairocart.old.Activities.ReplyNotification"></activity>-->
 

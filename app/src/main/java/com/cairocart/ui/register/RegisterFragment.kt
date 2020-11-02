@@ -1,5 +1,6 @@
 package com.cairocart.ui.register
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -7,6 +8,7 @@ import androidx.navigation.Navigation
 import com.cairocart.R
 import com.cairocart.base.BaseFragment
 import com.cairocart.databinding.RegisterFragmentBinding
+import com.cairocart.ui.bottomnavigate.BottomNavigateFragment
 import com.cairocart.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,8 +41,11 @@ class RegisterFragment : BaseFragment<RegisterFragmentBinding>(), RegisterNaviga
             when (it.staus) {
                 Status.SUCCESS -> {
                     dismissLoading()
-                    Navigation.findNavController(requireActivity(), R.id.navigationFragment)
-                        .navigate(R.id.action_registerFragment_to_homeFragment2) // go to home
+                    startActivity(Intent(context, BottomNavigateFragment::class.java))
+                    activity?.finish()
+
+//                    Navigation.findNavController(requireActivity(), R.id.navigationFragment)
+//                        .navigate(R.id.action_registerFragment_to_homeFragment2) // go to home
                 }
                 Status.LOADING -> {
                     showLoading()
@@ -48,7 +53,6 @@ class RegisterFragment : BaseFragment<RegisterFragmentBinding>(), RegisterNaviga
 
                 Status.ERROR -> {
                     dismissLoading()
-                    // toast
 
                 }
             }

@@ -1,4 +1,4 @@
-package com.cairocart.old.Model
+package com.cairocart.data.remote.model
 
 
  data class CatModel(

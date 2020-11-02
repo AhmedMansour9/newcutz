@@ -1,4 +1,4 @@
-package com.cairocart.old.treeview
+package com.cairocart.adapter
 
 import android.content.Context
 import android.graphics.Color
@@ -12,7 +12,8 @@ import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
 import com.cairocart.R
 import com.cairocart.databinding.ViewTreeItemBinding
-import com.cairocart.old.Model.CatModel
+import com.cairocart.data.remote.model.CatModel
+import com.cairocart.utils.setMargins
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
@@ -23,7 +24,7 @@ import reactivecircus.flowbinding.android.view.clicks
 @ExperimentalCoroutinesApi
 @FlowPreview
 @ModelView(autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT)
-class TreeItemView @JvmOverloads constructor(
+class CategoriesAdapter @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0

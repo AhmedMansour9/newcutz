@@ -3,7 +3,6 @@ package com.cairocart.data.remote.model
 import android.annotation.SuppressLint
 import android.os.Parcelable
 import android.text.TextUtils
-import com.cairocart.old.Model.SendRegisterRequest_Model
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 

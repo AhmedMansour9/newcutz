@@ -123,11 +123,6 @@ dependencies {
     // Add the annotation processor if you are using Epoxy's annotations (recommended)
 //    annotationProcessor "com.airbnb.android:epoxy-processor:4.1.0"
 
-    // epoxy recyclerview
-//    implementation (
-//            "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-//            "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-//    )
 
 
     // flowbinding

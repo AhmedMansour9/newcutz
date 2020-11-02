@@ -1,22 +1,32 @@
 package com.cairocart.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.viewModels
+import android.view.View
+import androidx.fragment.app.Fragment
 import com.cairocart.R
 import com.cairocart.base.BaseFragment
-import com.cairocart.databinding.HomeFragmentBinding
+import com.cairocart.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [HomeFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<HomeFragmentBinding>() {
+class HomeFragment  : BaseFragment<FragmentHomeBinding>()  {
 
-    override var idLayoutRes: Int = R.layout.home_fragment
+    override var idLayoutRes: Int = R.layout.fragment_home
 
-    private val mViewModel: HomeViewModel by viewModels()
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 

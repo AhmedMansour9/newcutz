@@ -3,10 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graph_home"
-    app:startDestination="@id/categoryFragment">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/categoryFragment"
+        android:id="@+id/nav_home"
+        tools:layout="@layout/fragment_home"
+        android:name="com.cairocart.ui.home.HomeFragment"
+        android:label="CategoryFragment" />
+
+
+    <fragment
+        android:id="@+id/T_Categories"
         tools:layout="@layout/category_fragment"
         android:name="com.cairocart.ui.category.CategoryFragment"
         android:label="CategoryFragment" />

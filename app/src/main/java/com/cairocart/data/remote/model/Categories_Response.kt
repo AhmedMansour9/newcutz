@@ -1,4 +1,4 @@
-package com.cairocart.old.Model
+package com.cairocart.data.remote.model
 
 
 import android.annotation.SuppressLint

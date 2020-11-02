@@ -1,10 +1,7 @@
 package com.cairocart.data.remote.repository
 
 import com.cairocart.data.remote.api.ApiService
-import com.cairocart.data.remote.model.AccountResponse
-import com.cairocart.data.remote.model.CategoryResponse
-import com.cairocart.data.remote.model.LoginRequest
-import com.cairocart.data.remote.model.RegisterRequest
+import com.cairocart.data.remote.model.*
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -22,7 +19,7 @@ class ApiRepository @Inject constructor(private val apiService: ApiService) : Ap
         apiService.loginFacebook(map)
 
 
-    override suspend fun fetchCategories(language: String): Response<CategoryResponse> =
+    override suspend fun fetchCategories(language: String): Response<Categories_Response> =
         apiService.fetchCategories(language)
 
 
