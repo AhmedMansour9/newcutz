@@ -16,7 +16,7 @@ interface ApiService {
     suspend fun loginFacebook(@QueryMap map: Map<String, String>): Response<AccountResponse>
 
     @GET("{language}"+"/rest/V1/mstore/categories")
-    suspend fun fetchCategories(@Path(value = "language", encoded = true)language:String): Response<Categories_Response>
+    suspend fun fetchCategories(@Path(value = "language", encoded = true)language:String): Response<CategoriesResponse>
 
 
 }

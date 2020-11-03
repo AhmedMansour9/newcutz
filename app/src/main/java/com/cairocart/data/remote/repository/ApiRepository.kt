@@ -19,7 +19,7 @@ class ApiRepository @Inject constructor(private val apiService: ApiService) : Ap
         apiService.loginFacebook(map)
 
 
-    override suspend fun fetchCategories(language: String): Response<Categories_Response> =
+    override suspend fun fetchCategories(language: String): Response<CategoriesResponse> =
         apiService.fetchCategories(language)
 
 

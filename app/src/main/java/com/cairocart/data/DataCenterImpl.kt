@@ -22,7 +22,7 @@ class DataCenterImpl @Inject constructor(
     override suspend fun loginFacebook(map: Map<String, String>): Response<AccountResponse> =
         apiRepository.loginFacebook(map)
 
-    override suspend fun getCategories(language: String): Response<Categories_Response> =
+    override suspend fun getCategories(language: String): Response<CategoriesResponse> =
         apiRepository.fetchCategories(language)
 
     override fun dataSourcePreference(): DataStore<Preferences> = dataStore

@@ -1,17 +1,17 @@
 package com.cairocart.mapper
 
 import com.cairocart.data.remote.model.Node
-import com.cairocart.data.remote.model.Categories_Response
+import com.cairocart.data.remote.model.CategoriesResponse
 import com.cairocart.data.remote.model.CatModel
 
 
-fun Categories_Response.DataCategory.toTree(): Node<CatModel>? {
+fun CategoriesResponse.DataCategory.toTree(): Node<CatModel>? {
     val root: Node<CatModel> = Node(CatModel(-1, null, false, -1, "", -1, -1, false))
     root.children = toCategories(childrenData) ?: mutableListOf()
     return root
 }
 
- fun toCategories(childrenData: List<Categories_Response.DataCategory.ChildrenDataa?>?): MutableList<Node<CatModel>>? {
+ fun toCategories(childrenData: List<CategoriesResponse.DataCategory.ChildrenDataa?>?): MutableList<Node<CatModel>>? {
     return childrenData?.mapNotNullTo(mutableListOf()) { children ->
         val id = children?.id
         val name = children?.name

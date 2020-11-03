@@ -8,7 +8,7 @@ import android.os.Parcelable
 
 @SuppressLint("ParcelCreator")
 @Parcelize
-data class Categories_Response(
+data class CategoriesResponse(
     @SerializedName("data")
     var `data`: DataCategory?,
     @SerializedName("status")

@@ -13,7 +13,7 @@ interface DataCenterManager {
 
     suspend fun loginFacebook(map: Map<String, String>): Response<AccountResponse>
 
-    suspend fun getCategories(language: String): Response<Categories_Response>
+    suspend fun getCategories(language: String): Response<CategoriesResponse>
 
     fun dataSourcePreference(): DataStore<Preferences>
 

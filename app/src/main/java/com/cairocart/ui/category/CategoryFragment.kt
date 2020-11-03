@@ -1,26 +1,30 @@
 package com.cairocart.ui.category
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelStoreOwner
+import androidx.navigation.Navigation
+import androidx.navigation.navGraphViewModels
 import com.cairocart.R
+import com.cairocart.TreeItemController
 import com.cairocart.base.BaseFragment
 import com.cairocart.data.remote.model.CatModel
-import com.cairocart.data.remote.model.Categories_Response
+import com.cairocart.data.remote.model.CategoriesResponse
 import com.cairocart.data.remote.model.Node
 import com.cairocart.databinding.CategoryFragmentBinding
-import com.cairocart.TreeItemController
 import com.cairocart.mapper.toTree
 import com.cairocart.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
 
     override var idLayoutRes: Int = R.layout.category_fragment
 
-    private val mViewModel: CategoryViewModel by viewModels()
+    val mViewModel: CategoryViewModel by navGraphViewModels(R.id.navigation2) {
+        defaultViewModelProviderFactory
+    }
 
     private val controller = TreeItemController(::onCatModelClicked)
 
@@ -36,7 +40,6 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
             when (it.staus) {
                 Status.SUCCESS -> {
                     dismissLoading()
-                    Log.d("CategoryFragment", "categoryObserver: " + it.data.toString())
                     addData(it.data?.data)
                 }
                 Status.LOADING -> {
@@ -44,7 +47,7 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
                 }
 
                 Status.ERROR -> {
-                   dismissLoading()
+                    dismissLoading()
                     // toast
 
                 }
@@ -53,7 +56,7 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
     }
 
     var tree: Node<CatModel>? = null
-    private fun addData(data: Categories_Response.DataCategory?) {
+    private fun addData(data: CategoriesResponse.DataCategory?) {
         tree = data?.toTree()
         tree?.let {
             controller.setData(it)
@@ -66,5 +69,11 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
         tree?.let {
             controller.setData(it)
         }
+    }
+
+    private fun getStoreOwner(): ViewModelStoreOwner? {
+        val navController = Navigation
+            .findNavController(requireActivity(), R.id.fragment)
+        return navController.getViewModelStoreOwner(R.id.navigation2)
     }
 }
