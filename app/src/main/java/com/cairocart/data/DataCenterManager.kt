@@ -15,7 +15,10 @@ interface DataCenterManager {
 
     suspend fun getCategories(language: String): Response<CategoriesResponse>
 
-     fun getProductsById(language: String,map: Map<String, String>): Response<ProductsByIdResponse>
+    suspend fun getProductsById(
+        language: String,
+        map: Map<String, String>
+    ): Response<ProductsByIdResponse>
 
     fun dataSourcePreference(): DataStore<Preferences>
 

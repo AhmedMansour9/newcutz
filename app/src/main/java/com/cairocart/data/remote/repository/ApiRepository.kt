@@ -24,7 +24,7 @@ class ApiRepository @Inject constructor(private val apiService: ApiService) : Ap
         apiService.fetchCategories(language)
 
 
-    override  fun fetchProductsById(language: String, map: Map<String, String>): Response<ProductsByIdResponse> =
+    override suspend fun fetchProductsById(language: String, map: Map<String, String>): Response<ProductsByIdResponse> =
         apiService.fetchProductsById(language,map)
 
 }

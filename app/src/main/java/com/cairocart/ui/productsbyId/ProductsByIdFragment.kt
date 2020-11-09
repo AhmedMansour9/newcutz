@@ -3,40 +3,22 @@ package com.cairocart.ui.productsbyId
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.navGraphViewModels
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.cairocart.ChangeLanguage
 import com.cairocart.R
 import com.cairocart.adapter.ProductsByIdAdapter
 import com.cairocart.base.BaseFragment
 import com.cairocart.data.remote.model.ProductsByIdResponse
 import com.cairocart.databinding.FragmentProductsByIdBinding
-import com.cairocart.ui.category.CategoryViewModel
-import com.cairocart.utils.Resource
 import com.cairocart.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProductsById.newInstance] factory method to
- * create an instance of this fragment.
- */
 @AndroidEntryPoint
 class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNavigator {
 
     override var idLayoutRes: Int = R.layout.fragment_products_by_id
-    private val productsAdapter =ProductsByIdAdapter()
+    private val productsAdapter = ProductsByIdAdapter()
     val mViewModel: ProductsByIdViewModel by navGraphViewModels(R.id.graph_home) {
         defaultViewModelProviderFactory
     }
@@ -47,17 +29,16 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         mViewDataBinding.productsViewModel = mViewModel
         initUI()
         getProducts()
-//        productsObserver()
+        productsObserver()
 
     }
 
     private fun getProducts() {
-        mViewModel.getProductsById(ChangeLanguage.getLanguage(requireContext()),"109")
+        mViewModel.getProductsById(ChangeLanguage.getLanguage(requireContext()), "109")
     }
 
     private fun initUI() {
         mViewDataBinding.recyclerProducts.setHasFixedSize(true)
-        mViewDataBinding.recyclerProducts.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         mViewDataBinding.recyclerProducts.adapter = productsAdapter
     }
 
@@ -67,7 +48,7 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
             when (it.staus) {
                 Status.SUCCESS -> {
                     dismissLoading()
-                    addData(it.data?.data as List<ProductsByIdResponse.Data>)
+                    addData(it.data)
                 }
                 Status.LOADING -> {
                     showLoading()
@@ -75,16 +56,13 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
 
                 Status.ERROR -> {
                     dismissLoading()
-                    // toast
-
                 }
             }
         })
     }
 
-    private fun addData(data: List<ProductsByIdResponse.Data>) {
+    private fun addData(data: List<ProductsByIdResponse.Data?>?) {
         productsAdapter.setDeveloperList(data as MutableList<ProductsByIdResponse.Data>)
-
 
 
     }
@@ -121,7 +99,7 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
     fun unselectLinear() {
         mViewDataBinding.ImgLinear.setImageResource(R.drawable.ic_linearsnonelected)
         mViewDataBinding.RelaLinear.setBackgroundColor(
-          Color.TRANSPARENT
+            Color.TRANSPARENT
         )
 
     }

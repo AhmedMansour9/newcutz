@@ -15,11 +15,18 @@ interface ApiService {
     @POST("social_login")
     suspend fun loginFacebook(@QueryMap map: Map<String, String>): Response<AccountResponse>
 
-    @GET("{language}"+"/rest/V1/mstore/categories")
-    suspend fun fetchCategories(@Path(value = "language", encoded = true)language:String): Response<CategoriesResponse>
+    @GET("{language}" + "/rest/V1/mstore/categories")
+    suspend fun fetchCategories(
+        @Path(
+            value = "language",
+            encoded = true
+        ) language: String
+    ): Response<CategoriesResponse>
 
-    @GET("{language}"+"/rest/V1/restapi/products")
-     fun fetchProductsById(@Path(value = "language", encoded = true)language:String
-    , @QueryMap map: Map<String, String>): Response<ProductsByIdResponse>
+    @GET("{language}" + "/rest/V1/restapi/products")
+    suspend fun fetchProductsById(
+        @Path(value = "language", encoded = true) language: String,
+        @QueryMap map: Map<String, String>
+    ): Response<ProductsByIdResponse>
 
 }

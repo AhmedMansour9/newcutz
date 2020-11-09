@@ -43,6 +43,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ss"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_38sdp"
             android:layout_marginStart="@dimen/_10sdp"
@@ -62,17 +63,17 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <RelativeLayout
+                    android:id="@+id/Rela_Linear"
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="match_parent"
-                    android:id="@+id/Rela_Linear"
                     android:background="@drawable/bc_lefttoggle">
 
                     <ImageView
                         android:id="@+id/Img_linear"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_12sdp"
-                        android:onClick="@{()->productsViewModel.navigator.onClickLinear()}"
                         android:layout_centerInParent="true"
+                        android:onClick="@{()->productsViewModel.navigator.onClickLinear()}"
                         android:src="@drawable/ic_linearselect" />
                 </RelativeLayout>
 
@@ -81,16 +82,16 @@
                     android:layout_height="match_parent" />
 
                 <RelativeLayout
-                    android:layout_width="@dimen/_30sdp"
                     android:id="@+id/Rela_Grid"
+                    android:layout_width="@dimen/_30sdp"
                     android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/Btn_grid"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_12sdp"
-                        android:onClick="@{()->productsViewModel.navigator.onClickGrid()}"
                         android:layout_centerInParent="true"
+                        android:onClick="@{()->productsViewModel.navigator.onClickGrid()}"
                         android:src="@drawable/ic_nongrid" />
                 </RelativeLayout>
 
@@ -102,18 +103,17 @@
                 android:layout_width="@dimen/_110sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:text="@string/filtert"
                 android:drawableEnd="@drawable/ic_filter"
-                android:textAllCaps="false"
                 android:gravity="center"
+                android:text="@string/filtert"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_11sdp"
                 app:backgroundTint="#069EEC"
                 app:cornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                 />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -122,11 +122,12 @@
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/SwipCategories"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginTop="?actionBarSize"
-            android:visibility="gone"
             android:layout_marginBottom="@dimen/_10sdp"
-            app:layout_constraintTop_toTopOf="parent">
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ss">
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -134,11 +135,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="?actionBarSize"
                 android:layout_marginEnd="@dimen/_20sdp"
-
+                android:orientation="vertical"
                 android:scrollbars="horizontal"
-                android:visibility="gone" />
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

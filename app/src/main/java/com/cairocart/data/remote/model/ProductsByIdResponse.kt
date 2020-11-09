@@ -51,7 +51,7 @@ data class ProductsByIdResponse(
         @SerializedName("name")
         var name: String?,
         @SerializedName("price")
-        var price: Int?,
+        var price: String?,
         @SerializedName("qty")
         var qty: Int?,
         @SerializedName("sku")

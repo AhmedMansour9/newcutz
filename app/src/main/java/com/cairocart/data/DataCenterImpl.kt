@@ -25,7 +25,7 @@ class DataCenterImpl @Inject constructor(
     override suspend fun getCategories(language: String): Response<CategoriesResponse> =
         apiRepository.fetchCategories(language)
 
-    override  fun getProductsById(language: String,map: Map<String, String>): Response<ProductsByIdResponse> =
+    override suspend fun getProductsById(language: String,map: Map<String, String>): Response<ProductsByIdResponse> =
         apiRepository.fetchProductsById(language,map)
 
     override fun dataSourcePreference(): DataStore<Preferences> = dataStore

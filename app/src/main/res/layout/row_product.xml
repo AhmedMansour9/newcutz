@@ -50,9 +50,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-
-
             <TextView
                 android:id="@+id/Title"
                 android:layout_width="wrap_content"
@@ -64,7 +61,7 @@
                 android:ellipsize="end"
                 android:textSize="@dimen/_13sdp"
                 android:maxLines="2"
-                android:text= "@{ model.name}"
+                android:text= "@{model.name}"
                 android:textColor="#676767"
                 android:textStyle="bold" />
 

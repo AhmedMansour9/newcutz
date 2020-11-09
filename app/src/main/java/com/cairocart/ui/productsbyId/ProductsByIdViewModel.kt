@@ -1,5 +1,6 @@
 package com.cairocart.ui.productsbyId
 
+import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -12,11 +13,11 @@ import kotlinx.coroutines.launch
 import javax.inject.Singleton
 
 @Singleton
-class ProductsByIdViewModel  @ViewModelInject constructor(dataCenterManager: DataCenterManager,) :
+class ProductsByIdViewModel @ViewModelInject constructor(dataCenterManager: DataCenterManager) :
     BaseViewModel<ProductByIdNavigator>(dataCenterManager) {
 
-    private val _productsResponse = MutableLiveData<Resource<ProductsByIdResponse>>()
-    val productResponse: LiveData<Resource<ProductsByIdResponse>>
+    private val _productsResponse = MutableLiveData<Resource<List<ProductsByIdResponse.Data?>?>>()
+    val productResponse: LiveData<Resource<List<ProductsByIdResponse.Data?>?>>
         get() = _productsResponse
 
 //    init {
@@ -24,20 +25,21 @@ class ProductsByIdViewModel  @ViewModelInject constructor(dataCenterManager: Dat
 //            getProducts()
 //    }
 
-    fun getProductsById(lang:String,catId:String) {
-       var hashMap=HashMap<String,String>()
-        hashMap.put("searchCriteria[filterGroups][0][filters][0][value]",catId)
-        hashMap.put("searchCriteria[filterGroups][0][filters][0][field]","category_id")
-        hashMap.put("searchCriteria[currentPage]","1")
-        hashMap.put("searchCriteria[pageSize]","10")
+    fun getProductsById(lang: String, catId: String) {
+        var hashMap = HashMap<String, String>()
+        hashMap.put("searchCriteria[filterGroups][0][filters][0][value]", catId)
+        hashMap.put("searchCriteria[filterGroups][0][filters][0][field]", "category_id")
+        hashMap.put("searchCriteria[currentPage]", "1")
+        hashMap.put("searchCriteria[pageSize]", "10")
 
-//        viewModelScope.launch {
+        viewModelScope.launch {
             _productsResponse.postValue(Resource.loading(null))
-            dataCenterManager.getProductsById(lang,hashMap).let {
+            dataCenterManager.getProductsById(lang, hashMap).let {
                 if (it.isSuccessful && it.code() == 200) {
-                    _productsResponse.postValue(Resource.success(it.body()))
+                    val data = it.body()?.data
+                    _productsResponse.postValue(Resource.success(data))
                 } else _productsResponse.postValue(Resource.error(it.message(), null))
             }
-//        }
+        }
     }
 }
