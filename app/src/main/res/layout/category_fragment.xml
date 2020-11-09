@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ECECEC"
+        android:background="#F6F7F9"
         android:id="@+id/RelaMenu">
 
         <androidx.appcompat.widget.Toolbar

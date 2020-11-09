@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.graphics.ColorUtils
@@ -13,11 +14,13 @@ import com.airbnb.epoxy.ModelView
 import com.cairocart.R
 import com.cairocart.databinding.ViewTreeItemBinding
 import com.cairocart.data.remote.model.CatModel
+import com.cairocart.data.remote.model.MessageEvent
 import com.cairocart.utils.setMargins
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import org.greenrobot.eventbus.EventBus
 import reactivecircus.flowbinding.android.view.clicks
 
 
@@ -52,10 +55,10 @@ class CategoriesAdapter @JvmOverloads constructor(
             .onEach { itemClickedListener?.invoke() }
             .launchIn(scope)
 
-        clicks()
-            .debounce(250)
-            .onEach { itemClickedListener?.invoke() }
-            .launchIn(scope)
+//        clicks()
+//            .debounce(250)
+//            .onEach { itemClickedListener?.invoke() }
+//            .launchIn(scope)
     }
 
     override fun onDetachedFromWindow() {
@@ -66,8 +69,10 @@ class CategoriesAdapter @JvmOverloads constructor(
 
     @ModelProp
     fun setItemData(CatModel: CatModel) {
+        binding.root.setOnClickListener(){
+            EventBus.getDefault().postSticky(MessageEvent(CatModel))
+        }
         binding.titleTv.text = CatModel.name
-
         setMargins(CatModel.level * 16)
         binding.expandIv.setImageResource(
 
@@ -78,6 +83,12 @@ class CategoriesAdapter @JvmOverloads constructor(
                 }
 
         )
+
+
+
+    }
+    public interface ItemListener {
+        fun itemClicked( node: CatModel);
 
     }
 

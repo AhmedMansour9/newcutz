@@ -1,6 +1,10 @@
 package com.cairocart.data.remote.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+
+@Parcelize
  data class CatModel(
     val id: Int,
     val image: String?,
@@ -10,5 +14,5 @@ package com.cairocart.data.remote.model
     val productCount: Int,
     val parentId: Int,
     val isExpanded: Boolean = false
-)
+) :Parcelable
 

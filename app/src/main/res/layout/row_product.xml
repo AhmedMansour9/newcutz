@@ -1,130 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_marginTop="@dimen/_5sdp"
-    app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="1dp"
-    android:layout_marginBottom="@dimen/_5sdp"
-    android:layout_height="wrap_content">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.cairocart.data.remote.model.ProductsByIdResponse.Data" />
+    </data>
+
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_90sdp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:id="@+id/PannerCard"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="4dp"
-        >
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="1dp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/Img_Product"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/PannerCard"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/Img_Product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:imageUrl="@{model.imageUrl}"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:ellipsize="end"
+                android:textSize="@dimen/_13sdp"
+                android:maxLines="2"
+                android:text= "@{ model.name}"
+                android:textColor="#676767"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/T_SmallDescrip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/Title"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:ellipsize="end"
+                android:textSize="@dimen/_10sdp"
+                android:maxLines="3"
+                android:text= "@{ model.description}"
+                android:textColor="#676767"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/T_SalePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/T_SmallDescrip"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text= "@{ model.price}"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/T_OriginalPrice"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/T_SmallDescrip"-->
+<!--                android:layout_marginStart="27dp"-->
+<!--                android:layout_marginTop="@dimen/_11sdp"-->
+<!--                android:layout_toEndOf="@+id/T_SalePrice"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="1"-->
+<!--                android:textColor="#706e7b"-->
+<!--                android:textSize="@dimen/_9sdp"-->
+<!--                android:textStyle="bold" />-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_below="@+id/T_SalePrice"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/add_cart"
+                android:drawableEnd="@drawable/ic_addcart"
+                android:textAllCaps="false"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_11sdp"
+                app:backgroundTint="#069EEC"
+                app:cornerRadius="5dp"
+                android:layout_toEndOf="@id/PannerCard"
                 />
 
-
+            <ImageView
+                android:id="@+id/Img_Favourit"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@+id/T_SalePrice"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                 />
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
-
-
-    <ImageView
-        android:id="@+id/Img_Favourit"
-        android:layout_width="@dimen/_25sdp"
-        android:layout_height="@dimen/_25sdp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="@dimen/_5sdp" />
-
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="@dimen/_130sdp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="29dp"
-        android:layout_toEndOf="@+id/PannerCard"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="ahemkdckjkfj"
-        android:textColor="#0b2031"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/T_SmallDescrip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Title"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_toEndOf="@+id/PannerCard"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:text="ahemkdckjk,d.emdmkemf;mfe;lef,melfmfj"
-        android:textColor="#95939d"
-        android:textStyle="bold" />
-        <ImageView
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:layout_marginStart="20dp"
-            android:layout_below="@+id/T_SmallDescrip"
-            android:layout_toEndOf="@+id/PannerCard"
-            android:layout_marginTop="@dimen/_10sdp"
-           android:id="@+id/img_price"
-            android:src="@drawable/ic_price"/>
-
-    <TextView
-        android:id="@+id/T_SalePrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/T_SmallDescrip"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_toEndOf="@+id/img_price"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textColor="#706e7b"
-        android:textStyle="bold" />
-
-    <TextView
-    android:id="@+id/T_OriginalPrice"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/T_SmallDescrip"
-    android:layout_marginStart="27dp"
-    android:layout_marginTop="@dimen/_11sdp"
-    android:layout_toEndOf="@+id/T_SalePrice"
-    android:ellipsize="end"
-    android:maxLines="1"
-    android:textColor="#706e7b"
-    android:textSize="@dimen/_9sdp"
-    android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="@dimen/_22sdp"
-        android:layout_height="@dimen/_22sdp"
-        android:layout_below="@+id/T_SmallDescrip"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/_7sdp"
-        android:layout_marginEnd="19dp"
-        android:src="@drawable/ic_cart" />
-
-    </RelativeLayout>
-</androidx.cardview.widget.CardView>
+</layout>

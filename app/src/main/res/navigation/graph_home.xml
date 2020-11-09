@@ -3,19 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graph_home"
-    app:startDestination="@id/navigation2">
+    app:startDestination="@id/homeFragment">
 
-    <navigation android:id="@+id/navigation2"
-        app:startDestination="@id/homeFragment">
+<!--    <navigation android:id="@+id/navigation2"-->
+<!--        app:startDestination="@id/homeFragment">-->
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.cairocart.ui.home.HomeFragment"
+            android:label="HomeFragment"
+            tools:layout="@layout/fragment_home"/>
+
         <fragment
             android:id="@+id/T_Categories"
             android:name="com.cairocart.ui.category.CategoryFragment"
             android:label="CategoryFragment"
-            tools:layout="@layout/category_fragment" />
+            tools:layout="@layout/category_fragment" >
+                <action
+                    android:id="@+id/action_T_Categories_to_productsById"
+                    app:destination="@id/productsById" />
+        </fragment>
+
         <fragment
-            android:id="@+id/homeFragment"
-            android:name="com.cairocart.ui.home.HomeFragment"
-            android:label="HomeFragment" />
-    </navigation>
+            android:id="@+id/productsById"
+            tools:layout="@layout/fragment_products_by_id"
+            android:name="com.cairocart.ui.productsbyId.ProductsById"
+            android:label="ProductsById" />
+
+<!--    </navigation>-->
+
 
 </navigation>

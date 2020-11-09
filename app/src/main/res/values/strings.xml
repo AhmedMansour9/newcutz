@@ -243,7 +243,7 @@
     <string name="limited">Limited Quantity</string>
     <string name="is_new">New Products</string>
     <string name="best">Best Products</string>
-    <string name="filtert">Filtert</string>
+    <string name="filtert">FILTER BY</string>
     <string name="limit">Limited</string>
     <string name="success_addcomment">Replay Send Success</string>
     <string name="n_products">No Products</string>
@@ -266,6 +266,7 @@
     <string name="log_in">log in</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
+    <string name="add_cart">ADD TO CART</string>
 
 
     <string-array name="types">

@@ -9,7 +9,8 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
 class TreeItemController(
-    val onClicked: (node: Node<CatModel>) -> Unit
+    val onClicked: (node: Node<CatModel>) -> Unit,
+
 ) : TypedEpoxyController<Node<CatModel>>() {
 
     override fun buildModels(root: Node<CatModel>) {
@@ -22,7 +23,10 @@ class TreeItemController(
             categoriesAdapter {
                 id(node.value.id)
                 itemData(node.value)
-                itemClickedListener { onClicked(node) }
+                itemClickedListener { onClicked(node)
+
+
+                }
             }
             if (node.value.isExpanded) {
                 buildTreeItemsModels(node.children)

@@ -1,6 +1,9 @@
 package com.cairocart.ui.category
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.navigation.Navigation
@@ -10,11 +13,15 @@ import com.cairocart.TreeItemController
 import com.cairocart.base.BaseFragment
 import com.cairocart.data.remote.model.CatModel
 import com.cairocart.data.remote.model.CategoriesResponse
+import com.cairocart.data.remote.model.MessageEvent
 import com.cairocart.data.remote.model.Node
 import com.cairocart.databinding.CategoryFragmentBinding
 import com.cairocart.mapper.toTree
 import com.cairocart.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 
 @AndroidEntryPoint
@@ -22,11 +29,12 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
 
     override var idLayoutRes: Int = R.layout.category_fragment
 
-    val mViewModel: CategoryViewModel by navGraphViewModels(R.id.navigation2) {
+    val mViewModel: CategoryViewModel by navGraphViewModels(R.id.graph_home) {
         defaultViewModelProviderFactory
     }
 
-    private val controller = TreeItemController(::onCatModelClicked)
+    private val controller = TreeItemController(::onCatModelClicked
+    )
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -71,9 +79,28 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
         }
     }
 
+    private fun onClickItem(node: CatModel) {
+
+    }
+
     private fun getStoreOwner(): ViewModelStoreOwner? {
         val navController = Navigation
             .findNavController(requireActivity(), R.id.fragment)
-        return navController.getViewModelStoreOwner(R.id.navigation2)
+        return navController.getViewModelStoreOwner(R.id.graph_home)
     }
+
+    @Subscribe(sticky = false, threadMode = ThreadMode.MAIN)
+    fun onMessageEvent(messsg: MessageEvent) {/* Do something */
+        val bundle = Bundle()
+        bundle.putParcelable("cat", messsg.catmodel)
+        Navigation.findNavController(mViewDataBinding.root).navigate(R.id.action_T_Categories_to_productsById,bundle);
+
+    };
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this)
+        }
+    }
+
 }

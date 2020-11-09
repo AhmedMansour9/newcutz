@@ -5,7 +5,7 @@
 
     <item android:icon="@drawable/btm_home"
         android:title="@string/home"
-        android:id="@+id/nav_home"
+        android:id="@+id/homeFragment"
         app:itemHorizontalTranslationEnabled="false"
         />
     <item android:icon="@drawable/ic_categories"
@@ -16,9 +16,15 @@
 
     <item android:icon="@drawable/btm_deails"
         android:title="@string/offers"
-        android:id="@+id/T_Offers"
+        android:id="@+id/productsById"
         app:itemHorizontalTranslationEnabled="false"
         />
+
+<!--    <item android:icon="@drawable/btm_deails"-->
+<!--        android:title="@string/offers"-->
+<!--        android:id="@+id/T_Offers"-->
+<!--        app:itemHorizontalTranslationEnabled="false"-->
+<!--        />-->
     <item android:icon="@drawable/btm_cart"
         android:title="@string/cartt"
         android:id="@+id/T_Cart"

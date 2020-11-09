@@ -34,8 +34,6 @@ class LoginFragment : BaseFragment<LoginFragmentBinding>(), LoginNavigator {
                     dismissLoading()
                     startActivity(Intent(context, BottomNavigateFragment::class.java))
                     activity?.finish()
-//                    Navigation.findNavController(requireActivity(), R.id.navigationFragment)
-//                        .navigate(R.id.action_loginFragment_to_homeFragment2) // go to home
                 }
                 Status.LOADING -> {
                     showLoading()

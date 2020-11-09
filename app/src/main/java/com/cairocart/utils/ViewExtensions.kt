@@ -5,6 +5,12 @@ import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.Dimension
+import com.cairocart.data.remote.model.CatModel
+
+
+sealed class TreeScreenEffects {
+    data class OpenDetails(val treeItem: CatModel) : TreeScreenEffects()
+}
 
 fun View.setVisibility(visible: Boolean) {
     if (visible) {

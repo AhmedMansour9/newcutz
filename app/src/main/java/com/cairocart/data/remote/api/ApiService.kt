@@ -18,5 +18,8 @@ interface ApiService {
     @GET("{language}"+"/rest/V1/mstore/categories")
     suspend fun fetchCategories(@Path(value = "language", encoded = true)language:String): Response<CategoriesResponse>
 
+    @GET("{language}"+"/rest/V1/restapi/products")
+     fun fetchProductsById(@Path(value = "language", encoded = true)language:String
+    , @QueryMap map: Map<String, String>): Response<ProductsByIdResponse>
 
 }

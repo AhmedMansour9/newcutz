@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="productsViewModel"
+            type="com.cairocart.ui.productsbyId.ProductsByIdViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RelaMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F7F9">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbaproduct"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/textView"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="#fff"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintCircleRadius="@dimen/_90sdp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbaproduct">
+
+            <LinearLayout
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@drawable/bc_ltoggle"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Rela_Linear"
+                    android:background="@drawable/bc_lefttoggle">
+
+                    <ImageView
+                        android:id="@+id/Img_linear"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:onClick="@{()->productsViewModel.navigator.onClickLinear()}"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_linearselect" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_30sdp"
+                    android:id="@+id/Rela_Grid"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/Btn_grid"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:onClick="@{()->productsViewModel.navigator.onClickGrid()}"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_nongrid" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/filtert"
+                android:drawableEnd="@drawable/ic_filter"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_11sdp"
+                app:backgroundTint="#069EEC"
+                app:cornerRadius="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                 />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/SwipCategories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_Products"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="?actionBarSize"
+                android:layout_marginEnd="@dimen/_20sdp"
+
+                android:scrollbars="horizontal"
+                android:visibility="gone" />
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

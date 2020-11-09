@@ -1,12 +1,16 @@
 package com.cairocart.databinding
 
+import android.graphics.drawable.Drawable
 import android.util.Patterns
+import android.widget.ImageView
 import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.BindingAdapter
-import com.google.android.material.textfield.TextInputEditText
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import java.util.regex.Pattern
+
 
 class EditTextDatabinding {
     companion object {
@@ -59,6 +63,17 @@ class EditTextDatabinding {
                 } else {
                     editText.error = null
                 }
+            }
+        }
+
+        @BindingAdapter("imageUrl")
+        fun loadImage(view: ImageView, url: String?) {
+            if (!url.isNullOrEmpty()) {
+
+                Glide.with(view.context)
+                    .load(url).apply(RequestOptions().circleCrop())
+                    .into(view)
+
             }
         }
 

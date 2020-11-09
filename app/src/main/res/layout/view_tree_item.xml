@@ -6,6 +6,9 @@
     android:layout_height="wrap_content"
     android:background="@color/colorPrimaryDark">
 
+
+
+
     <View
         android:id="@+id/backgroundView"
         android:layout_width="0dp"
@@ -16,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="@id/titleTv"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/expandIv"
@@ -77,6 +79,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="16dp" />
+
 
 
 </merge>
