@@ -25,11 +25,11 @@ class ProductsByIdViewModel @ViewModelInject constructor(dataCenterManager: Data
 //            getProducts()
 //    }
 
-    fun getProductsById(lang: String, catId: String) {
+    fun getProductsById(lang: String, catId: String,Page:String) {
         var hashMap = HashMap<String, String>()
         hashMap.put("searchCriteria[filterGroups][0][filters][0][value]", catId)
         hashMap.put("searchCriteria[filterGroups][0][filters][0][field]", "category_id")
-        hashMap.put("searchCriteria[currentPage]", "1")
+        hashMap.put("searchCriteria[currentPage]", Page)
         hashMap.put("searchCriteria[pageSize]", "10")
 
         viewModelScope.launch {

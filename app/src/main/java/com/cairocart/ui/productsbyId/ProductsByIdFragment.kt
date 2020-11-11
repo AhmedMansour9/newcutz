@@ -2,13 +2,17 @@ package com.cairocart.ui.productsbyId
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.navigation.navGraphViewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.cairocart.ChangeLanguage
 import com.cairocart.R
 import com.cairocart.adapter.ProductsByIdAdapter
+import com.cairocart.adapter.ProductsGridByIdAdapter
 import com.cairocart.base.BaseFragment
+import com.cairocart.data.remote.model.CatModel
 import com.cairocart.data.remote.model.ProductsByIdResponse
 import com.cairocart.databinding.FragmentProductsByIdBinding
 import com.cairocart.utils.Status
@@ -17,8 +21,23 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNavigator {
 
+    var checkStatus = 0
+    var page=1
     override var idLayoutRes: Int = R.layout.fragment_products_by_id
-    private val productsAdapter = ProductsByIdAdapter()
+    private val productsAdapter = ProductsByIdAdapter(object :
+        ProductsByIdAdapter.ProductItemListener {
+        override fun itemClicked(productData: ProductsByIdResponse.Data) {
+            val bundle2 = Bundle()
+            bundle2.putParcelable("item", productData)
+            Navigation.findNavController(mViewDataBinding.root)
+                .navigate(R.id.action_productsById_to_detailsProductFragment,bundle2);
+        }
+
+    })
+    private val productsGridAdapter = ProductsGridByIdAdapter()
+    lateinit var details: CatModel
+    var bundle= Bundle()
+
     val mViewModel: ProductsByIdViewModel by navGraphViewModels(R.id.graph_home) {
         defaultViewModelProviderFactory
     }
@@ -27,28 +46,46 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         super.onActivityCreated(savedInstanceState)
         mViewModel.navigator = this
         mViewDataBinding.productsViewModel = mViewModel
-        initUI()
+        getData()
         getProducts()
         productsObserver()
 
     }
 
-    private fun getProducts() {
-        mViewModel.getProductsById(ChangeLanguage.getLanguage(requireContext()), "109")
+    private fun getData() {
+        bundle=this.requireArguments()
+        details= bundle.getParcelable("cat")!!
     }
 
-    private fun initUI() {
-        mViewDataBinding.recyclerProducts.setHasFixedSize(true)
+    private fun checkStatus() {
+        if (checkStatus == 0) {
+            initLinearUI()
+        } else {
+            initGridUI()
+        }
+    }
+
+    private fun getProducts() {
+        mViewModel.getProductsById(ChangeLanguage.getLanguage(requireContext()), details.id.toString(),page.toString())
+    }
+
+    private fun initLinearUI() {
+        mViewDataBinding.recyclerProducts.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         mViewDataBinding.recyclerProducts.adapter = productsAdapter
     }
 
+    private fun initGridUI() {
+        mViewDataBinding.recyclerProducts.setLayoutManager(GridLayoutManager(requireContext(), 2))
+        mViewDataBinding.recyclerProducts.adapter = productsGridAdapter
+    }
 
     private fun productsObserver() {
         mViewModel.productResponse.observe(viewLifecycleOwner, Observer {
             when (it.staus) {
                 Status.SUCCESS -> {
                     dismissLoading()
-                    addData(it.data)
+                    addData(it.data as MutableList<ProductsByIdResponse.Data>)
                 }
                 Status.LOADING -> {
                     showLoading()
@@ -61,8 +98,10 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         })
     }
 
-    private fun addData(data: List<ProductsByIdResponse.Data?>?) {
-        productsAdapter.setDeveloperList(data as MutableList<ProductsByIdResponse.Data>)
+    private fun addData(data: MutableList<ProductsByIdResponse.Data>) {
+        checkStatus()
+        productsAdapter.setDeveloperList(data)
+        productsGridAdapter.setDeveloperList(data)
 
 
     }
@@ -70,15 +109,17 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
     override fun onClickGrid() {
         selectGrid()
         unselectLinear()
-
+        getProducts()
     }
 
     override fun onClickLinear() {
         selectLinear()
         unselectGrid()
+        getProducts()
     }
 
     fun selectGrid() {
+        checkStatus = 1
         mViewDataBinding.BtnGrid.setImageResource(R.drawable.ic_grid)
         mViewDataBinding.RelaGrid.setBackgroundResource(R.drawable.bc_righttoggle)
     }
@@ -92,6 +133,7 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
     }
 
     fun selectLinear() {
+        checkStatus = 0
         mViewDataBinding.ImgLinear.setImageResource(R.drawable.ic_linearselect)
         mViewDataBinding.RelaLinear.setBackgroundResource(R.drawable.bc_lefttoggle)
     }
@@ -102,6 +144,11 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
             Color.TRANSPARENT
         )
 
+    }
+
+    override fun onStop() {
+        super.onStop()
+        dismissLoading()
     }
 
 }

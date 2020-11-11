@@ -247,6 +247,7 @@
     <string name="log_in">log in</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
+    <string name="cu">جنيه</string>
 
 
     <string-array name="types">

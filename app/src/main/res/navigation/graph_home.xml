@@ -19,6 +19,9 @@
             android:label="CategoryFragment"
             tools:layout="@layout/category_fragment" >
                 <action
+                    app:enterAnim="@android:anim/fade_in"
+                    app:exitAnim="@android:anim/fade_out"
+                    app:popUpToInclusive="true"
                     android:id="@+id/action_T_Categories_to_productsById"
                     app:destination="@id/productsById" />
         </fragment>
@@ -27,9 +30,21 @@
             android:id="@+id/productsById"
             tools:layout="@layout/fragment_products_by_id"
             android:name="com.cairocart.ui.productsbyId.ProductsById"
-            android:label="ProductsById" />
+            android:label="ProductsById" >
+                <action
+                    app:enterAnim="@android:anim/fade_in"
+                    app:exitAnim="@android:anim/fade_out"
+                    app:popUpTo="@+id/productsById"
+                    app:popUpToInclusive="true"
+                    android:id="@+id/action_productsById_to_detailsProductFragment"
+                    app:destination="@id/detailsProductFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/detailsProductFragment"
+            android:name="com.cairocart.ui.detailsproduct.DetailsProductFragment"
+            android:label="DetailsProductFragment" />
 
-<!--    </navigation>-->
+        <!--    </navigation>-->
 
 
 </navigation>

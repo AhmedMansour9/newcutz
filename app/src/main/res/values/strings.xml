@@ -190,7 +190,6 @@
     <string name="off">OFF</string>
     <string name="in_stock">In Stock</string>
     <string name="wight">Wight</string>
-    <dimen name="spacing_large">15dp</dimen>
     <string name="noreviws">No Reviwes</string>
     <string name="forget_label">Forgot your password?</string>
     <string name="login_label">Sign in</string>
@@ -266,7 +265,8 @@
     <string name="log_in">log in</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
-    <string name="add_cart">ADD TO CART</string>
+    <string name="add_cart">ADD CART</string>
+    <string name="cu"> %s EGP</string>
 
 
     <string-array name="types">

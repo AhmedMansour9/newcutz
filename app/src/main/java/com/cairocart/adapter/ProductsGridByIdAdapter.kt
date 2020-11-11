@@ -1,19 +1,19 @@
 package com.cairocart.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cairocart.data.remote.model.ProductsByIdResponse
 import com.cairocart.databinding.RowProductBinding
+import com.cairocart.databinding.RowProductgridBinding
 
-class ProductsByIdAdapter(var productData:  ProductItemListener) : RecyclerView.Adapter<ProductsByIdAdapter.DeveloperViewHolder>() {
+class ProductsGridByIdAdapter : RecyclerView.Adapter<ProductsGridByIdAdapter.DeveloperViewHolder>() {
 
     private var mProductsModel = ArrayList<ProductsByIdResponse.Data>()
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): DeveloperViewHolder {
         return DeveloperViewHolder(
-            RowProductBinding.inflate(
+            RowProductgridBinding.inflate(
                 LayoutInflater.from(viewGroup.context),
                 viewGroup,
                 false
@@ -23,7 +23,6 @@ class ProductsByIdAdapter(var productData:  ProductItemListener) : RecyclerView.
 
     override fun onBindViewHolder(mDeveloperViewHolder: DeveloperViewHolder, position: Int) {
         mDeveloperViewHolder.onBind(position)
-
 
     }
 
@@ -36,25 +35,12 @@ class ProductsByIdAdapter(var productData:  ProductItemListener) : RecyclerView.
         this.notifyDataSetChanged()
     }
 
-    inner class DeveloperViewHolder(var mTradersResponse: RowProductBinding) :
+    inner class DeveloperViewHolder(var mTradersResponse: RowProductgridBinding) :
         RecyclerView.ViewHolder(mTradersResponse.root) {
-
         fun onBind(position: Int) {
             val currentStudent = mProductsModel[position]
-              mTradersResponse.model = currentStudent
+            mTradersResponse.model = currentStudent
 
-
-            itemView.setOnClickListener { view ->
-                run {
-                    productData.itemClicked(currentStudent)
-                }
-            }
         }
-
-
-    }
-
-    interface ProductItemListener {
-        fun itemClicked(productData: ProductsByIdResponse.Data);
     }
 }

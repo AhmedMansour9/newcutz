@@ -33,7 +33,8 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
         defaultViewModelProviderFactory
     }
 
-    private val controller = TreeItemController(::onCatModelClicked
+    private val controller = TreeItemController(
+        ::onCatModelClicked
     )
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -79,9 +80,6 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
         }
     }
 
-    private fun onClickItem(node: CatModel) {
-
-    }
 
     private fun getStoreOwner(): ViewModelStoreOwner? {
         val navController = Navigation
@@ -91,10 +89,12 @@ class CategoryFragment : BaseFragment<CategoryFragmentBinding>() {
 
     @Subscribe(sticky = false, threadMode = ThreadMode.MAIN)
     fun onMessageEvent(messsg: MessageEvent) {/* Do something */
-        val bundle = Bundle()
-        bundle.putParcelable("cat", messsg.catmodel)
-        Navigation.findNavController(mViewDataBinding.root).navigate(R.id.action_T_Categories_to_productsById,bundle);
-
+        if (messsg.Message.equals("cat")) {
+            val bundle = Bundle()
+            bundle.putParcelable("cat", messsg.catmodel)
+            Navigation.findNavController(mViewDataBinding.root)
+                .navigate(R.id.action_T_Categories_to_productsById, bundle);
+        }
     };
     override fun onAttach(context: Context) {
         super.onAttach(context)

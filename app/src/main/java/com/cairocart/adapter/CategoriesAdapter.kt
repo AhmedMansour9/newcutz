@@ -70,7 +70,7 @@ class CategoriesAdapter @JvmOverloads constructor(
     @ModelProp
     fun setItemData(CatModel: CatModel) {
         binding.root.setOnClickListener(){
-            EventBus.getDefault().postSticky(MessageEvent(CatModel))
+            EventBus.getDefault().postSticky(MessageEvent(CatModel,"cat"))
         }
         binding.titleTv.text = CatModel.name
         setMargins(CatModel.level * 16)

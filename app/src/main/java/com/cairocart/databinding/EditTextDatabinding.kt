@@ -8,6 +8,7 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
+import com.cairocart.R
 import com.google.android.material.textfield.TextInputLayout
 import java.util.regex.Pattern
 
@@ -73,6 +74,17 @@ class EditTextDatabinding {
                 Glide.with(view.context)
                     .load(url).apply(RequestOptions().circleCrop())
                     .into(view)
+
+            }
+        }
+
+        @BindingAdapter("checkFavourit")
+        @JvmStatic
+        fun checkFavourit(view: ImageView, status: Boolean) {
+            if (status==false) {
+                view.setImageResource(R.drawable.ic_emptyfavourit)
+            }else{
+                view.setImageResource(R.drawable.ic_favourit)
 
             }
         }

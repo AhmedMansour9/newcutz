@@ -9,4 +9,9 @@ public class MessageEvent {
     constructor(catmodel:CatModel) {
         this.catmodel = catmodel
     }
+    constructor(catmodel:CatModel,Message: String) {
+        this.Message = Message
+        this.catmodel = catmodel
+
+    }
 }
