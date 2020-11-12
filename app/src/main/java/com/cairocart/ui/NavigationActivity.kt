@@ -22,7 +22,6 @@ class NavigationActivity : BaseActivity<NavigationActivityBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setupLoading()
 
     }
 

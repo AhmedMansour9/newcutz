@@ -10,7 +10,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.ui.AppBarConfiguration
-import com.github.ybq.android.spinkit.style.FoldingCube
+//import com.github.ybq.android.spinkit.style.FoldingCube
 import com.kaopiz.kprogresshud.KProgressHUD
 
 abstract class BaseFragment<T : ViewDataBinding>() :
@@ -20,7 +20,7 @@ abstract class BaseFragment<T : ViewDataBinding>() :
     abstract var idLayoutRes: Int
     lateinit var mViewDataBinding: T
     private var dailog: Dialog? = null
-    private var foldingCube: FoldingCube? = null
+//    private var foldingCube: FoldingCube? = null
     private  lateinit var hud: KProgressHUD
 
 

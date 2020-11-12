@@ -71,7 +71,7 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
 
     private fun initLinearUI() {
         mViewDataBinding.recyclerProducts.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         mViewDataBinding.recyclerProducts.adapter = productsAdapter
     }
 

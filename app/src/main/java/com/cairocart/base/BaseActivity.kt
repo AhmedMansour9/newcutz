@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.databinding.ViewDataBinding
 import com.cairocart.R
-import com.github.ybq.android.spinkit.style.FoldingCube
 
 abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
@@ -24,7 +23,6 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
     lateinit var mViewDataBinding: T
 
     private var dailog: Dialog? = null
-    private var foldingCube: FoldingCube? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,31 +47,15 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("InflateParams")
-    fun setupLoading() {
-        this.dailog = Dialog(this)
-        val view = LayoutInflater.from(this).inflate(R.layout.loading_dialog, null)
 
-        dailog?.setContentView(view)
-        val progressBar: ProgressBar = dailog!!.findViewById(R.id.progress)
-        foldingCube = FoldingCube()
-        foldingCube?.setDrawBounds(0, 0, 100, 100)
-        foldingCube?.color = Color.WHITE
-        dailog?.setCancelable(false)
-        progressBar.indeterminateDrawable = foldingCube
-        foldingCube?.start()
-
-    }
 
     fun showLoading() {
         dailog?.show()
-        foldingCube?.stop()
 
     }
 
     fun dismissLoading() {
         dailog?.dismiss()
-        foldingCube?.stop()
     }
 
 }
