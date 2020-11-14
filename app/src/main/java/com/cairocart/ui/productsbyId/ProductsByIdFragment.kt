@@ -10,6 +10,7 @@ import androidx.navigation.navGraphViewModels
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.cairocart.ChangeLanguage
 import com.cairocart.R
 import com.cairocart.adapter.LoadStateViewHolder
@@ -19,12 +20,15 @@ import com.cairocart.data.remote.model.CatModel
 import com.cairocart.data.remote.model.ProductsResponse
 import com.cairocart.databinding.FragmentProductsByIdBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_products_by_id.*
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.distinctUntilChangedBy
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNavigator {
+class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNavigator ,SwipeRefreshLayout.OnRefreshListener{
 
     var linearView = true
     lateinit var details: CatModel
@@ -54,13 +58,18 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         mViewModel.navigator = this
         mViewDataBinding.productsViewModel = mViewModel
         mViewDataBinding.shimmerLayout.startShimmerAnimation()
+        init()
         getData()
         initGridUI()
-//        checkStatus()
         setupView()
 
 
     }
+
+    private fun init() {
+        mViewDataBinding.SwipCategories.setOnRefreshListener(this)
+    }
+
 
     private fun setupView() {
         searchJob?.cancel()
@@ -68,7 +77,6 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
             mViewModel.listData.collect {
                 productsGridAdapter.submitData(it)
             }
-
         }
 
 
@@ -83,13 +91,8 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
 
     private fun initGridUI() {
 
-        mViewDataBinding.recyclerProductsGrid.setLayoutManager(
-            LinearLayoutManager(
-                requireContext()
-            )
-        )
+        mViewDataBinding.recyclerProductsGrid.setLayoutManager(LinearLayoutManager(requireContext()))
         mViewDataBinding.recyclerProductsGrid.adapter = productsGridAdapter
-
         mViewDataBinding.recyclerProductsGrid.adapter =
             productsGridAdapter.withLoadStateFooter(footer = LoadStateViewHolder.LoadingStateAdapter {
                 productsGridAdapter.retry()
@@ -98,14 +101,24 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         productsGridAdapter.addLoadStateListener {
             val status = it.source.refresh is LoadState.Loading
             if (status) {
-                mViewDataBinding.SwipCategories.isVisible = true
-                mViewDataBinding.shimmerLayout.stopShimmerAnimation()
-                mViewDataBinding.shimmerLayout.isVisible = false
+                showShimmer()
+            }else {
+                hideShimmer()
             }
 
         }
 
     }
+    fun showShimmer(){
+        mViewDataBinding.shimmerLayout.startShimmerAnimation()
+        mViewDataBinding.shimmerLayout.isVisible = true
+    }
+
+    fun hideShimmer(){
+        mViewDataBinding.shimmerLayout.stopShimmerAnimation()
+        mViewDataBinding.shimmerLayout.isVisible = false
+    }
+
 
     private fun changeViewList() {
         if (linearView) {
@@ -167,7 +180,20 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
 
     override fun onStop() {
         super.onStop()
-        dismissLoading()
+        hideShimmer()
+    }
+
+    override fun onRefresh() {
+       mViewDataBinding.SwipCategories.isRefreshing=false
+        showShimmer()
+        lifecycleScope.launch {
+
+            productsGridAdapter.loadStateFlow
+                // Only emit when REFRESH LoadState changes.
+                .distinctUntilChangedBy { it.refresh }
+                .collect { mViewDataBinding.recyclerProductsGrid.scrollToPosition(0) }
+        }
+
     }
 
 }

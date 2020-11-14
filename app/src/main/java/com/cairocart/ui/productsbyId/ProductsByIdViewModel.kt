@@ -17,9 +17,10 @@ class ProductsByIdViewModel @ViewModelInject constructor(dataCenterManager: Data
     var Lang = MutableLiveData<String>()
 
 
-    val listData = Pager(PagingConfig(pageSize = 10)) {
+    var listData = Pager(PagingConfig(pageSize = 10)) {
         ProductsPagination(dataCenterManager, category_Id.value.toString(),Lang.value.toString())
     }.flow
+
 
 
 }
