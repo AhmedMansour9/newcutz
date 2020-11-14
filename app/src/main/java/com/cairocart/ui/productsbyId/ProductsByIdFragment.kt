@@ -2,41 +2,48 @@ package com.cairocart.ui.productsbyId
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.lifecycle.Observer
+import android.view.View
+import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.navigation.navGraphViewModels
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cairocart.ChangeLanguage
 import com.cairocart.R
-import com.cairocart.adapter.ProductsByIdAdapter
+import com.cairocart.adapter.LoadStateViewHolder
 import com.cairocart.adapter.ProductsGridByIdAdapter
 import com.cairocart.base.BaseFragment
 import com.cairocart.data.remote.model.CatModel
-import com.cairocart.data.remote.model.ProductsByIdResponse
+import com.cairocart.data.remote.model.ProductsResponse
 import com.cairocart.databinding.FragmentProductsByIdBinding
-import com.cairocart.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNavigator {
 
-    var checkStatus = 0
-    var page=1
+    var linearView = true
+    lateinit var details: CatModel
+    var bundle = Bundle()
+    private var searchJob: Job? = null
+
     override var idLayoutRes: Int = R.layout.fragment_products_by_id
-    private val productsAdapter = ProductsByIdAdapter(object :
-        ProductsByIdAdapter.ProductItemListener {
-        override fun itemClicked(productData: ProductsByIdResponse.Data) {
+
+
+    private val productsGridAdapter = ProductsGridByIdAdapter(productData = object :
+        ProductsGridByIdAdapter.ProductItemListener {
+        override fun itemClicked(productData: ProductsResponse.Data?) {
             val bundle2 = Bundle()
             bundle2.putParcelable("item", productData)
             Navigation.findNavController(mViewDataBinding.root)
-                .navigate(R.id.action_productsById_to_detailsProductFragment,bundle2);
+                .navigate(R.id.action_productsById_to_detailsProductFragment, bundle2);
         }
-
     })
-    private val productsGridAdapter = ProductsGridByIdAdapter()
-    lateinit var details: CatModel
-    var bundle= Bundle()
+
 
     val mViewModel: ProductsByIdViewModel by navGraphViewModels(R.id.graph_home) {
         defaultViewModelProviderFactory
@@ -46,80 +53,93 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         super.onActivityCreated(savedInstanceState)
         mViewModel.navigator = this
         mViewDataBinding.productsViewModel = mViewModel
+        mViewDataBinding.shimmerLayout.startShimmerAnimation()
         getData()
-        getProducts()
-        productsObserver()
+        initGridUI()
+//        checkStatus()
+        setupView()
+
+
+    }
+
+    private fun setupView() {
+        searchJob?.cancel()
+        searchJob = lifecycleScope.launch {
+            mViewModel.listData.collect {
+                productsGridAdapter.submitData(it)
+            }
+
+        }
+
 
     }
 
     private fun getData() {
-        bundle=this.requireArguments()
-        details= bundle.getParcelable("cat")!!
-    }
-
-    private fun checkStatus() {
-        if (checkStatus == 0) {
-            initLinearUI()
-        } else {
-            initGridUI()
-        }
-    }
-
-    private fun getProducts() {
-        mViewModel.getProductsById(ChangeLanguage.getLanguage(requireContext()), details.id.toString(),page.toString())
-    }
-
-    private fun initLinearUI() {
-        mViewDataBinding.recyclerProducts.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        mViewDataBinding.recyclerProducts.adapter = productsAdapter
+        bundle = this.requireArguments()
+        details = bundle.getParcelable("cat")!!
+        mViewModel.category_Id.value = details.id.toString()
+        mViewModel.Lang.value = ChangeLanguage.getLanguage(requireContext())
     }
 
     private fun initGridUI() {
-        mViewDataBinding.recyclerProducts.setLayoutManager(GridLayoutManager(requireContext(), 2))
-        mViewDataBinding.recyclerProducts.adapter = productsGridAdapter
-    }
 
-    private fun productsObserver() {
-        mViewModel.productResponse.observe(viewLifecycleOwner, Observer {
-            when (it.staus) {
-                Status.SUCCESS -> {
-                    dismissLoading()
-                    addData(it.data as MutableList<ProductsByIdResponse.Data>)
-                }
-                Status.LOADING -> {
-                    showLoading()
-                }
+        mViewDataBinding.recyclerProductsGrid.setLayoutManager(
+            LinearLayoutManager(
+                requireContext()
+            )
+        )
+        mViewDataBinding.recyclerProductsGrid.adapter = productsGridAdapter
 
-                Status.ERROR -> {
-                    dismissLoading()
-                }
+        mViewDataBinding.recyclerProductsGrid.adapter =
+            productsGridAdapter.withLoadStateFooter(footer = LoadStateViewHolder.LoadingStateAdapter {
+                productsGridAdapter.retry()
+            })
+
+        productsGridAdapter.addLoadStateListener {
+            val status = it.source.refresh is LoadState.Loading
+            if (status) {
+                mViewDataBinding.SwipCategories.isVisible = true
+                mViewDataBinding.shimmerLayout.stopShimmerAnimation()
+                mViewDataBinding.shimmerLayout.isVisible = false
             }
-        })
+
+        }
+
     }
 
-    private fun addData(data: MutableList<ProductsByIdResponse.Data>) {
-        checkStatus()
-        productsAdapter.setDeveloperList(data)
-        productsGridAdapter.setDeveloperList(data)
-
-
+    private fun changeViewList() {
+        if (linearView) {
+            mViewDataBinding.recyclerProductsGrid.setLayoutManager(
+                LinearLayoutManager(
+                    requireContext()
+                )
+            )
+            productsGridAdapter.type = 0
+        } else {
+            mViewDataBinding.recyclerProductsGrid.setLayoutManager(
+                GridLayoutManager(
+                    requireContext(), 2
+                )
+            )
+            productsGridAdapter.type = 1
+        }
     }
 
     override fun onClickGrid() {
         selectGrid()
         unselectLinear()
-        getProducts()
+        changeViewList()
+
     }
 
     override fun onClickLinear() {
         selectLinear()
         unselectGrid()
-        getProducts()
+        changeViewList()
     }
 
     fun selectGrid() {
-        checkStatus = 1
+        linearView = false
         mViewDataBinding.BtnGrid.setImageResource(R.drawable.ic_grid)
         mViewDataBinding.RelaGrid.setBackgroundResource(R.drawable.bc_righttoggle)
     }
@@ -129,11 +149,10 @@ class ProductsById : BaseFragment<FragmentProductsByIdBinding>(), ProductByIdNav
         mViewDataBinding.RelaGrid.setBackgroundColor(
             Color.TRANSPARENT
         )
-
     }
 
     fun selectLinear() {
-        checkStatus = 0
+        linearView = true
         mViewDataBinding.ImgLinear.setImageResource(R.drawable.ic_linearselect)
         mViewDataBinding.RelaLinear.setBackgroundResource(R.drawable.bc_lefttoggle)
     }

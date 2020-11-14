@@ -2,7 +2,6 @@ package com.cairocart.data.remote.repository
 
 import com.cairocart.data.remote.api.ApiService
 import com.cairocart.data.remote.model.*
-import retrofit2.Call
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -24,7 +23,7 @@ class ApiRepository @Inject constructor(private val apiService: ApiService) : Ap
         apiService.fetchCategories(language)
 
 
-    override suspend fun fetchProductsById(language: String, map: Map<String, String>): Response<ProductsByIdResponse> =
+    override suspend fun fetchProductsById(language: String, map: Map<String, String>): Response<ProductsResponse> =
         apiService.fetchProductsById(language,map)
 
 }

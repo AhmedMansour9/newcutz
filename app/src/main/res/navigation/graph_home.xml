@@ -34,7 +34,6 @@
                 <action
                     app:enterAnim="@android:anim/fade_in"
                     app:exitAnim="@android:anim/fade_out"
-                    app:popUpTo="@+id/productsById"
                     app:popUpToInclusive="true"
                     android:id="@+id/action_productsById_to_detailsProductFragment"
                     app:destination="@id/detailsProductFragment" />

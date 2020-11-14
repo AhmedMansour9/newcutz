@@ -151,9 +151,10 @@ dependencies {
     implementation "androidx.datastore:datastore-preferences:1.0.0-alpha02"
 
 
-    def paging_version = "3.0.0-alpha04"
+    def paging_version = "3.0.0-alpha08"
     implementation "androidx.paging:paging-runtime:$paging_version"
 
+    implementation 'com.facebook.shimmer:shimmer:0.1.0'
 
 
 }

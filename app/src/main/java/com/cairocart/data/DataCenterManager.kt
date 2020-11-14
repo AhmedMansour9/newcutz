@@ -18,7 +18,7 @@ interface DataCenterManager {
     suspend fun getProductsById(
         language: String,
         map: Map<String, String>
-    ): Response<ProductsByIdResponse>
+    ): Response<ProductsResponse>
 
     fun dataSourcePreference(): DataStore<Preferences>
 

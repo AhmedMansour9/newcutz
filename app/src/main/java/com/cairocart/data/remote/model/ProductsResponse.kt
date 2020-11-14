@@ -9,9 +9,9 @@ import android.os.Parcelable
 
 @SuppressLint("ParcelCreator")
 @Parcelize
-data class ProductsByIdResponse(
+data class ProductsResponse(
     @SerializedName("data")
-    var `data`: List<Data?>?,
+    var `data`: List<Data>,
     @SerializedName("status")
     var status: Status?
 ) : Parcelable {

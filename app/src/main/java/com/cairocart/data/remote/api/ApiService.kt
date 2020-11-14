@@ -27,6 +27,6 @@ interface ApiService {
     suspend fun fetchProductsById(
         @Path(value = "language", encoded = true) language: String,
         @QueryMap map: Map<String, String>
-    ): Response<ProductsByIdResponse>
+    ): Response<ProductsResponse>
 
 }

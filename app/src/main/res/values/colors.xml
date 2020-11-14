@@ -23,5 +23,6 @@
     <color name="grey_60">#666666</color>
     <color name="grey_80">#37474F</color>
     <color name="grey_20">#cccccc</color>
+    <color name="placeholder_color">#dedede</color>
 
 </resources>
