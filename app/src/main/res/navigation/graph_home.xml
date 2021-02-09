@@ -5,45 +5,189 @@
     android:id="@+id/graph_home"
     app:startDestination="@id/homeFragment">
 
-<!--    <navigation android:id="@+id/navigation2"-->
-<!--        app:startDestination="@id/homeFragment">-->
-        <fragment
-            android:id="@+id/homeFragment"
-            android:name="com.cairocart.ui.home.HomeFragment"
-            android:label="HomeFragment"
-            tools:layout="@layout/fragment_home"/>
+    <!--    <navigation android:id="@+id/navigation2"-->
+    <!--        app:startDestination="@id/homeFragment">-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cutz.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_T_Categories"
+            app:destination="@id/T_Categories" />
+        <action
+            android:id="@+id/action_homeFragment_to_resultSerachFragment"
+            app:destination="@id/resultSerachFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productCollection"
+            app:destination="@id/productCollection" />
+    </fragment>
 
-        <fragment
-            android:id="@+id/T_Categories"
-            android:name="com.cairocart.ui.category.CategoryFragment"
-            android:label="CategoryFragment"
-            tools:layout="@layout/category_fragment" >
-                <action
-                    app:enterAnim="@android:anim/fade_in"
-                    app:exitAnim="@android:anim/fade_out"
-                    app:popUpToInclusive="true"
-                    android:id="@+id/action_T_Categories_to_productsById"
-                    app:destination="@id/productsById" />
-        </fragment>
+    <fragment
+        android:id="@+id/T_Categories"
+        android:name="com.cutz.ui.category.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/category_fragment">
+        <action
+            android:id="@+id/action_T_Categories_to_productsById"
+            app:destination="@id/productsById"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
+    </fragment>
 
-        <fragment
-            android:id="@+id/productsById"
-            tools:layout="@layout/fragment_products_by_id"
-            android:name="com.cairocart.ui.productsbyId.ProductsById"
-            android:label="ProductsById" >
-                <action
-                    app:enterAnim="@android:anim/fade_in"
-                    app:exitAnim="@android:anim/fade_out"
-                    app:popUpToInclusive="true"
-                    android:id="@+id/action_productsById_to_detailsProductFragment"
-                    app:destination="@id/detailsProductFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/detailsProductFragment"
-            android:name="com.cairocart.ui.detailsproduct.DetailsProductFragment"
-            android:label="DetailsProductFragment" />
+    <fragment
+        android:id="@+id/productsById"
+        android:name="com.cutz.ui.productsbyId.ProductsById"
+        android:label="ProductsById"
+        tools:layout="@layout/fragment_products_by_id">
+        <action
+            android:id="@+id/action_productsById_to_detailsProductFragment"
+            app:destination="@id/detailsProductFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_productsById_to_loginFragment2"
+            app:destination="@id/loginFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_productsById_to_filtertionFragment"
+            app:destination="@id/filtertionFragment" />
+        <action
+            android:id="@+id/action_productsById_to_resultFiltertionFragment"
+            app:destination="@id/resultFiltertionFragment" />
+        <action
+            android:id="@+id/action_productsById_to_resultSerachFragment"
+            app:destination="@id/resultSerachFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailsProductFragment"
+        android:name="com.cutz.ui.detailsproduct.DetailsProductFragment"
+        android:label="DetailsProductFragment">
+        <action
+            android:id="@+id/action_detailsProductFragment_to_addReviewFragment"
+            app:destination="@id/addReviewFragment" />
+        <action
+            android:id="@+id/action_detailsProductFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </dialog>
+    <dialog
+        android:id="@+id/addReviewFragment"
+        android:name="com.cutz.ui.addreview.AddReviewFragment"
+        android:label="AddReviewFragment" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.cutz.ui.login.LoginActivity"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment2"
+            app:destination="@id/registerFragment2"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment2"
+        android:name="com.cutz.ui.register.RegisterActivity"
+        android:label="RegisterFragment"
+        tools:layout="@layout/register_fragment" />
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.cutz.ui.myaccount.MyAccountFragment"
+        android:label="MyAccountFragment"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_myAccountFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_myOrdersFragment"
+            app:destination="@id/myOrdersFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.cutz.ui.wishlist.WishListFragment"
+        android:label="WishListFragment">
+        <action
+            android:id="@+id/action_wishListFragment_to_detailsProductFragment"
+            app:destination="@id/detailsProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.cutz.ui.cart.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.cutz.ui.editprofile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <dialog
+        android:id="@+id/filtertionFragment"
+        android:name="com.cutz.ui.filter.FiltertionFragment"
+        android:label="FiltertionFragment"
+        tools:layout="@layout/fragment_filtertion">
+    </dialog>
+    <fragment
+        android:id="@+id/resultFiltertionFragment"
+        android:name="com.cutz.ui.resultfilter.ResultFiltertionFragment"
+        android:label="ResultFiltertionFragment"
+        tools:layout="@layout/fragment_result_filtertion" >
+        <action
+            android:id="@+id/action_resultFiltertionFragment_to_detailsProductFragment"
+            app:destination="@id/detailsProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.cutz.ui.contactus.ContactUsFragment"
+        android:label="ContactUsFragment" />
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.cutz.ui.offers.OffersFragment"
+        android:label="fragment_offers2"
+        tools:layout="@layout/fragment_offers2" >
+        <action
+            android:id="@+id/action_offersFragment_to_detailsProductFragment"
+            app:destination="@id/detailsProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.cutz.ui.recipes.RecipesFragment"
+        android:label="fragment_recipes"
+        tools:layout="@layout/fragment_recipes" />
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.cutz.ui.myorders.MyOrdersFragment"
+        android:label="MyOrdersFragment" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.cutz.ui.aboutus.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <fragment
+        android:id="@+id/resultSerachFragment"
+        android:name="com.cutz.ui.resultsearch.ResultSerachFragment"
+        android:label="ResultSerachFragment" >
+        <action
+            android:id="@+id/action_resultSerachFragment_to_detailsProductFragment"
+            app:destination="@id/detailsProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productCollection"
+        android:name="com.cutz.ui.productcollection.ProductCollection"
+        android:label="ProductCollection" />
 
-        <!--    </navigation>-->
+
+    <!--    </navigation>-->
 
 
 </navigation>

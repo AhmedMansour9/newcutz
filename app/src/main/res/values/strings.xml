@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jazar</string>
+    <string name="app_name">Cutz</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgetpas">Forget Password?</string>
@@ -37,7 +37,7 @@
     <string name="selectlanguage">Select Language</string>
     <string name="selectbranch">Select Branch</string>
     <string name="register">Register</string>
-    <string name="validemail">Please enter a valid email address</string>
+    <string name="validemail">Email or phone is already used</string>
     <string name="feildempty">Fill input with valid data</string>
     <string name="pasweak">The password should contain at least one digit &amp; at least one special char
      /n at least one upper case &amp;  at least 8 characters</string>
@@ -50,7 +50,7 @@
     <string name="changedata">Change Data</string>
     <string name="changepass">Change Password</string>
     <string name="change">Change </string>
-    <string name="confirmpass">ConFirm Password</string>
+    <string name="confirmpass">Confirm password</string>
     <string name="updated">Information has been updated Successfully</string>
     <string name="updatedpassword">Password has been updated Successfully</string>
     <string name="failedmsg">Failed, There is something wrong</string>
@@ -68,11 +68,11 @@
     <string name="apartment_num">Apartment Number</string>
     <string name="ordernow">Order Now</string>
     <string name="ordersuccess"> Your Order added successfully</string>
-    <string name="debit">Visa</string>
+    <string name="debit">Credit / Debit Card</string>
     <string name="perviousorder">PREVIOUS ORDERS</string>
-    <string name="cash">Cash</string>
+    <string name="cash">Cash On Delivery</string>
     <string name="noorders">Not Found Any order</string>
-    <string name="orderid">Orderid</string>
+    <string name="orderid">Order id</string>
     <string name="InProgress">In Progress</string>
     <string name="Delivered">Delivered</string>
     <string name="Canceled">Canceled</string>
@@ -80,16 +80,16 @@
     <string name="Deliveryaddress">Delivery address</string>
     <string name="Items">Items</string>
 
-    <string name="sub_total">sub total </string>
+    <string name="sub_total">Sub Total </string>
     <string name="Tax">Tax </string>
     <string name="Delivery_fees">Delivery fees </string>
     <string name="english">English</string>
     <string name="herbian">Hebrew</string>
-    <string name="arabic">Arabic</string>
+    <string name="arabic">عربي</string>
     <string name="Deliver">Deliver</string>
     <string name="date">Date</string>
     <string name="price">Price :</string>
-    <string name="noproduct">Not Found Any Product</string>
+    <string name="noproduct">Not found any product</string>
     <string name="title_activity_navigation">Navigation</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -167,12 +167,12 @@
     <string name="forget_pas">Forget Password</string>
     <string name="search">Search For Product</string>
 
-    <string name="facebook_app_id">1990709114396351</string>
+    <string name="facebook_app_id">2834578786860966</string>
     <string name="leave_review">Leave Review</string>
     <string name="loginhome">(Login/</string>
     <string name="registerhome">Register)</string>
     <string name="comment">Comment</string>
-    <string name="confirm">ConFirm</string>
+    <string name="confirm">Confirm</string>
     <string name="exit_message">Do You Want To Exit ?</string>
     <string name="my_acc">My Account</string>
     <string name="promo">Promo Code</string>
@@ -195,14 +195,14 @@
     <string name="login_label">Sign in</string>
     <string name="register_label">Sign Up</string>
     <string name="register_msg_label">I don\'t have an account?</string>
-    <string name="no_products">No Products:</string>
+    <string name="no_products">No Products</string>
     <string name="state">State</string>
     <string name="d_date">Delivery Time</string>
     <string name="empty_gift">Sorry, You Get Empty Gift</string>
     <string name="congratulation">Congratulations</string>
     <string name="chose_gift">Choose Your Gift</string>
     <string name="descount">PromoCode Discount</string>
-    <string name="status">Order Status</string>
+    <string name="status">Status:</string>
     <string name="gift_promo">You have Gift </string>
     <string name="pending">Pending</string>
     <string name="shipping">In Shippping</string>
@@ -219,11 +219,10 @@
     <string name="paid">Payment when Recieving Order</string>
     <string name="checkoutorder">ConFirm</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
-    <string name="addReview">Add Review</string>
-    <string name="success_addreview">Review added Success</string>
+    <string name="addReview">Review</string>
+    <string name="success_addreview">Review Sent Success</string>
     <string name="onarrival">On Arrival</string>
     <string name="canceled">Canceled</string>
-    <string name="save">Save</string>
     <string name="your_addres">Your Address</string>
     <string name="wallet">My Wallet</string>
     <string name="no_points">Number Of Points</string>
@@ -265,13 +264,93 @@
     <string name="log_in">log in</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
-    <string name="add_cart">ADD CART</string>
+    <string name="add_cart">ADD TO CART</string>
     <string name="cu"> %s EGP</string>
+    <string name="sku">SKU</string>
+    <string name="moree">Instructions</string>
+    <string name="write">Write Your Review</string>
+    <string name="quality">Quality</string>
+    <string name="pricee">Price</string>
+    <string name="value">Value</string>
+    <string name="title">Title</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="summry">Summary</string>
+    <string name="add_favourit">Product has been add to your Favourit list</string>
+    <string name="remove_favourit">Product has been remove from your favouritlist</string>
+    <string name="max_cart">Maximum number of cart</string>
+    <string name="min_cart">Minimum number of cart</string>
+    <string name="loading">Loading</string>
+    <string name="load_cart">The product is add to the cart</string>
+    <string name="error">Error!</string>
 
 
-    <string-array name="types">
-        <item>Schedule</item>
-        <item>Immediately</item>
-    </string-array>
+    <string name="price_cart">Price     %s EGP</string>
+    <string name="tprice_cart">TotalPrice     %s EGP</string>
+    <string name="finish">Finish</string>
+    <string name="pro_cart"> %s Product</string>
+
+    <string name="cart_empty">No Items in the Cart!</string>
+    <string name="sorry">Sorry</string>
+    <string name="go_shopping">CONTINUE SHOPPING</string>
+
+    <string name="searchcat">Search For Category</string>
+    <string name="refresh">Try Again</string>
+    <string name="buy_anything">DISCOVER YOUR CUTZ \n ONLINE MARKET</string>
+    <string name="exclusive">SELECT YOUR ORDER \n IN FEW CLICKS</string>
+    <string name="amazing_disc">DETECT YOUR LOCATION \n AND WE FIND YOU</string>
+    <string name="skip">Skip</string>
+    <string name="save">Save Changes</string>
+    <string name="clear">CLEAR ALL</string>
+    <string name="brand">Brands</string>
+    <string name="select_range">Select your Range price </string>
+    <string name="countries">Countries</string>
+    <string name="cities">Cities</string>
+    <string name="shipping_address">SHIPPING ADDRESS</string>
+    <string name="shipping_method">SHIPPING METHOD</string>
+    <string name="shipping_payment">SHIPPING PAYMENT</string>
+    <string name="order_summary">ORDER SUMMARY</string>
+    <string name="f_txt">We make it simple to find the food you \n crave. Enter your address and let us do</string>
+    <string name="s_txt">Whe you order eat street we\'ll hook \n you up with exclusive coupons, special</string>
+    <string name="third_txt">We make food ordering fast, simple and \n free- no matter if you order online</string>
+    <string name="recipes">Recipes</string>
+    <string name="trackorder">You can track the order delivery in the \n Orders section</string>
+    <string name="additonal">Additional</string>
+    <string name="rate">Rate</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="qty">Quantity %s</string>
+    <string name="choose">Choose your language</string>
+    <string name="search_key">Search Key</string>
+    <string name="noinstrations">No Instructions found</string>
+    <string name="related_product">Related Product</string>
+    <string name="validatefname">Please Validate First Name</string>
+    <string name="validateLname">Please Validate Last Name</string>
+    <string name="validateAddress">Please Validate Address</string>
+    <string name="validateEmail">Please Validate Email</string>
+    <string name="validatePhone">Please Validate  Phone</string>
+    <string name="coupoun">Coupon</string>
+    <string name="douyouhave">Do you have Coupon ?</string>
+    <string name="add_coupon">Click here</string>
+    <string name="please_entercoupon">Please enter code of your coupon</string>
+    <string name="valid_coupon">Please enter valid coupon</string>
+    <string name="order_id">#%s</string>
+    <string name="tracking_order">Tracking Order</string>
+    <string name="verifyphone">Please enter code that \n we have sent to your mobile number</string>
+    <string name="dontrecive">Did\'nt receive any code ?</string>
+    <string name="resend">Resend Code</string>
+    <string name="verify">Verify</string>
+    <string name="one_kilo">1 kg</string>
+    <string name="half_kilo">0.5 kg</string>
+    <string name="orderid2">Order id:</string>
+    <string name="total_price2">Total Price:</string>
+    <string name="wrong_verify">Wrong Verify code</string>
+    <string name="bbq">BBQ</string>
+    <string name="frozen">Frozen</string>
+    <string name="chilled">Chilled</string>
+    <string name="pansearing">Pan Searing</string>
+    <string name="serve">Serve %s of people</string>
+    <string name="forgettpassword">Forget Password</string>
+    <string name="enter_phone">Enter your phone number</string>
+    <string name="send">Send</string>
+    <string name="phone_wrong">Please Enter correct phone number</string>
 
 </resources>

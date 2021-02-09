@@ -8,11 +8,12 @@
         android:id="@+id/homeFragment"
         app:itemHorizontalTranslationEnabled="false"
         />
-    <item android:icon="@drawable/ic_categories"
-        android:title="@string/categories"
-        android:id="@+id/T_Categories"
+    <item android:icon="@drawable/ic_offers"
+        android:title="@string/offers"
+        android:id="@+id/offersFragment"
         app:itemHorizontalTranslationEnabled="false"
         />
+
 
 <!--    <item android:icon="@drawable/btm_deails"-->
 <!--        android:title="@string/offers"-->
@@ -20,25 +21,28 @@
 <!--        app:itemHorizontalTranslationEnabled="false"-->
 <!--        />-->
 
-    <item android:icon="@drawable/btm_deails"
-        android:title="@string/offers"
-        android:id="@+id/T_Offers"
+
+    <item android:icon="@drawable/ic_recipes"
+        android:title="@string/recipes"
+        android:id="@+id/recipesFragment"
         app:itemHorizontalTranslationEnabled="false"
         />
-    <item android:icon="@drawable/btm_cart"
+
+    <item android:icon="@drawable/ic_notification"
         android:title="@string/cartt"
-        android:id="@+id/T_Cart"
+        android:id="@+id/cartFragment"
         app:itemHorizontalTranslationEnabled="false"
         />
-<!--    <item android:icon="@drawable/language"-->
+
+    <!--    <item android:icon="@drawable/language"-->
 <!--        android:title="@string/requests"-->
 <!--        android:id="@+id/T_Language"-->
 <!--        app:itemHorizontalTranslationEnabled="false"-->
 <!--        />-->
     <item android:icon="@drawable/btm_account"
         android:title="@string/my_acc"
-        android:id="@+id/T_Setting"
-        app:itemHorizontalTranslationEnabled="false"
-        />
+        android:id="@+id/myAccountFragment"
+        app:itemHorizontalTranslationEnabled="false" />
+
 
 </menu>

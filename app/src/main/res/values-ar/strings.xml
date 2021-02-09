@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">جزر</string>
+    <string name="app_name">Cutz</string>
     <string name="email">البريد الالكتروني</string>
     <string name="password">الرقم السري</string>
     <string name="forgetpas">هل نسيت كلمة المرور ؟</string>
@@ -193,7 +193,7 @@
     <string name="requests">طلبات</string>
     <string name="out_stock">إنتهى من المخزن</string>
     <string name="please_enterstate">من فضلك ادخل الحي</string>
-    <string name="total_price">السعر الاجمالي</string>
+    <string name="total_price">: السعر الاجمالي</string>
     <string name="policy">الأحكام والشروط</string>
     <string name="checked">يرجى التأكد من التحقق من الخصوصية</string>
     <string name="sub_cat">الفئات الفرعية</string>
@@ -207,7 +207,6 @@
     <string name="addReview">اضف تقييم</string>
     <string name="success_addreview">تمت إضافة التقييم بنجاح</string>
     <string name="onarrival">علي وشك الوصول</string>
-    <string name="save">Save</string>
     <string name="your_addres">عنوانك</string>
     <string name="wallet">محفظتي</string>
     <string name="no_points">عدد النقاط</string>
@@ -248,12 +247,90 @@
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
     <string name="cu">جنيه</string>
+    <string name="rate">التقييم</string>
+    <string name="contact_information">معلومات التواصل</string>
+    <string name="qty">الكمية</string>
+    <string name="choose">اختر اللغة</string>
+    <string name="search_key">حروف البحث </string>
+    <string name="noinstrations">لا يوجد تعليمات</string>
+    <string name="related_product">المنتجات المماثلة</string>
+    <string name="coupoun">كود الخصم</string>
+    <string name="douyouhave">هل لديك كود خصم ؟</string>
+    <string name="add_coupon">اضف هنا</string>
+    <string name="please_entercoupon">من فضلك ادخل كود الخصم</string>
+    <string name="valid_coupon">من فضلك ادخل كود خصم صحيح</string>
+    <string name="tracking_order">متابعة الطلب</string>
+    <string name="verifyphone">من فضلك ادخل الرقم الذي \n ارسل لك علي هاتفك</string>
+    <string name="dontrecive">لم يرسل لك رقم التحقق ؟</string>
+    <string name="resend">اعادة الارسال</string>
+    <string name="one_kilo">1 كيلو</string>
+    <string name="half_kilo">نصف كيلو</string>
+    <string name="verify">تحقق</string>
+    <string name="wrong_verify">رقم التحقق خاطئ</string>
+    <string name="bbq">شواء</string>
+    <string name="chilled">مبرد</string>
+    <string name="pansearing">عموم يحرق</string>
+    <string name="frozen">مجمدة</string>
+    <string name="serve">يخدم %s عدد من الافراد</string>
+    <string name="n_cart">عدد المنتجات</string>
+    <string name="T_cart">السعر الكلي</string>
+    <string name="s_service">Shipping Service</string>
+    <string name="t_bill">Total Bill</string>
+    <string name="add_cart">اضف الي العربة</string>
+
+    <string name="sku">SKU</string>
+    <string name="moree">تعليمات</string>
+    <string name="write">اضف تقييم</string>
+    <string name="quality">Quality</string>
+    <string name="pricee">السعر</string>
+    <string name="value">قمة</string>
+    <string name="title">عنوان</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="summry">Summary</string>
+    <string name="add_favourit">تم اضافة المنتج الي المفضلة</string>
+    <string name="remove_favourit">تم حذف المنتج من المفضلة</string>
+    <string name="max_cart">الحد الاقصي للمنتج</string>
+    <string name="min_cart">Minimum number of cart</string>
+    <string name="loading">تحميل</string>
+    <string name="load_cart">تم اضافة المنتج الي العربة</string>
+    <string name="error">Error!</string>
 
 
-    <string-array name="types">
-        <item>توصيل مجمع يوميا</item>
-        <item>توصيل سريع</item>
+    <string name="price_cart">السعر %s جنيه</string>
+    <string name="tprice_cart">السعر الكلي %s جنيه</string>
+    <string name="finish">انهاء</string>
+    <string name="pro_cart">%s المنتجات</string>
 
-    </string-array>
+
+    <string name="cart_empty">لا يوجد منتجات في العربة</string>
+    <string name="sorry">نأسف!</string>
+    <string name="go_shopping">CONTINUE SHOPPING</string>
+
+    <string name="searchcat">Search For Category</string>
+    <string name="refresh">حاول ثانيا</string>
+    <string name="buy_anything">اكتشف قطعك \n في السوق عبر الإنترنت</string>
+    <string name="exclusive">حدد طلبك \n في بضع نقرات</string>
+    <string name="amazing_disc">اضف  موقعك \n وسوف نجدك</string>
+    <string name="skip">تخطي</string>
+    <string name="save">حفظ التغييرات</string>
+    <string name="clear">CLEAR ALL</string>
+    <string name="brand">Brands</string>
+    <string name="select_range">Select your Range price </string>
+    <string name="countries">البلاد</string>
+    <string name="cities">المدن</string>
+    <string name="shipping_address">تفاصيل العنوان</string>
+    <string name="shipping_method">طرق الشحن</string>
+    <string name="shipping_payment">طرق الدفع</string>
+    <string name="order_summary">ملخص الطلب</string>
+    <string name="f_txt">نجعل من السهل العثور على الطعام الذي \ n تشتهيه. أدخل عنوانك ودعنا نفعل</string>
+    <string name="s_txt">عندما تطلب تناول الطعام في الشارع ، سنقوم بتوصيلك بكوبونات حصرية ، خاصة</string>
+    <string name="third_txt">نجعل طلب الطعام سريعًا وبسيطًا \ n مجانًا - بغض النظر عما إذا كنت تطلب الطعام عبر الإنترنت</string>
+    <string name="recipes">وصفات</string>
+    <string name="trackorder">يمكنك تتبع تسليم الطلب في \n قسم الطلبات</string>
+    <string name="additonal">اضافات</string>
+    <string name="forgettpassword">استعادة الرقم السري</string>
+    <string name="enter_phone">ادخل رقم الهاتف</string>
+    <string name="send">ارسال</string>
+    <string name="phone_wrong">من فضلك ادخل رقم هاتف صحيح</string>
 
 </resources>

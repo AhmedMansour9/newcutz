@@ -6,75 +6,14 @@
 
         <variable
             name="registerViewModel"
-            type="com.cairocart.ui.register.RegisterViewModel" />
+            type="com.cutz.ui.register.RegisterViewModel" />
     </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
-
-<!--        <TextView-->
-<!--            android:id="@+id/cairo"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/_25sdp"-->
-<!--            android:fontFamily="@font/product_sans_bold"-->
-<!--            android:text="@string/cairo"-->
-<!--            android:textColor="@color/addition2"-->
-<!--            android:textSize="30sp"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/cart"-->
-<!--            app:layout_constraintHorizontal_chainStyle="packed"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/cart"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/product_sans_bold"-->
-<!--            android:text="@string/cartLabel"-->
-<!--            android:textColor="@color/addition1"-->
-<!--            android:textSize="30sp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/cairo"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/cairo" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/create_msg"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="18dp"-->
-<!--            android:layout_marginTop="@dimen/_30sdp"-->
-<!--            android:layout_marginRight="18dp"-->
-<!--            android:fontFamily="@font/productsansregular"-->
-<!--            android:text="@string/create_msg_label"-->
-<!--            android:textAllCaps="true"-->
-<!--            android:textColor="@android:color/darker_gray"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintLeft_toLeftOf="parent"-->
-<!--            app:layout_constraintRight_toRightOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/cairo" />-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/tell_us"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="18dp"-->
-<!--            android:layout_marginTop="@dimen/_10sdp"-->
-<!--            android:layout_marginRight="18dp"-->
-<!--            android:fontFamily="@font/product_sans_bold"-->
-<!--            android:text="@string/tell_us_about_yourself"-->
-<!--            android:textColor="@color/addition1"-->
-<!--            android:textSize="30sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintLeft_toLeftOf="parent"-->
-<!--            app:layout_constraintRight_toRightOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/create_msg" />-->
+        android:background="@color/black">
        <ScrollView
            android:layout_width="match_parent"
            android:layout_height="match_parent"
@@ -110,6 +49,8 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="25dp"
             android:hint="@string/firstLabel"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
             app:boxBackgroundColor="@android:color/transparent"
             app:layout_constraintTop_toBottomOf="@+id/logo">
 
@@ -118,10 +59,14 @@
                 android:singleLine="true"
                 android:inputType="text"
                 android:drawableEnd="@drawable/ic_name"
-                android:drawableTint="#0BAAFC"
+                android:textColor="@color/white"
+                android:hint="@string/fullname"
+                android:textColorHint="@color/white"
+                android:drawableTint="@color/white"
+                android:backgroundTint="@color/white"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/product_sans_bold"
-                android:text="@={registerViewModel.customer.firstname}"
+                android:text="@={registerViewModel.customer.full_name}"
                 />
 
 
@@ -134,7 +79,9 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="25dp"
-            android:hint="@string/lastLabel"
+            android:hint="@string/phone"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
             app:boxBackgroundColor="@android:color/transparent"
             app:layout_constraintTop_toBottomOf="@+id/firstTextField">
 
@@ -142,11 +89,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:inputType="text"
+                android:inputType="phone"
+                android:textColor="@color/white"
+                android:hint="@string/phone"
+                android:id="@+id/EPhone"
+                android:backgroundTint="@color/white"
+                android:textColorHint="@color/white"
+                android:drawableTint="@color/white"
                 android:drawableEnd="@drawable/ic_name"
-                android:drawableTint="#0BAAFC"
                 android:fontFamily="@font/product_sans_bold"
-                android:text="@={registerViewModel.customer.lastname}" />
+                android:text="@={registerViewModel.customer.phone}" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -158,6 +110,8 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="25dp"
+            app:hintTextColor="@color/white"
+            app:hintEnabled="false"
             android:hint="@string/emailAddressLabel"
             emailVaild="@{`Please enter a valid email address`}"
             app:boxBackgroundColor="@android:color/transparent"
@@ -169,7 +123,11 @@
                 android:fontFamily="@font/product_sans_bold"
                 android:inputType="textEmailAddress"
                 android:drawableEnd="@drawable/ic_email"
-                android:drawableTint="#0BAAFC"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:hint="@string/email"
+                android:textColorHint="@color/white"
+                android:drawableTint="@color/white"
                 android:text="@={registerViewModel.customer.email}" />
 
 
@@ -181,21 +139,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            app:hintTextColor="@color/white"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="25dp"
             android:hint="@string/passwordLabel"
             app:boxBackgroundColor="@android:color/transparent"
             app:layout_constraintTop_toBottomOf="@+id/emailTextField"
             app:passwordToggleEnabled="true"
-            passwordVaild="@{`The password should contain at least one digit , one special character  , one upper case and at least 8 characters`}"
-            app:passwordToggleTint="#069EEC">
+            app:hintEnabled="false"
+            app:passwordToggleTint="@color/white"
+            passwordVaild="@{`The password should contain at least  least 6 characters`}"
+          >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/product_sans_bold"
                 android:inputType="textPassword"
-                android:text="@={registerViewModel.registerRequest.password}" />
+                android:textColor="@color/white"
+                android:hint="@string/password"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                android:drawableTint="@color/white"
+                android:text="@={registerViewModel.customer.password}" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -203,7 +169,7 @@
                    android:id="@+id/btnSignIn"
                    style="@style/Widget.MaterialComponents.Button"
                    android:layout_width="match_parent"
-                   android:layout_height="65dp"
+                   android:layout_height="@dimen/_50sdp"
                    android:layout_marginLeft="30dp"
                    android:layout_marginTop="50dp"
                    android:layout_marginRight="30dp"
@@ -214,7 +180,8 @@
                    android:textAllCaps="false"
                    android:textColor="@android:color/white"
                    android:textSize="22sp"
-                   app:backgroundTint="#069EEC"
+                   app:cornerRadius="@dimen/_10sdp"
+                   app:backgroundTint="@color/red"
                    app:layout_constraintTop_toBottomOf="@+id/passwordTextField"
                    app:layout_constraintLeft_toLeftOf="parent"
                    app:layout_constraintRight_toRightOf="parent" />
@@ -229,7 +196,7 @@
                    android:fontFamily="@font/product_sans_bold"
                    android:text="@string/have_an_account"
                    android:textAllCaps="true"
-                   android:textColor="@color/addition1"
+                   android:textColor="@color/white"
                    android:textSize="16sp"
                    android:textStyle="bold"
                    app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
@@ -249,7 +216,7 @@
                    android:onClick="@{()->registerViewModel.navigator.backLoginClick()}"
                    android:text="@string/log_in"
                    android:textAllCaps="true"
-                   android:textColor="@color/addition1"
+                   android:textColor="@color/red"
                    android:textSize="16sp"
                    app:layout_constraintBottom_toBottomOf="@+id/title1"
                    app:layout_constraintEnd_toEndOf="parent"

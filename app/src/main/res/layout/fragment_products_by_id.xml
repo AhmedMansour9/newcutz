@@ -7,41 +7,113 @@
 
         <variable
             name="productsViewModel"
-            type="com.cairocart.ui.productsbyId.ProductsByIdViewModel" />
+            type="com.cutz.ui.productsbyId.ProductsByIdViewModel" />
 
     </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bgLayout"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/RelaMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F6F7F9">
+        android:background="@color/black">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbaproduct"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/colorPrimary">
+            android:layout_height="@dimen/_90sdp"
+            android:background="@color/black"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/textView"
-                    android:layout_width="@dimen/_60sdp"
+                    android:id="@+id/Img_Notification"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="364dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:src="@drawable/ic_notification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/T_notification_number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/logo"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/bc_txtcart"
+                    android:text="1"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_7sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <EditText
+                    android:id="@+id/E_Search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bc_search"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawableTint="#7B7677"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColorHint="#888888"
+                    android:textColor="#888888"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_constraintVertical_bias="0.93" />
+
+
+                <ImageView
+                    android:id="@+id/textView"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_centerHorizontal="true"
                     android:textColor="#fff"
-                    android:textSize="@dimen/_16sdp"
-                    android:textStyle="bold" />
+                    android:src="@drawable/logohome"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
-
+        </com.google.android.material.appbar.AppBarLayout>
 
 
 
@@ -52,20 +124,33 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
-            android:background="#fff"
+            android:background="@color/black"
             android:padding="@dimen/_5sdp"
             app:layout_constraintCircleRadius="@dimen/_90sdp"
-            app:layout_constraintTop_toBottomOf="@+id/toolbaproduct">
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/TName"
+                />
 
             <LinearLayout
                 android:id="@+id/toggleButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:background="@drawable/bc_ltoggle"
-                app:layout_constraintStart_toStartOf="parent">
+                >
 
-                <RelativeLayout
+
+            <RelativeLayout
                     android:id="@+id/Rela_Linear"
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="match_parent"
@@ -108,15 +193,19 @@
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:drawableEnd="@drawable/ic_filter"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="@string/filtert"
+                android:onClick="@{()->productsViewModel.navigator.onClickFilter()}"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_11sdp"
-                app:backgroundTint="#069EEC"
+                app:backgroundTint="@color/red"
                 app:cornerRadius="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -148,38 +237,79 @@
 
 
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/shimmerLayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
 
-            android:layout_marginTop="@dimen/_90sdp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Rela_Empty"
+            android:visibility="invisible"
+            android:layout_marginTop="?actionBarSize">
 
-
-            <LinearLayout
+            <ImageView
                 android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:id="@+id/img"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:src="@drawable/img_emptyproduct" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="@string/sorry"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:id="@+id/T_Success"
+                android:layout_below="@+id/img"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"/>
 
-                <include layout="@layout/placeholder"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:id="@+id/T_Message"
+                android:text="@string/noproduct"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_below="@+id/T_Success"
+                android:bufferType="spannable"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <include layout="@layout/placeholder"/>
-
-                <include layout="@layout/placeholder"/>
-
-                <include layout="@layout/placeholder"/>
 
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_GoHome"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/product_sans_bold"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home"
+                android:onClick="@{()->productsViewModel.navigator.openHome()}"
+                android:layout_below="@+id/T_Message"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp"
+                app:backgroundTint="@color/red"
+                app:cornerRadius="30dp"
+                />
 
 
-            </LinearLayout>
 
-
-        </com.facebook.shimmer.ShimmerFrameLayout>
-
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

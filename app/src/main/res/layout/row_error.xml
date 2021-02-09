@@ -25,6 +25,9 @@
             android:id="@+id/load_state_progress"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/red"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true" />
 
@@ -35,6 +38,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:text="Retry"
+            android:visibility="gone"
             android:layout_alignParentRight="true" />
 
     </RelativeLayout>

@@ -1,102 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff"
-    android:id="@+id/Rela_Favourits">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.Toolbar
+    <data>
+
+        <variable
+            name="productsViewModel"
+            type="com.cutz.ui.offers.OffersViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RelaMenu"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:id="@+id/toolbarFavourit"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+
+        <ImageView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:src="@drawable/logohome"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/SwipCategories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_60sdp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_ProductsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ss"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:scrollbars="horizontal"  />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_50sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/placeholder"/>
+
+                <include layout="@layout/placeholder"/>
+
+                <include layout="@layout/placeholder"/>
+
+                <include layout="@layout/placeholder"/>
+
+                <include layout="@layout/placeholder"/>
+
+
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/Rela_Empty"
+            android:visibility="invisible"
+            android:layout_marginTop="?actionBarSize">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:id="@+id/img"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:src="@drawable/img_emptyproduct" />
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="@string/app_name"
-                android:textColor="#fff"
-                android:textSize="@dimen/_16sdp"
+                android:text="@string/sorry"
+                android:textColor="@color/white"
                 android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:id="@+id/T_Success"
+                android:layout_below="@+id/img"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#87879D"
+                android:id="@+id/T_Message"
+                android:text="@string/noproduct"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_below="@+id/T_Success"
+                android:bufferType="spannable"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/Img_Filter"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_18sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:src="@drawable/ic_filter"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"/>
+
+
+
+
+
         </RelativeLayout>
-    </androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/product"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_below="@+id/toolbarFavourit"
-        android:textColor="#0b2031"
-        android:textStyle="bold"
-        android:textSize="@dimen/_13sdp"
-        android:id="@+id/favourit"
-        />
 
-
-
-    <TextView
-        android:id="@+id/T_TotalProdOffers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarFavourit"
-        android:layout_marginTop="@dimen/_18sdp"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_toEndOf="@+id/favourit"
-        android:textSize="@dimen/_9sdp"
-
-        android:textColor="#95939d"
-        />
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/SwipOffers"
-        android:layout_below="@+id/favourit"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        >
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_Offers"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_below="@+id/toolbar"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:scrollbars="horizontal" />
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/nofavproduct"
-        android:textColor="@color/blue"
-        android:visibility="invisible"
-        android:textSize="@dimen/_16sdp"
-        android:id="@+id/T_Nofavourit"
-        />
-
-</RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

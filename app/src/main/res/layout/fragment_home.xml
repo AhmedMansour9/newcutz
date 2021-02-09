@@ -10,6 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="@color/black"
         android:layout_height="match_parent">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -17,9 +18,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/SwipHome">
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -28,8 +29,8 @@
                     <com.google.android.material.appbar.AppBarLayout
                         android:id="@+id/appBarLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_80sdp"
-                        android:background="@color/colorPrimary"
+                        android:layout_height="@dimen/_90sdp"
+                        android:background="@color/black"
                         android:theme="@style/AppTheme.AppBarOverlay"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -44,26 +45,27 @@
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_18sdp"
                                 android:layout_marginStart="364dp"
-                                android:layout_marginTop="20dp"
                                 android:visibility="gone"
-                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="@dimen/_20sdp"
                                 android:src="@drawable/ic_notification"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/T_notification_numdetai"
+                                android:id="@+id/T_notification_number"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:layout_marginEnd="@dimen/_7sdp"
-                                android:layout_marginTop="@dimen/_6sdp"
-                                android:background="@drawable/bc_txtcart"
-                                android:padding="@dimen/_4sdp"
-                                android:textColor="#ffff"
                                 android:visibility="gone"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:background="@drawable/bc_txtcart"
+                                android:text="1"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="#ffff"
                                 android:textStyle="bold"
-                                android:textSize="@dimen/_6sdp"
+                                android:textSize="@dimen/_7sdp"
                                 app:layout_constraintTop_toTopOf="parent"
                                 custom:layout_constraintEnd_toEndOf="parent" />
 
@@ -71,11 +73,12 @@
                                 android:id="@+id/E_Search"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_30sdp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginEnd="20dp"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
                                 android:layout_marginBottom="8dp"
                                 android:background="@drawable/bc_search"
                                 android:drawableStart="@drawable/ic_search"
+                                android:drawableTint="#7B7677"
                                 android:drawablePadding="@dimen/_5sdp"
                                 android:focusable="true"
                                 android:focusableInTouchMode="true"
@@ -100,11 +103,12 @@
 
                             <ImageView
                                 android:id="@+id/textView"
-                                android:layout_width="@dimen/_60sdp"
+                                android:layout_width="@dimen/_80sdp"
                                 android:layout_height="@dimen/_40sdp"
                                 android:layout_marginTop="@dimen/_5sdp"
                                 android:layout_centerHorizontal="true"
                                 android:textColor="#fff"
+                                android:src="@drawable/logohome"
                                 custom:layout_constraintTop_toTopOf="parent"
                                 android:textStyle="bold"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -115,38 +119,28 @@
                     </com.google.android.material.appbar.AppBarLayout>
 
 
-<!--                    <com.smarteist.autoimageslider.SliderView-->
-<!--                        android:id="@+id/sliderView"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="@dimen/_150sdp"-->
-<!--                        app:sliderAnimationDuration="600"-->
-<!--                        app:sliderAutoCycleDirection="back_and_forth"-->
-<!--                        app:sliderAutoCycleEnabled="true"-->
-<!--                        app:sliderIndicatorAnimationDuration="600"-->
-<!--                        app:sliderIndicatorGravity="center_horizontal|bottom"-->
-<!--                        app:sliderIndicatorMargin="15dp"-->
-<!--                        android:layout_below="@+id/appBarLayout"-->
-<!--                        app:sliderIndicatorOrientation="horizontal"-->
-<!--                        app:sliderIndicatorPadding="3dp"-->
-<!--                        app:sliderIndicatorRadius="2dp"-->
-<!--                        app:sliderIndicatorSelectedColor="@color/colorPrimary"-->
-<!--                        app:sliderIndicatorUnselectedColor="#FFF"-->
-<!--                        app:sliderScrollTimeInSec="1"-->
-<!--                        app:sliderStartAutoCycle="true" />-->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerCategories"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_below="@+id/appBarLayout"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:scrollbars="horizontal"  />
 
 
-                    <!--    <com.github.ag.floatingactionmenu.OptionsFabLayout-->
-                    <!--        android:id="@+id/fab_l"-->
-                    <!--        android:layout_width="match_parent"-->
-                    <!--        android:layout_height="match_parent"-->
-                    <!--        app:color="@color/colorPrimary"-->
-                    <!--        custom:options_color="@color/colorPrimary"-->
-                    <!--        custom:fabSize="mini"-->
-                    <!--        custom:options_menu="@menu/menu_floating"-->
-                    <!--        custom:src="@drawable/ic_exitfloating" />-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_Collections"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/recyclerCategories"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:scrollbars="vertical"  />
 
                 </RelativeLayout>
-            </ScrollView>
+<!--            </ScrollView>-->
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </RelativeLayout>
