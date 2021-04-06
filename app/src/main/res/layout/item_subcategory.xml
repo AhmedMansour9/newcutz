@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.cutz.data.remote.model.SectonsResponse.Data.Category.SubCategory" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+         android:background="@drawable/rect_shadow"
+        android:layout_height="@dimen/_120sdp">
+
+        <ImageView
+            android:id="@+id/Img_Sub"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+             android:layout_marginEnd="@dimen/_18sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+
+            android:text="@={model.title}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@id/Img_Sub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Img_Sub"
+            app:layout_constraintTop_toTopOf="@id/Img_Sub" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

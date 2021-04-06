@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".ui.phone.VerifyPhoneActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:text="@string/phone"
+            android:id="@+id/phone"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/phone"
+            android:text="@string/verifyphone"
+            android:gravity="center"
+            android:id="@+id/verify"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/img_phone"
+            android:layout_below="@+id/verify"
+            android:id="@+id/img"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"/>
+        
+        <EditText
+            android:layout_width="@dimen/_40sdp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/black"
+            android:maxLength="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:gravity="center"
+            android:id="@+id/E_First"
+            android:background="@drawable/bc_phoneverify"
+            android:layout_height="@dimen/_40sdp"/>
+
+        <EditText
+            android:layout_width="@dimen/_40sdp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/E_First"
+            android:id="@+id/E_Second"
+            android:textColor="@color/black"
+            android:maxLength="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bc_phoneverify"
+            android:layout_height="@dimen/_40sdp"/>
+
+        <EditText
+            android:layout_width="@dimen/_40sdp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/E_Second"
+            android:id="@+id/E_Third"
+            android:textColor="@color/black"
+            android:maxLength="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bc_phoneverify"
+            android:layout_height="@dimen/_40sdp"/>
+
+        <EditText
+            android:layout_width="@dimen/_40sdp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/E_Third"
+            android:id="@+id/E_Fourth"
+            android:textColor="@color/black"
+            android:maxLength="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bc_phoneverify"
+            android:layout_height="@dimen/_40sdp"/>
+
+        <EditText
+            android:layout_width="@dimen/_40sdp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/E_Fourth"
+            android:id="@+id/E_fifth"
+            android:textColor="@color/black"
+            android:maxLength="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bc_phoneverify"
+            android:layout_height="@dimen/_40sdp"/>
+
+        <EditText
+            android:layout_width="@dimen/_40sdp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/E_fifth"
+            android:id="@+id/E_Six"
+            android:textColor="@color/black"
+            android:maxLength="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bc_phoneverify"
+            android:layout_height="@dimen/_40sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/E_First"
+            android:text="@string/dontrecive"
+            android:gravity="center"
+            android:id="@+id/notrecieve"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/red"
+            android:layout_below="@+id/notrecieve"
+            android:gravity="center"
+            android:id="@+id/seconds"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/red"
+            android:layout_below="@+id/seconds"
+            android:text="@string/resend"
+            android:onClick="resend"
+            android:gravity="center"
+            android:id="@+id/resend"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerify"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/verify"
+            android:onClick="Verify"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:cornerRadius="@dimen/_10sdp"
+            app:backgroundTint="@color/red"
+           android:layout_below="@+id/resend" />
+    </RelativeLayout>
+</layout>
