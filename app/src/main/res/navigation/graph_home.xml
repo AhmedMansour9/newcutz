@@ -185,6 +185,14 @@
         android:id="@+id/productCollection"
         android:name="com.cutz.ui.productcollection.ProductCollection"
         android:label="ProductCollection" />
+    <fragment
+        android:id="@+id/subCategoriesMenuFragment"
+        android:name="com.cutz.ui.subcategories.SubCategoriesMenuFragment"
+        android:label="SubCategoriesMenuFragment" >
+        <action
+            android:id="@+id/action_subCategoriesMenuFragment_to_productsById"
+            app:destination="@id/productsById" />
+    </fragment>
 
 
     <!--    </navigation>-->

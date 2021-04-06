@@ -13,11 +13,11 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardCornerRadius="0dp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        app:cardElevation="1dp"
-        android:backgroundTint="@color/black"
+        app:cardElevation="4dp"
+        android:backgroundTint="#1B1B1B"
         android:layout_marginBottom="@dimen/_5sdp"
         android:layout_height="wrap_content">
 

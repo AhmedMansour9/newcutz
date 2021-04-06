@@ -90,6 +90,17 @@
     <string name="date">تاريخ</string>
     <string name="price">السعر</string>
     <string name="noproduct">لم يتم العثور على أي منتج</string>
+    <string name="p_notmatch">Password Not Match</string>
+    <string name="currency">جنيه</string>
+    <string name="first_name">الاسم الاول</string>
+    <string name="last_name">الاسم الاخير</string>
+    <string name="validatefname">من فضلك ادخل الاسم الاول</string>
+    <string name="validateLname">من فضلك ادخل الاسم الاخير</string>
+    <string name="validateAddress">Please Validate Address</string>
+    <string name="validateEmail">Please Validate Email</string>
+    <string name="validatePhone">Please Validate  Phone</string>
+    <string name="orderid2">رقم الطلب: </string>
+    <string name="total_price2">السعر الاجمالي: </string>
 
 
 
@@ -232,9 +243,9 @@
     <string name="limit">كمية محدودة</string>
     <string name="success_addcomment">تم ارسال الرد بنجاح</string>
     <string name="n_products">عدد المنتجات</string>
-    <string name="create_one">Create one.</string>
-    <string name="don_t_have_an_account">Don\'t have an account?</string>
-    <string name="or_login_with">Or Login With</string>
+    <string name="create_one">اضغط هنا</string>
+    <string name="don_t_have_an_account">هل نسيت الرقم السري ؟</string>
+    <string name="or_login_with">او سجل ب</string>
     <string name="create_msg_label">Let\'s Start with creating your account</string>
     <string name="firstLabel">First Name</string>
     <string name="emailAddressLabel">Email</string>
@@ -242,14 +253,14 @@
     <string name="continueLabel">Register</string>
     <string name="tell_us_about_yourself">Tell us about yourself</string>
     <string name="sign_up">Sign up</string>
-    <string name="have_an_account">Have an account?</string>
-    <string name="log_in">log in</string>
+    <string name="have_an_account">لديك اكونت بالفعل ؟</string>
+    <string name="log_in">تسجيل دخول</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
-    <string name="cu">جنيه</string>
+    <string name="cu"> %s جنيه</string>
     <string name="rate">التقييم</string>
     <string name="contact_information">معلومات التواصل</string>
-    <string name="qty">الكمية</string>
+    <string name="qty">%s الكمية</string>
     <string name="choose">اختر اللغة</string>
     <string name="search_key">حروف البحث </string>
     <string name="noinstrations">لا يوجد تعليمات</string>
@@ -332,5 +343,7 @@
     <string name="enter_phone">ادخل رقم الهاتف</string>
     <string name="send">ارسال</string>
     <string name="phone_wrong">من فضلك ادخل رقم هاتف صحيح</string>
+    <string name="weight">احجام</string>
+    <string name="expire">الصلاحية</string>
 
 </resources>

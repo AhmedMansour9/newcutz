@@ -352,5 +352,7 @@
     <string name="enter_phone">Enter your phone number</string>
     <string name="send">Send</string>
     <string name="phone_wrong">Please Enter correct phone number</string>
+    <string name="weight">Weights</string>
+    <string name="expire">Experiment</string>
 
 </resources>

@@ -481,6 +481,7 @@
                                     android:layout_below="@+id/cart"
                                     android:layout_width="wrap_content"
                                     android:layout_marginTop="@dimen/_30sdp"
+                                    android:visibility="gone"
                                     android:layout_height="@dimen/_60sdp"
                                     android:layout_weight="2"
                                     android:orientation="vertical">
@@ -517,9 +518,9 @@
                                 android:id="@+id/Btn_Cart"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_34sdp"
-                                android:layout_below="@+id/Linear_kilos"
+                                android:layout_below="@+id/rela"
                                 android:layout_gravity="bottom"
-                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_30sdp"
                                 android:layout_marginEnd="@dimen/_80sdp"
                                 android:background="@drawable/bc_addcartt">
 
@@ -552,10 +553,10 @@
                                 android:id="@+id/T_Price"
                                 android:layout_width="@dimen/_80sdp"
                                 android:layout_height="@dimen/_34sdp"
-                                android:layout_below="@+id/Linear_kilos"
+                                android:layout_below="@+id/rela"
                                 android:layout_alignParentEnd="true"
                                 android:layout_gravity="bottom"
-                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_30sdp"
 
                                 android:gravity="center"
                                 android:text="@{model.finalPrice+model.currency}"
@@ -650,6 +651,69 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
+                            android:id="@+id/LinarWeights"
+                            android:minHeight="?attr/actionBarSize"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                app:srcCompat="@drawable/ic_weight"
+                                app:tint="@color/red" />
+
+                            <View
+                                android:id="@+id/view33"
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/weight"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_smlarge"
+                                android:layout_height="wrap_content" />
+
+                            <ImageButton
+                                android:id="@+id/bt_sizes"
+                                android:layout_width="?attr/actionBarSize"
+                                android:layout_height="?attr/actionBarSize"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:onClick="@{()->viewmodel.navigator.onClickAddetional()}"
+                                android:tint="@color/red"
+                                app:srcCompat="@drawable/ic_arrow_drop" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lyt_expand_sizes"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/sizesRecyclerView"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                             />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/red" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
                             android:minHeight="?attr/actionBarSize"
                             android:orientation="horizontal">
 
@@ -682,6 +746,8 @@
 
                         </LinearLayout>
 
+
+
                         <LinearLayout
                             android:id="@+id/lyt_expand_description"
                             android:layout_width="match_parent"
@@ -713,6 +779,78 @@
                             android:background="@color/red" />
 
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:minHeight="?attr/actionBarSize"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                app:srcCompat="@drawable/ic_expire"
+                                app:tint="@color/red" />
+
+                            <View
+                                android:id="@+id/view34"
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/expire"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="wrap_content" />
+
+                            <ImageButton
+                                android:id="@+id/bt_toggle_expirement"
+                                android:layout_width="?attr/actionBarSize"
+                                android:layout_height="?attr/actionBarSize"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:onClick="@{()->viewmodel.navigator.onClickExpirment()}"
+                                android:tint="@color/red"
+                                app:srcCompat="@drawable/ic_arrow_drop" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/lyt_expand_expiremnt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="?attr/actionBarSize"
+                            android:layout_marginLeft="?attr/actionBarSize"
+                            android:layout_marginEnd="@dimen/spacing_smlarge"
+                            android:layout_marginRight="@dimen/spacing_smlarge"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/spacing_medium"
+                            android:paddingBottom="@dimen/spacing_large"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                app:descrption="@{ model.expiration}" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/red" />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

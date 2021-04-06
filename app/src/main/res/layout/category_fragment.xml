@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -13,52 +13,50 @@
     </data>
 
     <RelativeLayout
+        android:id="@+id/RelaMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
-        android:id="@+id/RelaMenu">
+        android:background="#000">
 
 
         <RelativeLayout
-            android:layout_width="match_parent"
             android:id="@+id/rela"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/_90sdp">
 
             <ImageView
                 android:id="@+id/img"
                 android:layout_width="@dimen/_80sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/logohome"
-                />
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/logohome" />
 
             <ImageView
                 android:id="@+id/Img_Notification"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_18sdp"
-                android:visibility="gone"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:src="@drawable/ic_notification"
-                android:layout_alignParentEnd="true"/>
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/T_notification_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/bc_txtcart"
-                android:visibility="gone"
-                android:text="1"
                 android:padding="@dimen/_5sdp"
+                android:text="1"
                 android:textColor="#ffff"
-                android:textStyle="bold"
                 android:textSize="@dimen/_7sdp"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -66,7 +64,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_below="@+id/img"
-
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:scrollbars="horizontal" />
 
@@ -83,292 +80,767 @@
             android:scrollbars="horizontal" />
 
         <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_beef"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
-            android:id="@+id/Img_beef"
             android:visibility="gone"
             android:layout_centerInParent="true"
-            android:src="@drawable/img_beef"/>
+            android:src="@drawable/img_beef"
+          />
 
 
+        <RelativeLayout
+            android:id="@+id/Rela_Beef"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:visibility="gone"
+            android:layoutDirection="ltr"
+            android:layout_alignTop="@+id/Img_beef"
+            android:layout_marginTop="@dimen/_100sdp"
+            >
+
+            <TextView
+                android:id="@+id/T_Round"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickRound()}" />
+
+            <TextView
+                android:id="@+id/T_Rib"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginStart="@dimen/_130sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickRib()}" />
 
 
-     <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_alignTop="@+id/Img_beef"
-         android:id="@+id/Rela_Beef"
-         android:visibility="gone"
-         android:layout_marginTop="@dimen/_100sdp"
-         android:layout_height="@dimen/_200sdp">
+            <TextView
+                android:id="@+id/T_Neck"
+                android:layout_width="@dimen/_18sdp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginStart="@dimen/_64sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickNeck()}" />
 
-         <TextView
-             android:layout_width="@dimen/_30sdp"
-             android:layout_height="@dimen/_100sdp"
-             android:layout_alignParentEnd="true"
-             android:layout_marginTop="@dimen/_20sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickRound()}"
-             android:layout_marginEnd="@dimen/_20sdp"
-             android:id="@+id/T_Round"
-             />
+            <TextView
+                android:id="@+id/T_Head"
+                android:layout_width="@dimen/_50sdp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickHead()}" />
 
-         <TextView
-             android:layout_width="@dimen/_60sdp"
-             android:layout_height="@dimen/_70sdp"
-             android:layout_marginTop="@dimen/_20sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickRib()}"
-             android:layout_marginStart="@dimen/_130sdp"
-             android:id="@+id/T_Rib"
-             />
+            <TextView
+                android:id="@+id/T_Cheek"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/T_Head"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickBottomCheek()}" />
 
+            <TextView
+                android:id="@+id/T_Tonque"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/T_Head"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickBottomTongue()}" />
 
-         <TextView
-             android:layout_width="@dimen/_20sdp"
-             android:layout_height="@dimen/_80sdp"
-             android:layout_marginTop="@dimen/_20sdp"
-             android:layout_marginEnd="@dimen/_20sdp"
-             android:layout_marginStart="@dimen/_60sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickNeck()}"
-             android:id="@+id/T_Neck"
-             />
+            <TextView
+                android:id="@+id/T_Shank"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_105sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickShank()}"
+                android:layout_marginTop="@dimen/_125sdp"
+                android:layout_marginEnd="@dimen/_20sdp" />
 
+            <TextView
+                android:id="@+id/T_Shank2"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_125sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickShank()}" />
 
+            <TextView
+                android:id="@+id/T_Flank"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:layout_marginEnd="@dimen/_75sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickFlank()}" />
 
-         <TextView
-             android:layout_width="@dimen/_45sdp"
-             android:layout_height="@dimen/_30sdp"
-             android:layout_marginTop="@dimen/_125sdp"
-             android:layout_marginEnd="@dimen/_20sdp"
-             android:layout_marginStart="@dimen/_105sdp"
-             android:id="@+id/T_Shank"
-             />
+            <TextView
+                android:id="@+id/T_Brisket"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_85sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickBirsket()}" />
 
-         <TextView
-             android:layout_width="@dimen/_55sdp"
-             android:layout_height="@dimen/_30sdp"
-             android:layout_marginTop="@dimen/_125sdp"
-             android:layout_alignParentEnd="true"
-             android:onClick="@{()->registerViewModel.navigator.onClickShank()}"
-             android:layout_marginEnd="@dimen/_20sdp"
-             android:id="@+id/T_Shank2"
-             />
+            <TextView
+                android:id="@+id/T_Chuck"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickChuck()}" />
 
-         <TextView
-             android:layout_width="@dimen/_50sdp"
-             android:layout_height="@dimen/_30sdp"
-             android:layout_marginTop="@dimen/_100sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickFlank()}"
-             android:layout_alignParentEnd="true"
-             android:layout_marginEnd="@dimen/_75sdp"
-             android:id="@+id/T_Flank"
-             />
+            <TextView
+                android:id="@+id/T_BottomSirilion"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickBottomSillirion()}" />
 
-         <TextView
-             android:layout_width="@dimen/_45sdp"
-             android:layout_height="@dimen/_30sdp"
-             android:layout_marginTop="@dimen/_95sdp"
-             android:layout_marginEnd="@dimen/_20sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickBirsket()}"
-             android:layout_marginStart="@dimen/_85sdp"
-             android:id="@+id/T_Brisket"
-             />
+            <TextView
+                android:id="@+id/T_ShortLion"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_90sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickShortLion()}" />
 
-         <TextView
-             android:layout_width="@dimen/_40sdp"
-             android:layout_height="@dimen/_60sdp"
-             android:layout_marginTop="@dimen/_25sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickChuck()}"
-             android:layout_marginStart="@dimen/_90sdp"
-             android:id="@+id/T_Chuck"
-             />
-
-         <TextView
-             android:layout_width="@dimen/_40sdp"
-             android:layout_height="@dimen/_40sdp"
-             android:layout_marginTop="@dimen/_70sdp"
-             android:onClick="@{()->registerViewModel.navigator.onClickBottomSillirion()}"
-             android:layout_alignParentEnd="true"
-             android:layout_marginEnd="@dimen/_50sdp"
-             android:id="@+id/T_BottomSirilion"
-             />
-     </RelativeLayout>
-
-
+        </RelativeLayout>
 
 
         <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_veel"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
-            android:id="@+id/Img_veel"
             android:visibility="gone"
             android:layout_centerInParent="true"
-            android:src="@drawable/img_veel"/>
+            android:src="@drawable/img_veel" />
+
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_alignTop="@+id/Img_veel"
             android:id="@+id/Rela_Veel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
             android:visibility="gone"
-            android:layout_marginTop="@dimen/_100sdp"
-            android:layout_height="@dimen/_200sdp">
+            android:layoutDirection="ltr"
+            android:layout_alignTop="@+id/Img_veel"
+            android:layout_marginTop="@dimen/_100sdp">
 
             <TextView
                 android:layout_width="@dimen/_60sdp"
                 android:layout_height="@dimen/_80sdp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickVealRound()}"
                 android:layout_marginEnd="@dimen/_20sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickVealRound()}" />
 
             <TextView
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_140sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickVealRib()}"
-                android:layout_marginStart="@dimen/_140sdp"
-                />
-
-
-
+                android:onClick="@{()->registerViewModel.navigator.onClickVealRib()}" />
 
             <TextView
-                android:layout_width="@dimen/_45sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_125sdp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_140sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginStart="@dimen/_105sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickVealRib()}" />
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickVealHead()}" />
+
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickVealChuck()}" />
+
+            <TextView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_110sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickVealShortLion()}" />
+
+            <TextView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_80sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickVealSilrion()}" />
+
 
             <TextView
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_105sdp"
                 android:layout_alignParentEnd="true"
-                android:onClick="@{()->registerViewModel.navigator.onClickVealShank()}"
+                android:layout_marginTop="@dimen/_105sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickVealShank()}" />
 
             <TextView
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_90sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickVealFlank()}"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_90sdp"
                 android:layout_marginEnd="@dimen/_75sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickVealFlank()}" />
 
             <TextView
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_95sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginStart="@dimen/_85sdp"
-                />
+                android:layout_marginStart="@dimen/_100sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickVealShank()}"
+                android:layout_marginTop="@dimen/_85sdp"
+                android:layout_marginEnd="@dimen/_20sdp" />
+
         </RelativeLayout>
 
 
-
         <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_lamp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
-            android:id="@+id/Img_lamp"
             android:visibility="gone"
             android:layout_centerInParent="true"
-            android:src="@drawable/img_lamb"/>
+            android:src="@drawable/img_lamb"
+             />
 
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_alignTop="@+id/Img_lamp"
             android:id="@+id/Rela_Lamb"
-            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layoutDirection="ltr"
+            android:layout_alignTop="@+id/Img_lamp"
             android:layout_marginTop="@dimen/_100sdp"
-            android:layout_height="@dimen/_200sdp">
+            android:visibility="gone"
+            >
 
             <TextView
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_100sdp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambLeg()}"
                 android:layout_marginEnd="@dimen/_20sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickLambLeg()}" />
 
             <TextView
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_70sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambRib()}"
                 android:layout_marginStart="@dimen/_130sdp"
-                />
+                android:layout_marginTop="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickLambRib()}" />
 
 
             <TextView
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_60sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginStart="@dimen/_60sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambNeck()}"
-                />
-
+                android:onClick="@{()->registerViewModel.navigator.onClickLambNeck()}" />
 
 
             <TextView
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_105sdp"
                 android:layout_marginTop="@dimen/_125sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginStart="@dimen/_105sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambShank()}"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickLambShank()}" />
 
             <TextView
                 android:layout_width="@dimen/_55sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_125sdp"
                 android:layout_alignParentEnd="true"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambShank()}"
+                android:layout_marginTop="@dimen/_125sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickLambShank()}"
 
                 />
 
             <TextView
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_100sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambFlank()}"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_100sdp"
                 android:layout_marginEnd="@dimen/_75sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickLambFlank()}" />
 
             <TextView
                 android:layout_width="@dimen/_85sdp"
                 android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_85sdp"
                 android:layout_marginTop="@dimen/_95sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambBreast()}"
-                android:layout_marginStart="@dimen/_85sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickLambBreast()}" />
 
             <TextView
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_45sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambShoulder()}"
                 android:layout_marginStart="@dimen/_80sdp"
-                />
+                android:layout_marginTop="@dimen/_45sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickLambShoulder()}" />
 
             <TextView
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_80sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:onClick="@{()->registerViewModel.navigator.onClickLambSirLoin()}"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_80sdp"
-                />
+                android:onClick="@{()->registerViewModel.navigator.onClickLambSirLoin()}" />
         </RelativeLayout>
 
+
+
+        <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_fish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:visibility="gone"
+            android:layoutDirection="ltr"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_fish"
+            />
+        <RelativeLayout
+            android:id="@+id/Rela_fish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:visibility="gone"
+            android:layout_alignTop="@+id/Img_fish"
+            android:layout_marginTop="@dimen/_140sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishTail()}" />
+
+            <TextView
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishblackmeat()}" />
+
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishTailMeat()}" />
+
+            <TextView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_55sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishAdbomenMeat()}" />
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_110sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishCaviar()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishKama()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickfishHead()}" />
+
+        </RelativeLayout>
+
+
+
+        <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_duck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_duck"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/Rela_Duck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_360sdp"
+            android:visibility="gone"
+            android:layoutDirection="ltr"
+            android:layout_alignTop="@+id/Img_duck"
+            android:layout_marginTop="@dimen/_100sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckHead()}" />
+
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_60sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckNeck()}" />
+
+            <TextView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_90sdp"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckTenderlion()}" />
+
+            <TextView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:layout_marginStart="@dimen/_65sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckBreast()}" />
+
+            <TextView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_marginStart="@dimen/_190sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckWing()}" />
+
+            <TextView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_marginStart="@dimen/_130sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckDrumstick()}" />
+
+            <TextView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+                android:layout_marginStart="@dimen/_150sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckback()}" />
+
+            <TextView
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_175sdp"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckTip()}" />
+
+            <TextView
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{()->registerViewModel.navigator.onClickDuckTail()}" />
+
+        </RelativeLayout>
+
+
+
+
+
+        <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_chicken"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/img_chicken"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/Rela_Chicken"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layoutDirection="ltr"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_alignTop="@+id/Img_chicken"
+            android:layout_marginTop="@dimen/_110sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenNeck()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenBreast()}" />
+
+            <TextView
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_120sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenBack()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_85sdp"
+                android:layout_marginStart="@dimen/_120sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenWing()}" />
+
+            <TextView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_145sdp"
+                android:layout_marginStart="@dimen/_120sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenLeg()}" />
+
+            <TextView
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_125sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenThight()}" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_ostrich"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_osrtich"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/Rela_ostrich"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:visibility="gone"
+            android:layoutDirection="ltr"
+            android:layout_alignTop="@+id/Img_ostrich"
+            android:layout_marginBottom="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichHead()}" />
+
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichHead()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:rotation="30"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichNeck()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_130sdp"
+                android:rotation="150"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichNeck()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_130sdp"
+                android:rotation="150"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichTopFilet()" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:rotation="150"
+                android:layout_marginStart="@dimen/_75sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichOyster()}" />
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_110sdp"
+                android:rotation="200"
+                android:layout_marginStart="@dimen/_140sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichFan()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_150sdp"
+                android:rotation="160"
+                android:layout_marginStart="@dimen/_170sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichEyeFilet()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_170sdp"
+                android:rotation="160"
+                android:layout_marginStart="@dimen/_180sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichouterstripFilet()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_190sdp"
+                android:layout_marginStart="@dimen/_185sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichTenderLoin()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_160sdp"
+                android:layout_marginStart="@dimen/_120sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichDrumOuter()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_180sdp"
+                android:rotation="150"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichTips()}" />
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_185sdp"
+                android:rotation="150"
+                android:layout_marginStart="@dimen/_65sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichMoon()}" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_240sdp"
+                android:layout_marginStart="@dimen/_120sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichEyeLeg()}" />
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_130sdp"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{()->registerViewModel.navigator.onClickOstrichEyeTail()}" />
+
+
+        </RelativeLayout>
+
+
+
+        <com.cutz.utils.TouchImageView
+            android:id="@+id/Img_Shramp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/img_sharp" />
+
+
+        <RelativeLayout
+            android:id="@+id/Rela_Shramp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:visibility="gone"
+            android:layoutDirection="ltr"
+            android:layout_alignTop="@+id/Img_chicken"
+            android:layout_marginTop="@dimen/_240sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickSharpHead()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_alignParentEnd="true"
+
+                android:onClick="@{()->registerViewModel.navigator.onClickChickenBreast()}" />
+
+
+        </RelativeLayout>
 
 
     </RelativeLayout>

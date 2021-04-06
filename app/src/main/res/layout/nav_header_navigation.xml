@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/_160sdp"
-    android:background="#E9EBEE"
-    android:fitsSystemWindows="false"
-    android:layout_marginTop="@dimen/_30sdp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <ImageView
-        android:layout_width="@dimen/_180sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:id="@+id/logo"
-        android:layout_centerInParent="true"
-        android:src="@drawable/logo" />
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.cutz.ui.editprofile.EditProfileViewModel" />
+    </data>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/logo"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:id="@+id/RelaLogin"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Photo"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:text="@string/loginhome"
-            android:id="@+id/T_login"
+            android:layout_below="@+id/Photo"
+            android:id="@+id/FullName"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000"
-            android:id="@+id/T_Register"
-            android:text="@string/registerhome"
-            android:layout_toEndOf="@+id/T_login"
-            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Categories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/FullName"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:scrollbars="vertical" />
 
     </RelativeLayout>
-
-
-
-</RelativeLayout>
+</layout>
