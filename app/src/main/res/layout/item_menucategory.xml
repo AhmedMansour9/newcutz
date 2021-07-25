@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.cutz.data.remote.model.CategoriesResponse.Data" />
+            type="com.cutzegypt.data.remote.model.CategoriesResponse.Data" />
 
     </data>
 

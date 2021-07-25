@@ -16,7 +16,7 @@
     <string name="menu">Categories</string>
     <string name="favourit">Favourit Product</string>
     <string name="more">More</string>
-    <string name="offers"> Offers</string>
+    <string name="offers">Sepcial Offers</string>
     <string name="addres">Address</string>
     <string name="edit">Edit</string>
     <string name="myorders">My Orders</string>
@@ -354,5 +354,12 @@
     <string name="phone_wrong">Please Enter correct phone number</string>
     <string name="weight">Weights</string>
     <string name="expire">Experiment</string>
+    <string name="change_location">Change Location</string>
+    <string name="location">Location: </string>
+    <string name="confirm_location">Confirm Your Delivery Location</string>
+    <string name="select_location"> Select Your Current Location</string>
+    <string name="select_branch">Select Branch</string>
+    <string name="bestSeller">Best Seller</string>
+
 
 </resources>

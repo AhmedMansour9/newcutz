@@ -7,7 +7,7 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutz.ui.resultfilter.ResultFitertionViewModel" />
+            type="com.cutzegypt.ui.resultfilter.ResultFitertionViewModel" />
 
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout

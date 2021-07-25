@@ -7,7 +7,7 @@
 
         <variable
             name="registerViewModel"
-            type="com.cutz.ui.category.CategoriesViewModel" />
+            type="com.cutzegypt.ui.category.CategoriesViewModel" />
 
 
     </data>

@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.cutz.data.remote.model.AboutUsResponse.Data" />
+            type="com.cutzegypt.data.remote.model.AboutUsResponse.Data" />
     </data>
 
     <androidx.cardview.widget.CardView

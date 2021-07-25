@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.cutz.ui.myaccount.MyAccountViewModel" />
+            type="com.cutzegypt.ui.myaccount.MyAccountViewModel" />
 
     </data>
 

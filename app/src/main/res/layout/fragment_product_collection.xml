@@ -7,7 +7,7 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutz.ui.wishlist.WishListViewModel" />
+            type="com.cutzegypt.ui.wishlist.WishListViewModel" />
 
     </data>
 

@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.cutz">
+    package="com.cutzegypt">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- TODO: Step 1.0, Review Permissions: Specify permissions you are using. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name=".App"
+        android:name="com.cutzegypt.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:hardwareAccelerated="true"
-        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:replace="android:theme"
         tools:ignore="AllowBackup">
-        <activity android:name=".ui.payonline.PayonlineActivity"
+        <activity android:name="com.cutzegypt.ui.payonline.PayonlineActivity"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".ui.resendpassword.ResendPasswordActivitty" />
-        <activity android:name=".ui.forgetpassword.ForgetPasswordActivity" />
-        <activity android:name=".ui.phone.VerifyPhoneActivity" />
-        <activity android:name=".ui.addetionalcart.AddetionalCart" />
+        <activity android:name="com.cutzegypt.ui.resendpassword.ResendPasswordActivitty" />
+        <activity android:name="com.cutzegypt.ui.forgetpassword.ForgetPasswordActivity" />
+        <activity android:name="com.cutzegypt.ui.phone.VerifyPhoneActivity" />
+        <activity android:name="com.cutzegypt.ui.addetionalcart.AddetionalCart" />
         <activity
-            android:name=".ui.coupon.AddCouponActivity"
+            android:name="com.cutzegypt.ui.coupon.AddCouponActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
-            android:name=".ui.languag.Language"
+            android:name="com.cutzegypt.ui.languag.Language"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name=".ui.successorder.SuccessOrder" />
+        <activity android:name="com.cutzegypt.ui.successorder.SuccessOrder" />
         <activity
-            android:name=".ui.nointernet.NoInternertActivity"
+            android:name="com.cutzegypt.ui.nointernet.NoInternertActivity"
             android:theme="@style/MyDialogTheme" />
         <activity
-            android:name=".ui.congratulition.CongratulitionCartActivity"
+            android:name="com.cutzegypt.ui.congratulition.CongratulitionCartActivity"
             android:theme="@style/MyDialogTheme" />
-        <activity android:name=".ui.splash.Splash">
+        <activity android:name="com.cutzegypt.ui.splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,16 +49,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.onboarding.OnBoardingActivity"
+            android:name="com.cutzegypt.ui.onboarding.OnBoardingActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.bottomnavigate.BottomNavigateActivity"
+            android:name="com.cutzegypt.ui.bottomnavigate.BottomNavigateActivity"
              android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name="com.cutzegypt.ui.login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.register.RegisterActivity"
+            android:name="com.cutzegypt.ui.register.RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
@@ -72,6 +73,12 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
-    </application>
+
+<!--        <service-->
+<!--            android:name="MyNavigationService"-->
+<!--            android:foregroundServiceType="location" >-->
+<!--        &lt;!&ndash; Any inner elements would go here. &ndash;&gt;-->
+<!--    </service>-->
+</application>
 
 </manifest>

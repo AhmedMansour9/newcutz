@@ -6,11 +6,11 @@
 
         <variable
             name="model"
-            type="com.cutz.data.remote.model.ProductsResponse.Data" />
+            type="com.cutzegypt.data.remote.model.ProductsResponse.Data" />
 
         <variable
             name="viewmodel"
-            type="com.cutz.ui.detailsproduct.DetailsProductViewModel" />
+            type="com.cutzegypt.ui.detailsproduct.DetailsProductViewModel" />
 
     </data>
 
@@ -174,7 +174,7 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:paddingStart="@dimen/_10sdp"
-                            android:layout_height="@dimen/_60sdp">
+                            android:layout_height="wrap_content">
 
                             <RatingBar
                                 android:id="@+id/RatingBar"
@@ -238,6 +238,19 @@
                                 android:layout_alignParentEnd="true"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/Stock"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:textColor="@color/white"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                app:descrption="@{ model.description}" />
 
 <!--                            <TextView-->
 <!--                                android:id="@+id/Sku"-->
@@ -478,12 +491,12 @@
 
                                 <RadioGroup
                                     android:id="@+id/Linear_kilos"
-                                    android:layout_below="@+id/cart"
+                                    android:layout_below="@+id/rela"
                                     android:layout_width="wrap_content"
                                     android:layout_marginTop="@dimen/_30sdp"
-                                    android:visibility="gone"
                                     android:layout_height="@dimen/_60sdp"
                                     android:layout_weight="2"
+                                    android:visibility="gone"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -518,7 +531,7 @@
                                 android:id="@+id/Btn_Cart"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_34sdp"
-                                android:layout_below="@+id/rela"
+                                android:layout_below="@+id/Linear_kilos"
                                 android:layout_gravity="bottom"
                                 android:layout_marginTop="@dimen/_30sdp"
                                 android:layout_marginEnd="@dimen/_80sdp"
@@ -553,7 +566,7 @@
                                 android:id="@+id/T_Price"
                                 android:layout_width="@dimen/_80sdp"
                                 android:layout_height="@dimen/_34sdp"
-                                android:layout_below="@+id/rela"
+                                android:layout_below="@+id/Linear_kilos"
                                 android:layout_alignParentEnd="true"
                                 android:layout_gravity="bottom"
                                 android:layout_marginTop="@dimen/_30sdp"
@@ -652,6 +665,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:id="@+id/LinarWeights"
+                            android:visibility="gone"
                             android:minHeight="?attr/actionBarSize"
                             android:orientation="horizontal">
 
@@ -708,12 +722,14 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1px"
+                            android:visibility="gone"
                             android:background="@color/red" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
+                            android:visibility="gone"
                             android:minHeight="?attr/actionBarSize"
                             android:orientation="horizontal">
 
@@ -755,21 +771,25 @@
                             android:layout_marginStart="?attr/actionBarSize"
                             android:layout_marginLeft="?attr/actionBarSize"
                             android:layout_marginEnd="@dimen/spacing_smlarge"
+                            android:visibility="gone"
                             android:layout_marginRight="@dimen/spacing_smlarge"
                             android:layout_marginBottom="@dimen/spacing_middle"
                             android:gravity="center_vertical"
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:paddingTop="@dimen/spacing_medium"
-                            android:paddingBottom="@dimen/spacing_large"
-                            android:visibility="gone">
+                            android:paddingBottom="@dimen/spacing_large">
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/white"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                app:descrption="@{ model.description}" />
+
+
+                            <ImageView
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:imageUrl="@{model.nutritionFact}"
+                                android:id="@+id/img"
+                                />
+
 
                         </LinearLayout>
 

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="model"
-            type="com.cutz.data.remote.model.SectonsResponse.Data.Category" />
+            type="com.cutzegypt.data.remote.model.SectonsResponse.Data.Category" />
 
     </data>
 

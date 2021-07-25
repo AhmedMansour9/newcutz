@@ -9,7 +9,7 @@
     <!--        app:startDestination="@id/homeFragment">-->
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.cutz.ui.home.HomeFragment"
+        android:name="com.cutzegypt.ui.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" >
         <action
@@ -21,11 +21,21 @@
         <action
             android:id="@+id/action_homeFragment_to_productCollection"
             app:destination="@id/productCollection" />
+        <action
+            android:id="@+id/action_homeFragment_to_changelocationFragment"
+            app:destination="@id/changelocationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailsProductFragment"
+            app:destination="@id/detailsProductFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_productById"
+            app:destination="@id/productsById" />
     </fragment>
 
     <fragment
         android:id="@+id/T_Categories"
-        android:name="com.cutz.ui.category.CategoryFragment"
+        android:name="com.cutzegypt.ui.category.CategoryFragment"
         android:label="CategoryFragment"
         tools:layout="@layout/category_fragment">
         <action
@@ -38,7 +48,7 @@
 
     <fragment
         android:id="@+id/productsById"
-        android:name="com.cutz.ui.productsbyId.ProductsById"
+        android:name="com.cutzegypt.ui.productsbyId.ProductsById"
         android:label="ProductsById"
         tools:layout="@layout/fragment_products_by_id">
         <action
@@ -65,7 +75,7 @@
     </fragment>
     <dialog
         android:id="@+id/detailsProductFragment"
-        android:name="com.cutz.ui.detailsproduct.DetailsProductFragment"
+        android:name="com.cutzegypt.ui.detailsproduct.DetailsProductFragment"
         android:label="DetailsProductFragment">
         <action
             android:id="@+id/action_detailsProductFragment_to_addReviewFragment"
@@ -76,11 +86,11 @@
     </dialog>
     <dialog
         android:id="@+id/addReviewFragment"
-        android:name="com.cutz.ui.addreview.AddReviewFragment"
+        android:name="com.cutzegypt.ui.addreview.AddReviewFragment"
         android:label="AddReviewFragment" />
     <fragment
         android:id="@+id/loginFragment2"
-        android:name="com.cutz.ui.login.LoginActivity"
+        android:name="com.cutzegypt.ui.login.LoginActivity"
         android:label="LoginFragment"
         tools:layout="@layout/login_fragment">
         <action
@@ -91,12 +101,12 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment2"
-        android:name="com.cutz.ui.register.RegisterActivity"
+        android:name="com.cutzegypt.ui.register.RegisterActivity"
         android:label="RegisterFragment"
         tools:layout="@layout/register_fragment" />
     <fragment
         android:id="@+id/myAccountFragment"
-        android:name="com.cutz.ui.myaccount.MyAccountFragment"
+        android:name="com.cutzegypt.ui.myaccount.MyAccountFragment"
         android:label="MyAccountFragment"
         tools:layout="@layout/fragment_my_account">
         <action
@@ -117,7 +127,7 @@
     </fragment>
     <fragment
         android:id="@+id/wishListFragment"
-        android:name="com.cutz.ui.wishlist.WishListFragment"
+        android:name="com.cutzegypt.ui.wishlist.WishListFragment"
         android:label="WishListFragment">
         <action
             android:id="@+id/action_wishListFragment_to_detailsProductFragment"
@@ -125,22 +135,22 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.cutz.ui.cart.CartFragment"
+        android:name="com.cutzegypt.ui.cart.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.cutz.ui.editprofile.EditProfileFragment"
+        android:name="com.cutzegypt.ui.editprofile.EditProfileFragment"
         android:label="EditProfileFragment" />
     <dialog
         android:id="@+id/filtertionFragment"
-        android:name="com.cutz.ui.filter.FiltertionFragment"
+        android:name="com.cutzegypt.ui.filter.FiltertionFragment"
         android:label="FiltertionFragment"
         tools:layout="@layout/fragment_filtertion">
     </dialog>
     <fragment
         android:id="@+id/resultFiltertionFragment"
-        android:name="com.cutz.ui.resultfilter.ResultFiltertionFragment"
+        android:name="com.cutzegypt.ui.resultfilter.ResultFiltertionFragment"
         android:label="ResultFiltertionFragment"
         tools:layout="@layout/fragment_result_filtertion" >
         <action
@@ -149,11 +159,11 @@
     </fragment>
     <fragment
         android:id="@+id/contactUsFragment"
-        android:name="com.cutz.ui.contactus.ContactUsFragment"
+        android:name="com.cutzegypt.ui.contactus.ContactUsFragment"
         android:label="ContactUsFragment" />
     <fragment
         android:id="@+id/offersFragment"
-        android:name="com.cutz.ui.offers.OffersFragment"
+        android:name="com.cutzegypt.ui.offers.OffersFragment"
         android:label="fragment_offers2"
         tools:layout="@layout/fragment_offers2" >
         <action
@@ -162,20 +172,20 @@
     </fragment>
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.cutz.ui.recipes.RecipesFragment"
+        android:name="com.cutzegypt.ui.recipes.RecipesFragment"
         android:label="fragment_recipes"
         tools:layout="@layout/fragment_recipes" />
     <fragment
         android:id="@+id/myOrdersFragment"
-        android:name="com.cutz.ui.myorders.MyOrdersFragment"
+        android:name="com.cutzegypt.ui.myorders.MyOrdersFragment"
         android:label="MyOrdersFragment" />
     <fragment
         android:id="@+id/aboutUsFragment"
-        android:name="com.cutz.ui.aboutus.AboutUsFragment"
+        android:name="com.cutzegypt.ui.aboutus.AboutUsFragment"
         android:label="AboutUsFragment" />
     <fragment
         android:id="@+id/resultSerachFragment"
-        android:name="com.cutz.ui.resultsearch.ResultSerachFragment"
+        android:name="com.cutzegypt.ui.resultsearch.ResultSerachFragment"
         android:label="ResultSerachFragment" >
         <action
             android:id="@+id/action_resultSerachFragment_to_detailsProductFragment"
@@ -183,19 +193,22 @@
     </fragment>
     <fragment
         android:id="@+id/productCollection"
-        android:name="com.cutz.ui.productcollection.ProductCollection"
+        android:name="com.cutzegypt.ui.productcollection.ProductCollection"
         android:label="ProductCollection" />
     <fragment
         android:id="@+id/subCategoriesMenuFragment"
-        android:name="com.cutz.ui.subcategories.SubCategoriesMenuFragment"
+        android:name="com.cutzegypt.ui.subcategories.SubCategoriesMenuFragment"
         android:label="SubCategoriesMenuFragment" >
         <action
             android:id="@+id/action_subCategoriesMenuFragment_to_productsById"
             app:destination="@id/productsById" />
     </fragment>
+    <fragment
+        android:id="@+id/changelocationFragment"
+        android:name="com.cutzegypt.ui.changelocation.ChangelocationFragment"
+        android:label="ChangelocationFragment" />
 
 
-    <!--    </navigation>-->
 
 
 </navigation>

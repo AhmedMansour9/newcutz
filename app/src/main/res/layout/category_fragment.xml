@@ -7,7 +7,7 @@
 
         <variable
             name="registerViewModel"
-            type="com.cutz.ui.category.CategoriesViewModel" />
+            type="com.cutzegypt.ui.category.CategoriesViewModel" />
 
 
     </data>
@@ -79,11 +79,11 @@
             android:layout_marginEnd="@dimen/_10sdp"
             android:scrollbars="horizontal" />
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_beef"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_400sdp"
             android:visibility="gone"
+            android:layout_height="@dimen/_400sdp"
             android:layout_centerInParent="true"
             android:src="@drawable/img_beef"
           />
@@ -222,7 +222,7 @@
         </RelativeLayout>
 
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_veel"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -322,7 +322,7 @@
         </RelativeLayout>
 
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_lamp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -419,7 +419,7 @@
 
 
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_fish"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -500,7 +500,7 @@
 
 
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_duck"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -591,7 +591,7 @@
 
 
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_chicken"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -659,10 +659,86 @@
         </RelativeLayout>
 
 
+        <com.cutzegypt.utils.TouchImageView
+            android:id="@+id/Img_Turkey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/img_turkey"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/Rela_Turkey"
+            android:layout_width="match_parent"
+            android:layoutDirection="ltr"
+            android:visibility="gone"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_alignTop="@+id/Img_Turkey"
+            android:layout_marginTop="@dimen/_60sdp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyHead()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyNick()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyTenderloin()}" />
+
+            <TextView
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyBack()}" />
+
+
+            <TextView
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_marginStart="@dimen/_110sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyWing()}" />
+
+            <TextView
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyTail()}" />
+
+            <TextView
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_165sdp"
+                android:layout_marginEnd="@dimen/_125sdp"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{()->registerViewModel.navigator.onClickTurkeyThight()}" />
+
+
+        </RelativeLayout>
 
 
 
-        <com.cutz.utils.TouchImageView
+
+
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_ostrich"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -805,7 +881,7 @@
 
 
 
-        <com.cutz.utils.TouchImageView
+        <com.cutzegypt.utils.TouchImageView
             android:id="@+id/Img_Shramp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"

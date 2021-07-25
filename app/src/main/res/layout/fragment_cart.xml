@@ -6,11 +6,11 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutz.ui.cart.CartViewModel" />
+            type="com.cutzegypt.ui.cart.CartViewModel" />
 
         <variable
             name="model"
-            type="com.cutz.data.remote.model.ListCartResponse.Data" />
+            type="com.cutzegypt.data.remote.model.ListCartResponse.Data" />
 
     </data>
 

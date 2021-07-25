@@ -5,7 +5,7 @@
 
         <variable
             name="model"
-            type="com.cutz.data.remote.model.SectonsResponse.Data" />
+            type="com.cutzegypt.data.remote.model.SectonsResponse.Data" />
 
     </data>
     <RelativeLayout

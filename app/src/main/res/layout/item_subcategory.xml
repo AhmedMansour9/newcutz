@@ -7,14 +7,21 @@
 
         <variable
             name="model"
-            type="com.cutz.data.remote.model.SectonsResponse.Data.Category.SubCategory" />
+            type="com.cutzegypt.data.remote.model.SectonsResponse.Data.Category.SubCategory" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-         android:background="@drawable/rect_shadow"
         android:layout_height="@dimen/_120sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/rect_shadow"
+            android:layout_height="match_parent"/>
+
+
+
 
         <ImageView
             android:id="@+id/Img_Sub"

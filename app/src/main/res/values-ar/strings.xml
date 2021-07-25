@@ -345,5 +345,13 @@
     <string name="phone_wrong">من فضلك ادخل رقم هاتف صحيح</string>
     <string name="weight">احجام</string>
     <string name="expire">الصلاحية</string>
+    <string name="change_location">تغيير العنوان</string>
+    <string name="location">الموقع  </string>
+
+    <string name="select_branch">اختر الفرع</string>
+
+    <string name="confirm_location">قم بتأكيد موقع التسليم الخاص بك</string>
+    <string name="select_location">حدد موقعك الحالي</string>
+    <string name="bestSeller">الاكثر مبيعا</string>
 
 </resources>

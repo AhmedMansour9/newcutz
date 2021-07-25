@@ -28,6 +28,17 @@
 
     </style>
 
+    <style name="MyBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@drawable/bottom_navigation_selector</item>
+        <item name="itemTextColor">@drawable/bottom_navigation_selector</item>
+        <item name="itemTextAppearanceActive">@style/MyBottomNavigationView.TextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/MyBottomNavigationView.TextAppearance</item>
+    </style>
+
+    <style name="MyBottomNavigationView.TextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+
     <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <item name="windowActionBar">false</item>
         <item name="colorPrimaryDark">@color/black</item>

@@ -7,7 +7,7 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutz.ui.resultsearch.ResultSerachViewModel" />
+            type="com.cutzegypt.ui.resultsearch.ResultSerachViewModel" />
 
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -47,6 +47,37 @@
             </androidx.appcompat.widget.Toolbar>
 
 
+            <EditText
+                android:id="@+id/E_Search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bc_search"
+                android:drawableStart="@drawable/ic_search"
+                android:drawableTint="#7B7677"
+                android:drawablePadding="@dimen/_5sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColorHint="#888888"
+                android:textColor="#888888"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbaproduct"
+                app:layout_constraintVertical_bias="0.93" />
+
+
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,7 +90,7 @@
                 android:background="@color/black"
                 android:padding="@dimen/_5sdp"
                 app:layout_constraintCircleRadius="@dimen/_90sdp"
-                app:layout_constraintTop_toBottomOf="@+id/toolbaproduct">
+                app:layout_constraintTop_toBottomOf="@+id/E_Search">
 
                 <TextView
                     android:layout_width="wrap_content"

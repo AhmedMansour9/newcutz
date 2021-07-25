@@ -6,7 +6,7 @@
 
         <variable
             name="registerViewModel"
-            type="com.cutz.ui.register.RegisterViewModel" />
+            type="com.cutzegypt.ui.register.RegisterViewModel" />
     </data>
 
 

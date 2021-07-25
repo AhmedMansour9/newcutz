@@ -7,7 +7,7 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutz.ui.recipes.ReciepesViewModel" />
+            type="com.cutzegypt.ui.recipes.ReciepesViewModel" />
 
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout

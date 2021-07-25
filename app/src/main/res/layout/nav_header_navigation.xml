@@ -5,7 +5,7 @@
     <data>
         <variable
             name="registerViewModel"
-            type="com.cutz.ui.editprofile.EditProfileViewModel" />
+            type="com.cutzegypt.ui.editprofile.EditProfileViewModel" />
     </data>
 
     <RelativeLayout

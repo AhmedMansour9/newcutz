@@ -7,7 +7,7 @@
 
         <variable
             name="loginViewModel"
-            type="com.cutz.ui.login.LoginViewModel" />
+            type="com.cutzegypt.ui.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -97,6 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
             android:background="?android:selectableItemBackground"
             android:fontFamily="@font/product_sans_bold"
             android:onClick="@{()->loginViewModel.navigator.forgetPasswordClick()}"
