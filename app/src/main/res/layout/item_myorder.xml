@@ -6,15 +6,14 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.MyOrdersResponse.Data" />
+            type="com.hadrmout.data.remote.model.MyOrdersResponse.Data" />
 
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         app:cardBackgroundColor="@color/black">
 
 
@@ -30,12 +29,11 @@
                 android:id="@+id/orderid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:maxLines="1"
                 android:text="@string/orderid2"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp" />
+                android:textSize="@dimen/_14sdp" />
 
             <TextView
                 android:id="@+id/T_order_id"
@@ -50,45 +48,11 @@
                 android:textSize="@dimen/_15sdp" />
 
 
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="@dimen/_6sdp"
-
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp" />
-
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_toStartOf="@+id/Text"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:src="@drawable/ic_tracking"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tracking_order"
-                android:textColor="@color/white"
-                android:id="@+id/Text"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/vieww"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                />
-
-
 
             <TextView
                 android:id="@+id/totalprice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_below="@+id/orderid"
                 android:maxLines="1"
@@ -113,12 +77,13 @@
                 android:id="@+id/T_Status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:maxLines="1"
+                android:padding="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/Text"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
+                android:background="@drawable/bc_status"
                 android:textSize="@dimen/_12sdp" />
             <TextView
                 android:id="@+id/status"

@@ -6,15 +6,15 @@
 
         <variable
             name="viewmodel"
-            type="com.cutzegypt.ui.createorder.CreateOrderViewModel" />
+            type="com.hadrmout.ui.address_profile.AddreeViewModel" />
 
         <variable
             name="productsViewModel"
-            type="com.cutzegypt.ui.cart.CartViewModel" />
+            type="com.hadrmout.ui.cart.CartViewModel" />
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ListCartResponse.Data" />
+            type="com.hadrmout.data.remote.model.ListCartResponse.Data" />
 
 
         <variable
@@ -59,15 +59,6 @@
                     android:tint="@android:color/white"
                     app:srcCompat="@drawable/ic_close" />
 
-                <ImageView
-                    android:id="@+id/textView"
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/logohome"
-                    android:textColor="#fff"
-                    android:textSize="@dimen/_16sdp"
-                    android:textStyle="bold" />
 
 
             </RelativeLayout>
@@ -116,7 +107,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/black">
-
 
 
                                 <TextView
@@ -169,7 +159,7 @@
                                     android:layout_marginEnd="@dimen/_10sdp"
                                     android:background="@drawable/bc_layer"
                                     android:selectedItemPosition="@={viewmodel.itemPositionCity}"
-                                    app:adapter="@{spinnerAdapterCities}" />
+                                    />
 
 
                                 <TextView
@@ -178,6 +168,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/S_City"
                                     android:layout_marginStart="@dimen/_10sdp"
+                                    android:visibility="gone"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:text="@string/state"
                                     android:textColor="@color/white" />
@@ -188,6 +179,7 @@
                                     android:layout_height="@dimen/_35sdp"
                                     android:layout_below="@+id/state"
                                     android:layout_marginStart="@dimen/_10sdp"
+                                    android:visibility="gone"
                                     android:layout_marginTop="@dimen/_3sdp"
                                     android:layout_marginEnd="@dimen/_10sdp"
                                     android:background="@drawable/bc_layer"
@@ -203,12 +195,50 @@
                                     android:layout_marginEnd="@dimen/_10sdp"
                                     android:background="#707070" />
 
+                                <TextView
+                                    android:id="@+id/region"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/view12"
+                                    android:visibility="gone"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:text="@string/region"
+                                    android:textColor="@color/white" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/ERRegion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:layout_below="@+id/region"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:background="@drawable/bc_layer"
+                                    app:boxBackgroundColor="@android:color/transparent"
+                                    app:hintEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/E_Region"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_35sdp"
+                                        android:background="@null"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
 
                                 <TextView
                                     android:id="@+id/street"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/view12"
+                                    android:layout_below="@+id/ERRegion"
                                     android:layout_marginStart="@dimen/_10sdp"
                                     android:layout_marginTop="@dimen/_8sdp"
                                     android:text="@string/addres"
@@ -262,7 +292,7 @@
                                     android:textColor="@color/white" />
 
                                 <com.google.android.material.textfield.TextInputLayout
-                                    android:id="@+id/EBNumber"
+                                    android:id="@+id/EBBNumber"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/b_number"
@@ -278,7 +308,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/_35sdp"
                                         android:background="@null"
-                                        android:inputType="text"
+                                        android:inputType="number"
                                         android:paddingStart="@dimen/_10sdp"
                                         android:singleLine="true"
                                         android:textColor="@color/white"
@@ -291,7 +321,7 @@
                                     android:id="@+id/view5"
                                     android:layout_width="match_parent"
                                     android:layout_height=".5dp"
-                                    android:layout_below="@+id/EBNumber"
+                                    android:layout_below="@+id/EBBNumber"
                                     android:layout_marginStart="@dimen/_10sdp"
                                     android:layout_marginEnd="@dimen/_10sdp"
                                     android:background="#707070" />
@@ -304,7 +334,7 @@
                                     android:layout_below="@+id/view5"
                                     android:layout_marginStart="@dimen/_10sdp"
                                     android:layout_marginTop="@dimen/_8sdp"
-                                    android:text="@string/b_number"
+                                    android:text="@string/f_number"
                                     android:textColor="@color/white" />
 
                                 <com.google.android.material.textfield.TextInputLayout
@@ -319,12 +349,12 @@
                                     app:boxBackgroundColor="@android:color/transparent"
                                     app:hintEnabled="false">
 
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/F_Number"
+                                    <EditText
+                                        android:id="@+id/F_NNumber"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/_35sdp"
                                         android:background="@null"
-                                        android:inputType="text"
+                                        android:inputType="number"
                                         android:paddingStart="@dimen/_10sdp"
                                         android:singleLine="true"
                                         android:textColor="@color/white"
@@ -335,21 +365,21 @@
 
 
                                 <com.google.android.material.button.MaterialButton
-                                    android:id="@+id/Btn_Order"
+                                    android:id="@+id/Btn_Save"
                                     style="@style/Widget.MaterialComponents.Button"
                                     android:layout_width="match_parent"
                                     android:layout_height="@dimen/_40sdp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginEnd="@dimen/_40sdp"
-                                    android:layout_marginStart="@dimen/_40sdp"
-                                    android:layout_marginBottom="@dimen/_10sdp"
-                                    android:layout_marginTop="@dimen/_10sdp"
                                     android:layout_below="@+id/FNumber"
-                                    android:text="@string/confirm"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="@dimen/_40sdp"
+                                    android:layout_marginTop="@dimen/_70sdp"
+                                    android:layout_marginEnd="@dimen/_40sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:text="@string/save"
                                     android:textAllCaps="true"
                                     android:textColor="@android:color/white"
                                     android:textSize="@dimen/_12sdp"
-                                    app:backgroundTint="@color/red"
+                                    app:backgroundTint="@color/yellow"
                                     app:cornerRadius="25dp" />
 
 

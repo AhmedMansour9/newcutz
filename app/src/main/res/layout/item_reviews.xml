@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-     <variable
-         name="model"
-         type="com.cutzegypt.data.remote.model.ProductsResponse.Data.Rate" />
+
 
     </data>
 
@@ -51,7 +49,6 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="@dimen/_33sdp"
             android:layout_marginStart="@dimen/_20sdp"
-            app:review="@{model.rate}"
             style="?android:attr/ratingBarStyleSmall"
             app:layout_constraintStart_toEndOf="@+id/quality"
             android:theme="@style/AppThemeRatingBar"

@@ -6,24 +6,27 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.SectonsResponse.Data" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
 
     </data>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_240sdp"
         android:background="@color/black"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_height="@dimen/_160sdp">
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_height="@dimen/_120sdp">
 
         <ImageView
             android:layout_width="match_parent"
             android:scaleType="fitXY"
-            app:imageUrl="@{model.image2}"
+            app:imageUrl="@{model.image}"
             android:id="@+id/Img"
-            android:layout_height="@dimen/_160sdp"/>
+            android:layout_height="match_parent"/>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -53,5 +56,5 @@
             android:layout_marginTop="@dimen/_6sdp"
             />
 
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

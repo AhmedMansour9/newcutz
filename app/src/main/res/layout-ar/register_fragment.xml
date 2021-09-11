@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="registerViewModel"
+            type="com.hadrmout.ui.register.RegisterViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Scroll"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Constrain"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/text"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/sign_up"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="@color/yellow"
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/firstTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginRight="25dp"
+                    android:hint="@string/firstLabel"
+                    app:hintTextColor="@color/white"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:layout_constraintTop_toBottomOf="@+id/text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:textColor="@color/white"
+                        android:hint="@string/fullname"
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="start"
+                        android:id="@+id/EName"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:layout_height="wrap_content"
+                        android:text="@={registerViewModel.customer.full_name}"
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lastTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="25dp"
+                    android:hint="@string/phone"
+                    app:hintTextColor="@color/white"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:layout_constraintTop_toBottomOf="@+id/firstTextField">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:inputType="phone"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:gravity="right"
+                        android:textSize="16sp"
+                        android:hint="@string/phone"
+                        android:id="@+id/EPhone"
+                        android:backgroundTint="@color/white"
+                        android:textColorHint="@color/white"
+                        android:text="@={registerViewModel.customer.phone}" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="25dp"
+                    app:hintTextColor="@color/white"
+                    android:hint="@string/emailAddressLabel"
+                    emailVaild="@{`Please enter a valid email address`}"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:layout_constraintTop_toBottomOf="@+id/lastTextField">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:id="@+id/EEmail"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textSize="16sp"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:hint="@string/email"
+                        android:textColorHint="@color/white"
+                        android:text="@={registerViewModel.customer.email}" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    app:hintTextColor="@color/white"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="25dp"
+                    android:hint="@string/passwordLabel"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailTextField"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    passwordVaild="@{`The password should contain at least  least 6 characters`}"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:id="@+id/EPassword"
+                        android:textSize="16sp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:gravity="right"
+                        android:hint="@string/password"
+                        android:textColorHint="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:text="@={registerViewModel.customer.password}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignIn"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:onClick="@{()->registerViewModel.navigator.sigupClick()}"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    app:cornerRadius="@dimen/_10sdp"
+                    app:backgroundTint="@color/yellow"
+                    app:layout_constraintTop_toBottomOf="@+id/passwordTextField"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:text="@string/have_an_account"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
+                    app:layout_constraintEnd_toStartOf="@id/createAccount"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/createAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="?android:selectableItemBackground"
+                    android:onClick="@{()->registerViewModel.navigator.backLoginClick()}"
+                    android:text="@string/log_in"
+                    android:textAllCaps="true"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/title1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/title1"
+                    app:layout_constraintTop_toTopOf="@+id/title1"
+                    />
+
+                <TextView
+                    android:id="@+id/privacy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:text="@string/privacyregister"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createAccount" />
+
+                <TextView
+                    android:id="@+id/privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/privacy"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacy2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

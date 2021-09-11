@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/rect_shadow"
+        android:backgroundTint="#1B1B1B"
+        android:orientation="vertical"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PannerCard"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_105sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/Img_Product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="fitXY"
+                        app:imageUrl="@{model.image}" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{model.title}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/T_SmallDescrip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/Title"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="#8D8D91"
+                android:textSize="@dimen/_11sdp"
+                app:descrption="@{ model.description}" />
+
+            <ImageView
+                android:id="@+id/RatingBar"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_below="@+id/T_SmallDescrip"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:src="@drawable/img_raiting" />
+
+            <TextView
+                android:id="@+id/T_Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/T_SmallDescrip"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/RatingBar"
+                android:ellipsize="end"
+                android:fontFamily="@raw/cairo"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:ratee="@{model.avgRate}" />
+
+            <TextView
+                android:id="@+id/T_TotalMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/T_SmallDescrip"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/T_Total"
+                android:ellipsize="end"
+                android:fontFamily="@raw/cairo"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:min="@{model.time}" />
+
+            <TextView
+                android:id="@+id/T_SalePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RatingBar"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/PannerCard"
+                android:ellipsize="end"
+                android:fontFamily="@raw/cairo"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:price="@{model.finalPrice}" />
+
+
+            <TextView
+                android:id="@+id/T_BeforePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RatingBar"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/T_SalePrice"
+                android:ellipsize="end"
+                android:fontFamily="@raw/cairo"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:BeforePrice="@{model.mainPrice}"
+                app:FinalPrice="@{model.finalPrice}" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

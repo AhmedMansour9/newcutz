@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.MyOrdersResponse.Data" />
+            type="com.hadrmout.data.remote.model.MyOrdersResponse.Data" />
 
 
 
@@ -185,7 +185,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:layout_marginStart="@dimen/_6sdp"
-                                    android:text= "@{model.createdAt.toString()}"
                                     android:layout_marginTop="@dimen/_10sdp"
                                     android:layout_marginEnd="@dimen/_6sdp"
                                     android:textColor="@color/white"

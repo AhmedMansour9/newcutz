@@ -8,11 +8,7 @@
         android:background="@color/black"
         android:layout_height="match_parent">
 
-        <androidx.drawerlayout.widget.DrawerLayout
-            android:id="@+id/drawer_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,6 +16,7 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:layout_constraintTop_toTopOf="parent"
@@ -69,24 +66,7 @@
 
            </RelativeLayout>
 
-            <com.google.android.material.navigation.NavigationView
-                android:id="@+id/nav_view"
-                style="@style/Widget.Design.NavigationView"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                app:itemTextColor="@color/white"
-                app:itemBackground="@color/black"
-                android:layout_gravity="start">
 
-
-
-
-                <include layout="@layout/nav_header_navigation" />
-
-            </com.google.android.material.navigation.NavigationView>
-
-        </androidx.drawerlayout.widget.DrawerLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

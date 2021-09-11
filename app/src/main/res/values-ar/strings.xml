@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Cutz</string>
+    <string name="app_name">حضرموت</string>
     <string name="email">البريد الالكتروني</string>
     <string name="password">الرقم السري</string>
     <string name="forgetpas">هل نسيت كلمة المرور ؟</string>
@@ -18,10 +18,13 @@
     <string name="menu">القائمة</string>
     <string name="favourit">المفضلة</string>
     <string name="more">المزيد</string>
-    <string name="offers">ما يغلاش عليك</string>
+    <string name="gram">/جم</string>
+    <string name="offers">عروض</string>
     <string name="addres">عنوان التسليم</string>
     <string name="edit">تعديل</string>
+    <string name="edit_address">تعديل العنوان</string>
     <string name="myorders">طلباتي</string>
+    <string name="noaddress">لا يوحد عنوان مسجل</string>
     <string name="myprofile"> الشخصية</string>
     <string name="recentorders">طلباتي</string>
     <string name="myaddress">العنوان</string>
@@ -53,6 +56,7 @@
     <string name="confirmpass">تأكيد الرقم السري</string>
     <string name="updated">تم تحديث المعلومات بنجاح</string>
     <string name="updatedpassword">تم تحديث كلمة المرور بنجاح</string>
+    <string name="updatedemail">تم ارسال البريد الالكتروني بنجاح</string>
     <string name="failedmsg">فشل ، هناك شيء خاطئ</string>
     <string name="sendmsg">ارسل رسالة</string>
     <string name="sendsuccess">تم ارسال الرسالة</string>
@@ -96,11 +100,13 @@
     <string name="last_name">الاسم الاخير</string>
     <string name="validatefname">من فضلك ادخل الاسم الاول</string>
     <string name="validateLname">من فضلك ادخل الاسم الاخير</string>
-    <string name="validateAddress">Please Validate Address</string>
-    <string name="validateEmail">Please Validate Email</string>
-    <string name="validatePhone">Please Validate  Phone</string>
+    <string name="validateAddress">من فضلك ادخل العنوان</string>
+    <string name="validateEmail">من فضلك ادخل البريد الاليكتروني</string>
+    <string name="validatePhone">من فضلك ادخل رقم التليفون</string>
     <string name="orderid2">رقم الطلب: </string>
     <string name="total_price2">السعر الاجمالي: </string>
+    <string name="validateBNumber">من فضلك ادخل رقم العمارة</string>
+    <string name="validateFNumber">من فضلك ادخل رقم الدور</string>
 
 
 
@@ -169,7 +175,7 @@
     <string name="comment">تعليق</string>
     <string name="confirm">تأكيد</string>
     <string name="exit_message">هل تريد الخروج ؟</string>
-    <string name="my_acc">حسابي</string>
+    <string name="my_acc">الملف الشخصي</string>
     <string name="wishlist">المفضلة</string>
     <string name="reach_out">تواصل معنا</string>
     <string name="setting">الاعدادات</string>
@@ -244,7 +250,7 @@
     <string name="success_addcomment">تم ارسال الرد بنجاح</string>
     <string name="n_products">عدد المنتجات</string>
     <string name="create_one">اضغط هنا</string>
-    <string name="don_t_have_an_account">هل نسيت الرقم السري ؟</string>
+    <string name="don_t_have_an_account">ليس لديك حساب ؟</string>
     <string name="or_login_with">او سجل ب</string>
     <string name="create_msg_label">Let\'s Start with creating your account</string>
     <string name="firstLabel">First Name</string>
@@ -252,16 +258,23 @@
     <string name="passwordLabel">Password</string>
     <string name="continueLabel">Register</string>
     <string name="tell_us_about_yourself">Tell us about yourself</string>
-    <string name="sign_up">Sign up</string>
+    <string name="sign_up">انشاء حساب</string>
     <string name="have_an_account">لديك اكونت بالفعل ؟</string>
+    <string name="welcome">مرحبا!</string>
+    <string name="sign_inn">تسجيل الدخول أو إنشاء حساب لإدارة الطلبات سريعا</string>
+    <string name="privacy"><u>سياسة الاستخدام والشروط والأحكام</u></string>
     <string name="log_in">تسجيل دخول</string>
+    <string name="restaurant">مطعم</string>
+    <string name="butcher">الجزارة</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
     <string name="cu"> %s جنيه</string>
     <string name="rate">التقييم</string>
     <string name="contact_information">معلومات التواصل</string>
     <string name="qty">%s الكمية</string>
+    <string name="promoo">عروض</string>
     <string name="choose">اختر اللغة</string>
+    <string name="privacyregister">>في حال إكمالك لعملية التسجيل، فأنت توافق على</string>
     <string name="search_key">حروف البحث </string>
     <string name="noinstrations">لا يوجد تعليمات</string>
     <string name="related_product">المنتجات المماثلة</string>
@@ -287,7 +300,8 @@
     <string name="T_cart">السعر الكلي</string>
     <string name="s_service">Shipping Service</string>
     <string name="t_bill">Total Bill</string>
-    <string name="add_cart">اضف الي العربة</string>
+    <string name="add_cart">اضافة</string>
+    <string name="add_address">اضف عنوان</string>
 
     <string name="sku">SKU</string>
     <string name="moree">تعليمات</string>
@@ -332,7 +346,7 @@
     <string name="shipping_address">تفاصيل العنوان</string>
     <string name="shipping_method">طرق الشحن</string>
     <string name="shipping_payment">طرق الدفع</string>
-    <string name="order_summary">ملخص الطلب</string>
+    <string name="order_summary"> الطلب</string>
     <string name="f_txt">نجعل من السهل العثور على الطعام الذي \ n تشتهيه. أدخل عنوانك ودعنا نفعل</string>
     <string name="s_txt">عندما تطلب تناول الطعام في الشارع ، سنقوم بتوصيلك بكوبونات حصرية ، خاصة</string>
     <string name="third_txt">نجعل طلب الطعام سريعًا وبسيطًا \ n مجانًا - بغض النظر عما إذا كنت تطلب الطعام عبر الإنترنت</string>

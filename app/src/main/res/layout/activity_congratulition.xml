@@ -81,7 +81,7 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_12sdp"
-                app:backgroundTint="@color/red"
+                app:backgroundTint="@color/yellow"
                 app:cornerRadius="30dp"
                  />
 
@@ -100,7 +100,7 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_12sdp"
-                app:backgroundTint="@color/red"
+                app:backgroundTint="@color/yellow"
                 app:cornerRadius="30dp"
                 />
 

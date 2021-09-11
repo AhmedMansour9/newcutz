@@ -3,15 +3,13 @@
     <color name="colorPrimary">#141414</color>
     <color name="colorPrimaryDark">#141414</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="darkred">#e4283d</color>
     <color name="red">#AC1E33</color>
     <color name="blue">#0BAAFC</color>
     <color name="grey">#A7ADB6</color>
     <color name="orange">#979797</color>
-    <color name="yellow">#F98210</color>
     <color name="black">#141414</color>
     <color name="orange_tabs">#fc913a</color>
-
+    <color name="yellow">#FCAE19</color>
     <color name="addition1">#212121</color>
     <color name="addition2">#069EEC</color>
 
@@ -19,6 +17,7 @@
     <color name="lines_color">#262D37</color>
     <!--    <color name="colorAccent">#314E6A</color>-->
     <color name="white">#FFFFFF</color>
+    <color name="darkred">#510104</color>
     <color name="icons_color">#f2a365</color>
     <color name="light_color">#ececec</color>
     <color name="grey_60">#666666</color>

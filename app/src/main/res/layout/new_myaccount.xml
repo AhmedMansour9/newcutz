@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.hadrmout.ui.myaccount.MyAccountViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Photo"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp" />
+
+        <TextView
+            android:id="@+id/T_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/Linear_first"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@+id/T_Name"
+
+            android:layout_marginTop="@dimen/_40sdp"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/Img_Orders"
+                android:layout_width="0dp"
+                android:onClick="@{()->viewModel.navigator.onClickMyOrders()}"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="1"
+                android:src="@drawable/img_orders" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:onClick="@{()->viewModel.navigator.onClickProfile()}"
+                android:layout_weight="1"
+                android:src="@drawable/img_profile" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="1"
+                android:onClick="@{()->viewModel.navigator.onClickFavourit()}"
+                android:src="@drawable/img_favourit" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Linear_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Linear_first"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->viewModel.navigator.onClickMyOrders()}"
+                android:gravity="center"
+                android:text="@string/myorders"
+                android:textColor="#8D8D91" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.navigator.onClickProfile()}"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/myprofile"
+                android:textColor="#8D8D91" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->viewModel.navigator.onClickFavourit()}"
+                android:gravity="center"
+                android:text="@string/wishlist"
+                android:textColor="#8D8D91" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Linear_third"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@+id/Linear_second"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:onClick="@{()->viewModel.navigator.onClickLanguage()}"
+                android:layout_weight="1"
+                android:src="@drawable/img_language" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="1"
+                android:onClick="@{()->viewModel.navigator.onClickAboutUs()}"
+                android:src="@drawable/ic_about"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:onClick="@{()->viewModel.navigator.onClickMyAddress()}"
+                android:layout_weight="1"
+                android:src="@drawable/img_address" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Linear_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Linear_third"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.navigator.onClickMyAddress()}"
+                android:text="@string/language"
+                android:textColor="#8D8D91" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.navigator.onClickAboutUs()}"
+                android:text="@string/about"
+                android:textColor="#8D8D91" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.navigator.onClickMyAddress()}"
+                android:text="@string/addres"
+                android:textColor="#8D8D91" />
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createAccount"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="40dp"
+            android:onClick="@{()->viewModel.navigator.onClickLogOut()}"
+            android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:backgroundTint="#1C1C1F"
+            app:cornerRadius="25dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</layout>

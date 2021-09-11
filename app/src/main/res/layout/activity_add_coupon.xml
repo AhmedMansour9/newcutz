@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/coupoun"
                 android:textSize="@dimen/_16sdp"
-                android:background="@color/red"
+                android:background="@color/yellow"
                 android:id="@+id/coupon"
                 android:gravity="center"
 
@@ -72,7 +72,7 @@
                 android:layout_width="@dimen/_35sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_centerInParent="true"
-                android:indeterminateTint="@color/red"
+                android:indeterminateTint="@color/yellow"
                 android:visibility="gone"
                 android:id="@+id/Progress"
                 />
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/confirm"
                 android:textSize="@dimen/_16sdp"
-                android:background="@color/red"
+                android:background="@color/yellow"
                 android:id="@+id/Confirm"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_below="@+id/EInputCoupon"

@@ -29,16 +29,15 @@ android {
         experimental = true
     }
     defaultConfig {
-        applicationId "com.cutzegypt"
+        applicationId "com.hadrmout"
         multiDexEnabled true
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 30
-        versionCode 14
-        versionName "2.4"
+        versionCode 24
+        versionName "3.5"
         vectorDrawables.useSupportLibrary = true
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField 'String', 'BASE_URL', "\"https://cutz.com.eg/api/\""
+        buildConfigField 'String', 'BASE_URL', "\"https://hmantar.com/api/\""
     }
 
     buildTypes {
@@ -169,6 +168,8 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:26.3.0')
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
 
 }
 apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:cardElevation="1dp"
+        android:backgroundTint="#1B1B1B"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_10sdp"
+
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="@color/black"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:id="@+id/PannerCard"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/Img_Product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:imageUrl="@{model.image}"
+                        />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_below="@+id/PannerCard"
+                android:gravity="start"
+                android:text= "@{model.title}"
+                android:textSize="@dimen/_15sdp"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:includeFontPadding="false"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/white"
+                android:layout_below="@+id/Title"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/view"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_below="@+id/view"
+                android:layout_toEndOf="@+id/T_TotalMin"
+                android:paddingTop="3dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Rela"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/T_SalePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    app:price="@{model.finalPrice}"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/T_BeforePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/T_SalePrice"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:BeforePrice="@{model.mainPrice}"
+                    app:FinalPrice="@{model.finalPrice}"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/RatingBar"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_below="@+id/view"
+                android:src="@drawable/img_raiting" />
+
+            <TextView
+                android:id="@+id/T_Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/RatingBar"
+                android:ellipsize="end"
+                android:fontFamily="@raw/cairo"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:ratee="@{model.avgRate}" />
+
+            <TextView
+                android:id="@+id/T_TotalMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/T_Total"
+                android:ellipsize="end"
+                android:fontFamily="@raw/cairo"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:min="@{model.time}" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

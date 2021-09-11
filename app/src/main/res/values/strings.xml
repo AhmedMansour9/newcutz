@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">Cutz</string>
+    <string name="app_name">Hadramout</string>
+    <string name="welcome">Welcome!</string>
+    <string name="sign_inn">Sign In or Create Account to quickly mange orders</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgetpas">Forget Password?</string>
-    <string name="login">Login</string>
+    <string name="login">SIGN IN</string>
     <string name="or">Or</string>
     <string name="loginface">LOGIN WITH FCAEBOOK</string>
     <string name="noacc">Don\'t Have Account?</string>
@@ -14,9 +16,10 @@
     <string name="branch">Branches</string>
     <string name="home">Home</string>
     <string name="menu">Categories</string>
-    <string name="favourit">Favourit Product</string>
+    <string name="favourit">Favourits</string>
     <string name="more">More</string>
-    <string name="offers">Sepcial Offers</string>
+    <string name="offers">Offers</string>
+    <string name="noaddress">No Address found</string>
     <string name="addres">Address</string>
     <string name="edit">Edit</string>
     <string name="myorders">My Orders</string>
@@ -26,7 +29,7 @@
     <string name="aboutchick">About Chic Chicken</string>
     <string name="follot">Follow Us</string>
     <string name="contactus">Contact Us</string>
-    <string name="logout">Logout</string>
+    <string name="logout">SIGNOUT</string>
     <string name="about">About Us</string>
     <string name="addtocart">Add To Cart</string>
     <string name="include">Include</string>
@@ -36,7 +39,7 @@
     <string name="checkout">Checkout</string>
     <string name="selectlanguage">Select Language</string>
     <string name="selectbranch">Select Branch</string>
-    <string name="register">Register</string>
+    <string name="register">CREATE ACCOUNT</string>
     <string name="validemail">Email or phone is already used</string>
     <string name="feildempty">Fill input with valid data</string>
     <string name="pasweak">The password should contain at least one digit &amp; at least one special char
@@ -53,6 +56,7 @@
     <string name="confirmpass">Confirm password</string>
     <string name="updated">Information has been updated Successfully</string>
     <string name="updatedpassword">Password has been updated Successfully</string>
+    <string name="updatedemail">Email has been sent Successfully</string>
     <string name="failedmsg">Failed, There is something wrong</string>
     <string name="sendmsg">Send Message</string>
     <string name="sendsuccess">Message has been Send</string>
@@ -89,7 +93,7 @@
     <string name="Deliver">Deliver</string>
     <string name="date">Date</string>
     <string name="price">Price :</string>
-    <string name="noproduct">Not found any product</string>
+    <string name="noproduct">No Products found</string>
     <string name="title_activity_navigation">Navigation</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -97,6 +101,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="gram">/G</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -264,7 +269,15 @@
     <string name="log_in">log in</string>
     <string name="cairo">Cairo</string>
     <string name="cartLabel">Cart</string>
-    <string name="add_cart">ADD TO CART</string>
+    <string name="add_cart">ADD </string>
+    <string name="add_address">Add Address</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="privacy"><u>usage policy, terms condition of Hadrmout</u></string>
+    <string name="privacyregister"> By submitting, you accept</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="butcher">Butchery</string>
+    <string name="promoo">Promo</string>
+
     <string name="cu"> %s EGP</string>
     <string name="sku">SKU</string>
     <string name="moree">Instructions</string>
@@ -308,7 +321,7 @@
     <string name="shipping_address">SHIPPING ADDRESS</string>
     <string name="shipping_method">SHIPPING METHOD</string>
     <string name="shipping_payment">SHIPPING PAYMENT</string>
-    <string name="order_summary">ORDER SUMMARY</string>
+    <string name="order_summary">Order</string>
     <string name="f_txt">We make it simple to find the food you \n crave. Enter your address and let us do</string>
     <string name="s_txt">Whe you order eat street we\'ll hook \n you up with exclusive coupons, special</string>
     <string name="third_txt">We make food ordering fast, simple and \n free- no matter if you order online</string>
@@ -325,11 +338,13 @@
     <string name="validatefname">Please Validate First Name</string>
     <string name="validateLname">Please Validate Last Name</string>
     <string name="validateAddress">Please Validate Address</string>
-    <string name="validateEmail">Please Validate Email</string>
+    <string name="validateEmail">Please Enter a valid Email</string>
+    <string name="validateBNumber">Please Validate Building Number</string>
+    <string name="validateFNumber">Please Validate Floor Number</string>
     <string name="validatePhone">Please Validate  Phone</string>
     <string name="coupoun">Coupon</string>
     <string name="douyouhave">Do you have Coupon ?</string>
-    <string name="add_coupon">Click here</string>
+    <string name="add_coupon">APPLY COUPON</string>
     <string name="please_entercoupon">Please enter code of your coupon</string>
     <string name="valid_coupon">Please enter valid coupon</string>
     <string name="order_id">#%s</string>
@@ -340,7 +355,7 @@
     <string name="verify">Verify</string>
     <string name="one_kilo">1 kg</string>
     <string name="half_kilo">0.5 kg</string>
-    <string name="orderid2">Order id:</string>
+    <string name="orderid2">Order Num:</string>
     <string name="total_price2">Total Price:</string>
     <string name="wrong_verify">Wrong Verify code</string>
     <string name="bbq">BBQ</string>

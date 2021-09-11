@@ -7,11 +7,11 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
 
         <variable
             name="viewmodel"
-            type="com.cutzegypt.ui.filter.FiltertionViewModel" />
+            type="com.hadrmout.ui.filter.FiltertionViewModel" />
 
     </data>
 

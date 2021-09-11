@@ -6,7 +6,7 @@
 
         <variable
             name="registerViewModel"
-            type="com.cutzegypt.ui.contactus.ContactUsViewModel" />
+            type="com.hadrmout.ui.contactus.ContactUsViewModel" />
     </data>
 
 

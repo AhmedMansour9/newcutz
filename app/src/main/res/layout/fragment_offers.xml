@@ -7,7 +7,7 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutzegypt.ui.offers.OffersViewModel" />
+            type="com.hadrmout.ui.offers.OffersViewModel" />
 
     </data>
 
@@ -17,20 +17,21 @@
         android:layout_height="match_parent"
         android:background="@color/black">
 
-
-
-        <ImageView
-            android:id="@+id/textView"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_centerHorizontal="true"
-            android:textColor="#fff"
-            android:src="@drawable/logohome"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/offers"
+            android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_15sdp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_15sdp"
+            />
+
+
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/SwipCategories"

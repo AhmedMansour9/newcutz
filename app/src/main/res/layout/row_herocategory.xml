@@ -5,7 +5,7 @@
     <data>
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.SectonsResponse.Data.Category" />
+            type="com.hadrmout.data.remote.model.SectonsResponse.Data.Category" />
 
     </data>
 
@@ -13,8 +13,7 @@
         android:layout_width="wrap_content"
         android:background="@color/black"
         android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_height="@dimen/_27sdp">
+        android:layout_height="wrap_content">
 
 
         <TextView
@@ -22,22 +21,15 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:gravity="center"
+            android:padding="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:id="@+id/T_Name"
             android:maxLines="1"
             android:text="@={model.title}" />
 
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:id="@+id/Vieww"
-            android:layout_alignEnd="@+id/T_Name"
-            android:layout_alignStart="@+id/T_Name"
-            android:background="@color/white"
-            android:layout_alignParentBottom="true" />
+
 
 
     </RelativeLayout>

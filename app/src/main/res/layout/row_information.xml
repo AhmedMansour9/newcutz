@@ -4,9 +4,7 @@
 
     <data>
 
-        <variable
-            name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data.Instruction" />
+
 
     </data>
 
@@ -25,7 +23,6 @@
             android:layout_marginStart="@dimen/_2sdp"
             android:layout_marginEnd="@dimen/_1sdp"
             android:padding="@dimen/_5sdp"
-            android:text= "@{model.title}"
             android:background="@color/red"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +31,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:descrption= "@{ model.description}"
             android:textColor="@color/white"
             android:layout_below="@+id/title"
             android:layout_margin="@dimen/_5sdp"

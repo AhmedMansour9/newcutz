@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="com.cutzegypt.ui.changelocation.ChangeLocationViewModel" />
+            type="com.hadrmout.ui.changelocation.ChangeLocationViewModel" />
 
         <variable
             name="spinnerAdapter"

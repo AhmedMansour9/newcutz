@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.SectonsResponse.Data.Category.SubCategory" />
+            type="com.hadrmout.data.remote.model.SectonsResponse.Data.Category.SubCategory" />
 
     </data>
 

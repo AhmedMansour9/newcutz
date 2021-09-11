@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -16,6 +16,7 @@
         app:cardCornerRadius="0dp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/rect_shadow"
         app:cardElevation="4dp"
         android:backgroundTint="#1B1B1B"
         android:layout_marginBottom="@dimen/_5sdp"
@@ -30,7 +31,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="@dimen/_110sdp"
-                android:layout_height="@dimen/_120sdp"
+                android:layout_height="@dimen/_100sdp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="@dimen/_10sdp"
@@ -43,7 +44,6 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:background="@color/white"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -118,7 +118,7 @@
                 android:layout_toEndOf="@+id/PannerCard"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text= "@{model.finalPrice+model.currency}"
+                app:price="@{model.finalPrice}"
                 android:fontFamily="@raw/cairo"
                 android:textColor="@color/white"
                  />
@@ -142,30 +142,7 @@
 
 
 
-            <ImageView
-                android:id="@+id/img_true"
-                android:layout_width="@dimen/_17sdp"
-                android:layout_height="@dimen/_17sdp"
-                android:layout_below="@+id/T_SalePrice"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:layout_marginStart="@dimen/_7sdp"
-                android:layout_toEndOf="@+id/PannerCard"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/img_true" />
 
-
-
-            <TextView
-                android:id="@+id/Stock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/img_true"
-                android:layout_below="@+id/T_SalePrice"
-                android:layout_marginStart="@dimen/_3sdp"
-                android:textSize="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:text="@string/in_stock"
-                android:textColor="@color/white" />
 
 
 
@@ -206,10 +183,10 @@
             <ImageView
                 android:id="@+id/Btn_AddCart"
                 android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_below="@+id/T_SalePrice"
-                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/RatingBar"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/ic_roundedcart"
                 android:layout_toStartOf="@+id/Img_Favourit"
@@ -217,11 +194,10 @@
 
             <ImageView
                 android:id="@+id/Img_Favourit"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_below="@+id/T_SalePrice"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/RatingBar"
                 android:layout_marginTop="@dimen/_2sdp"
-                app:checkFavourit="@{model.isFavoirte()}"
 
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/_10sdp"

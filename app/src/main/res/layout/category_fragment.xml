@@ -7,7 +7,7 @@
 
         <variable
             name="registerViewModel"
-            type="com.cutzegypt.ui.category.CategoriesViewModel" />
+            type="com.hadrmout.ui.category.CategoriesViewModel" />
 
 
     </data>
@@ -79,7 +79,7 @@
             android:layout_marginEnd="@dimen/_10sdp"
             android:scrollbars="horizontal" />
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_beef"
             android:layout_width="match_parent"
             android:visibility="gone"
@@ -222,7 +222,7 @@
         </RelativeLayout>
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_veel"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -322,7 +322,7 @@
         </RelativeLayout>
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_lamp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -419,11 +419,10 @@
 
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_fish"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
-            android:visibility="gone"
             android:layoutDirection="ltr"
             android:layout_centerInParent="true"
             android:src="@drawable/img_fish"
@@ -500,7 +499,7 @@
 
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_duck"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -591,7 +590,7 @@
 
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_chicken"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -659,7 +658,7 @@
         </RelativeLayout>
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_Turkey"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -738,7 +737,7 @@
 
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_ostrich"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"
@@ -881,7 +880,7 @@
 
 
 
-        <com.cutzegypt.utils.TouchImageView
+        <com.hadrmout.utils.TouchImageView
             android:id="@+id/Img_Shramp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400sdp"

@@ -5,7 +5,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data.Addtion" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data.Addition" />
 
     </data>
     <RelativeLayout
@@ -31,7 +31,7 @@
             android:layout_below="@+id/T_Name"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:text= "@{model.price+model.currency}"
+            android:text= "@{model.price}"
             android:textColor="@color/white"
             android:id="@+id/T_Price" />
         <CheckBox

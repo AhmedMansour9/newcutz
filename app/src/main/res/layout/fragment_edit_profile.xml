@@ -6,7 +6,7 @@
 
         <variable
             name="registerViewModel"
-            type="com.cutzegypt.ui.editprofile.EditProfileViewModel" />
+            type="com.hadrmout.ui.editprofile.EditProfileViewModel" />
     </data>
 
 
@@ -28,18 +28,41 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Constrain"
                 >
-                <ImageView
-                    android:id="@+id/textView"
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbaproduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:src="@drawable/logohome"
-                    android:textColor="#fff"
-                    android:textSize="@dimen/_16sdp"
-                    android:textStyle="bold" />
+                    android:background="@color/black">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:srcCompat="@drawable/img_backk"
+                            android:id="@+id/Img_Back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/myprofile"
+                            android:textColor="@color/white"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textSize="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_17sdp"/>
+
+
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
 
 
 
@@ -165,7 +188,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="18sp"
                     app:cornerRadius="@dimen/_20sdp"
-                    app:backgroundTint="@color/red"
+                    app:backgroundTint="@color/yellow"
                     app:layout_constraintTop_toBottomOf="@+id/emailTextField"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />

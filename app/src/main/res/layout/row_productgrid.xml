@@ -5,7 +5,7 @@
     <data>
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
 
     </data>
 
@@ -29,9 +29,9 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_120sdp"
                 android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/black"
                 android:layout_marginBottom="@dimen/_3sdp"
                 android:id="@+id/PannerCard"
                 app:cardCornerRadius="5dp"
@@ -44,10 +44,9 @@
                     <ImageView
                         android:id="@+id/Img_Product"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_100sdp"
-                        android:scaleType="fitXY"
+                        android:layout_height="@dimen/_120sdp"
                         app:imageUrl="@{model.image}"
-                        />
+                        android:scaleType="fitXY" />
 
 
                 </RelativeLayout>
@@ -65,13 +64,12 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_below="@+id/PannerCard"
-                android:gravity="center"
+                android:gravity="start"
                 android:text= "@{model.title}"
-                android:textSize="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
                 android:maxLines="2"
                 android:textColor="@color/white"
                 android:includeFontPadding="false"
-                android:layout_centerHorizontal="true"
                 />
 
 
@@ -79,8 +77,9 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_below="@+id/Title"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:id="@+id/Rela"
                 android:layout_height="wrap_content">
                 <TextView
@@ -89,7 +88,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:textSize="@dimen/_10sdp"
-                    android:text= "@{model.finalPrice+model.currency}"
                     android:maxLines="1"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
@@ -99,14 +97,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_toEndOf="@+id/T_SalePrice"
-
+                    android:textSize="@dimen/_10sdp"
                     android:ellipsize="end"
                     android:maxLines="1"
                     app:BeforePrice="@{model.mainPrice}"
                     app:FinalPrice="@{model.finalPrice}"
-                    android:fontFamily="@raw/cairo"
                     android:textColor="@color/white"
                     />
 
@@ -117,37 +114,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Rela"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_2sdp"
                 style="?android:attr/ratingBarStyleSmall"
                 android:numStars="5"
                 android:theme="@style/AppTheme.AppBarOverlay"
                 app:review="@{model.avgRate}"
-                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:progressTint="#FFC107"
                 android:stepSize="0.5" />
 
             <ImageView
                 android:id="@+id/Btn_AddCart"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_below="@+id/RatingBar"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_below="@+id/Rela"
                 android:src="@drawable/ic_roundedcart"
-                android:layout_alignStart="@+id/PannerCard"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_alignEnd="@+id/PannerCard"
                 />
 
             <ImageView
                 android:id="@+id/Img_Favourit"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_below="@+id/RatingBar"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_30sdp"
-                app:checkFavourit="@{model.isFavoirte()}"
-                android:layout_alignEnd="@+id/PannerCard"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_below="@+id/Rela"
+                android:layout_toStartOf="@+id/Btn_AddCart"
+                android:layout_marginEnd="@dimen/_10sdp"
                 />
 
         </RelativeLayout>

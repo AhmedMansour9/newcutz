@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data.Weights" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data.Addition" />
 
     </data>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
-        android:background="@drawable/bc_size"
-        android:paddingStart="@dimen/_5sdp"
-        android:paddingEnd="@dimen/_5sdp"
+        android:layout_width="match_parent"
         android:id="@+id/Rela_Size"
-        android:layout_height="@dimen/_50sdp">
+        android:background="@drawable/bc_size"
+        android:layout_height="@dimen/_35sdp">
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ChecBox"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/yellow"
+                />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/T_Title"
-
-            android:layout_centerHorizontal="true"
-            android:text="@={model.weight}"
-            android:layout_margin="@dimen/_5sdp"
+            app:weight="@{model.title}"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/ChecBox"
             android:maxLines="1"
             android:textColor="@color/white" />
 
@@ -33,11 +41,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/T_Price"
-            android:layout_centerHorizontal="true"
-            android:text="@={model.price}"
+            app:price="@{model.price}"
             android:maxLines="1"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:textColor="@color/white" />
 
 

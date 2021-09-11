@@ -48,20 +48,7 @@
         <attr name="mainPhoneId" format="reference" />
     </declare-styleable>
 
-    <declare-styleable name="SingleLineComponent">
-        <attr name="startIconDrawable" format="reference" />
-        <attr name="endIconDrawable" format="reference" />
-        <attr name="android:text" />
-        <attr name="secondaryText" format="string" localization="suggested" />
-        <attr name="showDivider" format="boolean" />
-    </declare-styleable>
 
-    <declare-styleable name="SectionComponent">
-        <attr name="android:label" />
-        <attr name="android:text" />
-    </declare-styleable>
-    <declare-styleable name="FullscreenAttrs">
-        <attr name="fullscreenBackgroundColor" format="color" />
-        <attr name="fullscreenTextColor" format="color" />
-    </declare-styleable>
+
+
 </resources>

@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ProductsResponse.Data" />
+            type="com.hadrmout.data.remote.model.ProductsResponse.Data" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -118,7 +118,7 @@
                 android:layout_toEndOf="@+id/PannerCard"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text= "@{model.finalPrice+model.currency}"
+                android:text= "@{model.finalPrice}"
                 android:fontFamily="@raw/cairo"
                 android:textColor="@color/white"
                 />

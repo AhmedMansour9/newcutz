@@ -6,7 +6,7 @@
     <data>
         <variable
             name="reviewViewModel"
-            type="com.cutzegypt.ui.addreview.AddReviewViewModel" />
+            type="com.hadrmout.ui.addreview.AddReviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

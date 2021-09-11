@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.CategoriesResponse.Data" />
+            type="com.hadrmout.data.remote.model.CategoriesResponse.Data" />
 
     </data>
 
@@ -43,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="2"
+
             android:ellipsize="end"
             android:layout_toEndOf="@+id/Rela"
             android:layout_centerVertical="true"
@@ -51,7 +52,7 @@
             android:textColor="@color/white"
             android:text="@={model.title}"
             android:textSize="@dimen/_12sdp"
-            android:gravity="center" />
+            android:gravity="start" />
 
         <ImageView
             android:layout_width="@dimen/_12sdp"

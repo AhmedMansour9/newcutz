@@ -7,7 +7,7 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutzegypt.ui.resultsearch.ResultSerachViewModel" />
+            type="com.hadrmout.ui.resultsearch.ResultSerachViewModel" />
 
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout

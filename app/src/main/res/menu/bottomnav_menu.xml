@@ -22,12 +22,6 @@
 <!--        />-->
 
 
-    <item android:icon="@drawable/ic_recipes"
-        android:title="@string/recipes"
-        android:id="@+id/recipesFragment"
-        app:itemHorizontalTranslationEnabled="false"
-        />
-
     <item android:icon="@drawable/ic_notification"
         android:title="@string/cartt"
         android:id="@+id/cartFragment"

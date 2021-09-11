@@ -6,11 +6,11 @@
 
         <variable
             name="productsViewModel"
-            type="com.cutzegypt.ui.cart.CartViewModel" />
+            type="com.hadrmout.ui.cart.CartViewModel" />
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ListCartResponse.Data" />
+            type="com.hadrmout.data.remote.model.ListCartResponse.Data" />
 
     </data>
 
@@ -37,18 +37,18 @@
 <!--                    android:layout_centerVertical="true"-->
 <!--                    />-->
 
-                <ImageView
-                    android:id="@+id/textView"
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#fff"
-                    android:src="@drawable/logohome"
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/cartt"
+                    android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_17sdp"/>
+
+
 
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -88,7 +88,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/Relaa_Cart"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_60sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_above="@+id/Btn_Order"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:backgroundTint="@color/black"
@@ -170,7 +170,7 @@
                 android:text="@string/checkout"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_12sdp"
-                app:backgroundTint="@color/red"
+                app:backgroundTint="#1C1C1F"
                 app:cornerRadius="20dp" />
 
         </RelativeLayout>

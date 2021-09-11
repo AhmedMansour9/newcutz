@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.cutzegypt.data.remote.model.ListCartResponse.Data.CartItem" />
+            type="com.hadrmout.data.remote.model.ListCartResponse.Data.CartItem" />
     </data>
 
     <RelativeLayout
@@ -26,7 +26,7 @@
                 android:id="@+id/Img_Product"
                 android:layout_width="@dimen/_85sdp"
                 android:layout_height="@dimen/_85sdp"
-                app:imageUrl="@{model.product.image}"
+                app:imageUrl="@{model.image}"
                 android:scaleType="fitXY"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
@@ -72,7 +72,7 @@
                 android:textSize="@dimen/_11sdp"
                 android:fontFamily="@raw/cairo"
                 android:maxLines="1"
-                android:text= "@{model.product.title}"
+                android:text= "@{model.title}"
                 android:textColor="@color/white"
                 />
 
@@ -99,7 +99,7 @@
                 android:layout_toEndOf="@+id/Img_Product"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text= "@{@string/price_cart(model.product.finalPrice)}"
+                android:text= "@{@string/price_cart(model.finalPrice)}"
                 android:fontFamily="@raw/cairo"
                 android:textColor="@color/white"
                 />
